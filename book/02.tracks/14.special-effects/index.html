@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Special Effects - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../00.todo/index.html">TODO</a></li><li><a href="../../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../../02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../../02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../../02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../../02.tracks/14.special-effects/index.html" class="active"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../../03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../../03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../../03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#special-effects" id="special-effects"><h1>Special Effects</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#cartoon-style">Cartoon Style</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>If you want to give your track (or even car) a special look, you can try out one of these things:</p>
+<a class="header" href="#cartoon-style" id="cartoon-style"><h2>Cartoon Style</h2></a>
+<p>Cartoons often have outlines around characters and objects. In modern games, this could be achieved with a shader. However, Re-Volt doesn't support such fancy technology. There <em>is</em> a way to get your cartoon fixings despite the games ancient technology.</p>
+<blockquote>
+<p>Please excuse the different Blender theme I'm using, it's much easier to see things with a brighter background!
+<cite>Marv</cite></p>
+</blockquote>
+<p>Alright, first off, here's what we're aiming for:</p>
+<p><img src="final.png" alt="Spoiling the final result before the tutorial started. This is how you lose readers!" /></p>
+<p>Before we get started, you might want to set your view port to <strong>Texture Mode</strong> in order to see vertex colors:</p>
+<p><img src="texture_mode.png" alt="You really have to enable texture mode, there is no way around it." /></p>
+<p>So, you're a bit bored by the appearance of your object, right? Perhaps you're a bit lazy to work out the textures and all you have right now is a shaded monkey.</p>
+<p><img src="suzanne_shaded.png" alt="Picture of a shaded monkey head" /></p>
+<p>One thing to note is that results with more complex models may vary, perhaps even require manual cleanup. In this case, it works out alright if you're not a perfectionist (which I know you are!).</p>
+<p>To even see what's going on, we need to adjust a setting in the 3D view. Do you remember the panel on the right? You can toggle it by pressing <strong>N</strong>. Press it a few times to see which panel I'm talking about.<br />
+Now scroll down a bit and make sure <strong>Backface Culling</strong> is <strong>enabled</strong>.<br />
+<img src="backface_culling.png" alt="Backface culling, may sound harsher than it actually is." /></p>
+<p>The first step is to duplicate your object. I'm going to demonstrate this in <strong>Object Mode</strong> since it's easier to work with.<br />
+To duplicate the object, I press <strong>SHIFT D</strong>. You will then have another instance of the object stuck to your cursor. We don't want to move it anywhere else, so hit <strong>ESC</strong> or <strong>RMB</strong>.<br />
+If you look at your outliner in the top right, you'll see two of your objects:</p>
+<p><img src="two_suzannes.png" alt="Picture of the list with two objects" /></p>
+<p>Now let's change into <strong>Edit Mode</strong>. Make sure everything is selected by pressing <strong>A</strong>. The first thing we'll do is to <strong>flip the normals</strong>. To do that, either hit <strong>SPACE</strong> and type <strong>Flip Normals</strong> or click this button:</p>
+<p><img src="flip_direction.png" alt="Flipping the normals like a chess table after losing the game" /></p>
+<p>You won't see any difference just yet.<br />
+Now let's get to the juicy part. Make sure everything is still selected! Press <strong>ALT S</strong> (this tool is called Shrink Flatten) and move your mouse around. If you're unsure, enter something like <strong>-0.1</strong> on the keyboard and press <strong>ENTER</strong> or <strong>LMB</strong>. You will already see that something like an outline will form:</p>
+<p><img src="outlined_monkey.png" alt="Almost done, monkey with outline" /></p>
+<p>Now it is time to assign a color to the outline. Head on over to the Re-Volt tool tab and locate the Vertex Color Panel. You might be prompted to create a vertex color layer. Do so.<br />
+When your object has a vertex color layer, you will see the buttons for setting colors. Either pick a color or a shade and press a button (I chose black because I'm boring). You will then see that the outline changes its color:<br />
+<img src="black_outlined_monkey.png" alt="The screenshot before the final result." /></p>
+<p>Enter Object mode again and bewonder your final result. Perhaps go back and change the color or use ALT S again to change the thickness. Yes, I know, there are some rough edges but you have to understand that the game is from 1999, alright?</p>
+<p><img src="final.png" alt="The final result." /></p>
+<p>Now, feel free to merge the two objects by selecting them and pressing <strong>CTRL J</strong>. You have to do this for exporting cars (.prm), but not when you're working on a track (.w).</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../02.tracks/13.collision/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../02.tracks/15.exporting/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../02.tracks/13.collision/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../02.tracks/15.exporting/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Force Fields - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../00.todo/index.html">TODO</a></li><li><a href="../../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../../02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../../02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../../02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../../02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../../03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../../03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../../03.makeitgood/04.force-fields/index.html" class="active"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#force-fields" id="force-fields"><h1>Force Fields</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#linear-red">LINEAR (red):</a></li>
+<li><a href="#orientation-green">ORIENTATION (green):</a></li>
+<li><a href="#velocity-blue">VELOCITY (blue):</a></li>
+<li><a href="#spherical-yellow">SPHERICAL (yellow):</a></li>
+<li><a href="#wind-no-color">WIND (no color):</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p><img src="mig-farce-fields-keys.jpg" alt="keytable" /></p>
+<p>In track making the farce field can be used to add to the theme of a track. Acclaim tracks using farce fields include: Ghost Town 1 and 2, Toytanic 1 and 2 and Toys in the Hood 2.</p>
+<p>When in the racing environment hit F4 to enter edit mode and then press insert to begin inserting farce fields. RV will automatically select the Linear farce type. Place the mouse over a field name and press enter to select an already present field. When finished adding your fields remember to hit CRTL+F4 to save your changes.</p>
+<p>NOTE: All fields (except spherical) have a white line in the center of the field. This line tells RV which direction to push in. I suggest editing the field’s size and placement in camera axis mode and editing the rotation and direction line in the world axis mode (hit left alt to change ). I also recommend changing the direction of the push in Rot Box mode (num pad del to change). The reason for this is because it is easier to get a perpendicular line direction by rotating the box instead of the line.
+Refer to the keys table for information on how to change all field settings.</p>
+<a class="header" href="#linear-red" id="linear-red"><h2>LINEAR (red):</h2></a>
+<p>The first type (and most common) is the linear field. This field is a pushing field for objects. This field is used on the Toytanic levels in the pool. The two values for the field are Mag and Dampening.</p>
+<p><strong>Mag:</strong>
+(press num pad enter to change value when selected)</p>
+<p>Tells RV how much force to apply to object entering the field. In the toytanic pool this is used to make lightweight cars float. The accepted value for floating, as if in water, is 2300. All values entered in this spot should be positive numbers.</p>
+<p><strong>Dampening:</strong>
+(press num pad enter to change value when selected)</p>
+<p>Tells RV how hard the field is. When objects hit the field it determines how far they should be allowed to go in before they are pushed back. Accepted values for this spot are positive numbers between 0 and 100. A value of 100 creates an invisible wall. Any object trying to enter the field while going against the direction of the push will not be allowed to enter. WARNING: Do not place a value of 100 on a field where the object entering the field will be pushed in the same direction of travel, this will create a force powerful enough to throw the car off of the track.</p>
+<a class="header" href="#orientation-green" id="orientation-green"><h2>ORIENTATION (green):</h2></a>
+<p>The second type of field is the orientation field. This field is used to rotate a car so that it faces a certain direction. This field is used in the Toytanic pool and in the Aqua series of tracks. The mag and dampening values are used in this field, but the Dampening value is not needed for proper use of the field.
+Note: The white line should point to the bottom of the car or object.</p>
+<p><img src="mig_farcefields_orientation.gif" alt="Farce field set to Orientation with magnitude 1000000" /></p>
+<p>Farce field set to Orientation with magnitude 1000000</p>
+<a class="header" href="#velocity-blue" id="velocity-blue"><h2>VELOCITY (blue):</h2></a>
+<p>This field is similar to the Linear field with one small difference. If a linear field is used to push a car when the mag value yields a push smaller than that of the cars top speed the field will act as a speed limiter. The Velocity field does not do this (I think). The velocity field should add to the top speed of the car. The velocity field uses the Mag value to determine its effects.</p>
+<a class="header" href="#spherical-yellow" id="spherical-yellow"><h2>SPHERICAL (yellow):</h2></a>
+<p>It is a round field that has no direction line and has GRAD START and GRAD END as its settings. There are no known uses of this field in any RV track, Acclaim or user made.</p>
+<a class="header" href="#wind-no-color" id="wind-no-color"><h2>WIND (no color):</h2></a>
+<p>(only found in Ghost Town)</p>
+<p>It is assumed that this field pushes very light weight objects. The use of it in Ghost Town appears to be in the movement of the tumbleweed. How it does this is unknown. The settings for this field are MAG and DAMPENING.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../03.makeitgood/03.ai-nodes/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../03.makeitgood/05.objects/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../03.makeitgood/03.ai-nodes/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../03.makeitgood/05.objects/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

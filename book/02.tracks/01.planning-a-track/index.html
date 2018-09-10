@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Planning a Track - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../00.todo/index.html">TODO</a></li><li><a href="../../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../../02.tracks/01.planning-a-track/index.html" class="active"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../../02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../../02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../../02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../../03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../../03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../../03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#planning-a-track" id="planning-a-track"><h1>Planning a Track</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#collecting-ideas">Collecting Ideas</a></li>
+<li><a href="#planning-the-track">Planning the Track</a></li>
+<li><a href="#the-flow">The Flow</a></li>
+<li><a href="#planning-the-layout">Planning the Layout</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#introduction" id="introduction"><h2>Introduction</h2></a>
+<p>The most important thing is to not overestimate yourself and the capabilities of the game. Re-Volt has been around for more than a decade. You won’t get any amazing next-gen graphics out of it and some mechanics are just not possible. Back then, proper texturing and lighting (manually, of course!) did the job.</p>
+<a class="header" href="#collecting-ideas" id="collecting-ideas"><h2>Collecting Ideas</h2></a>
+<p>Planning the track is probably the most demanding task. Take your time and think for a few days about possible themes and details. Always carry a small notebook to write your thoughts down (nowadays you can do that with your smartphone, of course). Write everything down immediately as it comes to your mind; Anything that could be helpful for your track. Even the smallest detail might help you in the end. You might think that you will remember later but you won’t. No matter how small your idea is, just write it down!</p>
+<p>The next step is to find reference pictures and google for some hours. Try different search terms for your track theme. You should also check out sites like deviantArt or Flickr. Create a folder on your desktop and save everything in there. Here are my references for the track I will be making throughout this guide:</p>
+<p><a href="http://imgur.com/a/ZkEV6">Chinatown References</a></p>
+<p>If you think you got a solid idea, think about it once more. Do you have every inch of the track planned out? Do you think they could work in the game? It is really important to have a rock solid plan for your track. It will make modeling it much easier.<br />
+Some people might be able to just start modeling without much planning, making up parts of the track as they go.</p>
+<p>If you're planning to do an indoor track, you can check out Google Maps. There is a <a href="https://support.google.com/maps/answer/1685827">list of indoor maps</a> that you can check out to gather some inspiration.</p>
+<a class="header" href="#planning-the-track" id="planning-the-track"><h2>Planning the Track</h2></a>
+<p>Categorize your ideas. Some examples are: Track flow, special elements (such as escalators, long jumps, underwater parts, …) and details. Write them down in a table with columns reaching from fundamental elements to little graphical details. This table will help you building up the actual plan.
+When you’re done collecting your ideas, try to organize them in an order. A fun idea is to cut all of them out and put them on a table, then arrange them in an interesting order.</p>
+<a class="header" href="#the-flow" id="the-flow"><h2>The Flow</h2></a>
+<p>A very fundamental part of it is the flow itself. The flow describes the path the cars take on a track and how well it's driveable. It can be smooth with a lot of curves and aids that help you to keep in line or rather rough with some edges and obstacles. A good flow is not necessarily smooth. Some people might enjoy a little challenge.</p>
+<p>Venice is a pretty hard track for beginners but offers a fun challenge for online races. You're easily pushed into the canals if you don't pay attention. The narrow bridge part integrates well into the track theme which makes up for its difficutly.<br />
+Just don’t put any unnecessary obstacles in your track (any narrow parts that are just there to make the track harder), but implement obstacles in your overall theme of the track. A hull breach in a space ship that sucks you out into space? That sounds cool. A random spot in the track where you’re just lifted up into the air? Way more likely to be annoying.</p>
+<p>The perfect flow is actually up to personal preference. A good example however are stock tracks since most people enjoy them. Ask yourself: What do I like about tracks? What do I hate about them? What do I hate although it’s a funny challenge and worth implementing?</p>
+<p>If you mess up the flow, there is little reason for people to play your track. Re-Volt is not a game for showing off your graphics (although some quite nice things can be done). I advise you to not rush or skip this part and do the flow on the fly. Take your time and optimize it where you can. Make your track original and interestingly challenging.</p>
+<a class="header" href="#planning-the-layout" id="planning-the-layout"><h2>Planning the Layout</h2></a>
+<p><em>Can you suggest any tool for planning a track</em>? Pen and Paper. It’s still the most efficient way to put your ideas down. Take a look at your list of track elements and put them together. Make sure to distribute them all over the track. You should avoid any entirely boring parts. Think about Holiday Camp here. It has that long part where you’re just heading back to the start line. It’s not too bad but it gets boring over time.</p>
+<p>If you have trouble finding a proper layout for your track, just have a look at stock tracks from above (You can search for maps on Re-Volt Frontend for some track renderings). It’s no shame to copy some elements from them.</p>
+<p>When you have an acceptable flow, start finding places for your special track elements and details. Don’t be vague about this. It will help you immensely if you have a proper map on paper that you could already race on. Don’t leave anything out!</p>
+<p>Before proceeding you should have a nice plan of your track. Take your time and rework it a few times. It saves a lot of work to have an accurate map. If you have one, it’s going to be easy to model your track!</p>
+<p>Here are some old maps of my first track:</p>
+<p><img src="skizze_ht.jpg" alt="sketch1" />
+<img src="skizze_ht2.jpg" alt="sketch2" /></p>
+<p>For this tutorial, I'm going to use this one:</p>
+<p><img src="sketch.png" alt="sketch art" /></p>
+<blockquote>
+<p>The more detailed your plan is, the easier it will be to model the track.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../02.tracks/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../02.tracks/02.resources/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../02.tracks/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../02.tracks/02.resources/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

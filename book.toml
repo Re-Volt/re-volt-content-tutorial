@@ -1,0 +1,5 @@
+[book]
+title = "RV Tutorials"
+authors = ["Marvin Thiel"]
+multilingual = false
+src = "src"
