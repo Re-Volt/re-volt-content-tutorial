@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>MakeItGood - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../index.html">Introduction</a></li><li class="affix"><a href="../00.todo/index.html">TODO</a></li><li><a href="../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../03.makeitgood/index.html" class="active"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#makeitgood" id="makeitgood"><h1>MakeItGood</h1></a>
+<p>At this point you should be done modeling and texturing your track.</p>
+<p>MakeItGood is a cheat code that enables you to access several different editing modes.</p>
+<blockquote>
+<p>To enable the edit modes: Launch Re-Volt in “-dev” mode (revolt.exe -dev). If you are using Re-Volt 1.2 or RVGL (which you should be), this is the way to go.</p>
+</blockquote>
+<p><strong>Alternatively:</strong> To get into each of the editing modes select Start Race from the main menu. Then select Single Race, and any game mode. Now put in “MAKEITGOOD” as a name and hit enter. After doing this you should hear a honking sound as it moves on to the car selection screen. Press Esc three times and it should take you back to the Race Type menu. At the bottom you will see a new option, Edit Mode. Select what edit mode you want. Once you get into the level, just follow the tutorial below for whatever mode your editing. You can start with POS Nodes, then continue with Track Zones and so on. Just follow the list of tutorials down below.</p>
+<table><thead><tr><th align="left">   </th><th align="left">  Edit Mode  </th><th align="left">  Description  </th></tr></thead><tbody>
+<tr><td align="left"> <img src="posnodes.jpg" alt="" /> </td><td align="left">  <a href="./01.pos-nodes">POS Nodes</a> </td><td align="left">  <strong>POS Nodes</strong> tell the Re-Volt engine about the race path, this includes distance your car is from the other cars in the race as well as the length of the track and what it takes to complete a lap on your track. Pos nodes will only define nodes, the orientation is given by Track zones. </td></tr>
+<tr><td align="left"> <img src="taz1.png" alt="" /> </td><td align="left">  <a href="./02.track-zones">Track Zones</a> </td><td align="left">  <strong>Track Zones</strong> tell the Re-Volt engine what order the cars need to take around your track to make a complete lap. They work in conjunction with Pos Nodes &amp; AI Nodes.Together with POS Nodes, they’ll determinate your position inside race path. </td></tr>
+<tr><td align="left"> <img src="ainodes.jpg" alt="" /> </td><td align="left">  <a href="./03.ai-nodes">AI Nodes</a> </td><td align="left">  <strong>AI Nodes</strong> are what the ai (computer) cars use to properly navigate the track. AI Nodes are mandatory in all tracks with the exception of battle levels and stunt tracks. </td></tr>
+<tr><td align="left"> <img src="force.png" alt="" /> </td><td align="left">  <a href="./04.force-fields">Force Fields</a> </td><td align="left">  <strong>Force Fields</strong> push and pull by applying different forces to cars around the track depending on how you set your fields up. You can use these in a variety of ways to enhance the theme of your track. For whatever reason, the word force is spelled <em>Farce</em> in the game. </td></tr>
+<tr><td align="left"> <img src="objects.jpg" alt="" /> </td><td align="left">  <a href="./05.objects">Objects</a> </td><td align="left">  <strong>Objects</strong> are 3D models with special features. This also includes the Pick-Ups which players get their weapons from. </td></tr>
+<tr><td align="left"> <img src="triggers.png" alt="" /> </td><td align="left">  <a href="./06.triggers">Triggers</a> </td><td align="left">  <strong>Triggers</strong> allow you to put direction arrows and other things into your track. This will help people navigate your track. It’s also used for the piano in Toy World and for cameras. </td></tr>
+<tr><td align="left"> <img src="camnodes.png" alt="" /> </td><td align="left">  Camera Nodes </td><td align="left">  <strong>Camera Nodes</strong> tell the Re-Volt engine where to place the cameras for replays, and what direction (order) they should travel. See TVTIME. </td></tr>
+<tr><td align="left"> <img src="default.jpg" alt="" /> </td><td align="left">  Visiboxes </td><td align="left">  <strong>Visiboxes</strong> will block out certain sections of your track while they are not in view, increasing the FPS (Frames Per Second) on your track, making the track a smoother racing experience </td></tr>
+<tr><td align="left"> <img src="instance.jpg" alt="" /> </td><td align="left">  Instances </td><td align="left">  <strong>Instances</strong> are models that you (or other people) have created that you can insert into your track to enhance your overall theme. </td></tr>
+<tr><td align="left"> <img src="lights.png" alt="" /> </td><td align="left">  Lights </td><td align="left">  Adding <strong>lights</strong> can help create a different mood for your track as well as the objects (such as cars) inside. </td></tr>
+<tr><td align="left">  <img src="default.jpg" alt="" /> </td><td align="left">  Portals (Erm, nothing to see here) </td><td align="left">  Not used in game. This mode was probably used for performance optimization, not teleportation. </td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../02.tracks/16.makeitgood/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../03.makeitgood/01.pos-nodes/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../02.tracks/16.makeitgood/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../03.makeitgood/01.pos-nodes/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

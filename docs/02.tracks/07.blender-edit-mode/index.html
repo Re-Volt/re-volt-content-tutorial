@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Blender: Edit Mode - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../00.todo/index.html">TODO</a></li><li><a href="../../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../../02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../../02.tracks/07.blender-edit-mode/index.html" class="active"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../../02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../../02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../../03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../../03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../../03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#edit-mode" id="edit-mode"><h1>Edit Mode</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#getting-your-map-inside-blender">Getting your Map inside Blender</a></li>
+<li><a href="#editing-an-object">Editing an Object</a>
+<ul>
+<li><a href="#vertex-select">Vertex Select</a></li>
+<li><a href="#edge-select">Edge Select</a></li>
+<li><a href="#face-select">Face Select</a></li>
+<li><a href="#select-linked">Select Linked</a></li>
+<li><a href="#add">Add</a></li>
+<li><a href="#subdivide">Subdivide</a></li>
+<li><a href="#extrude">Extrude</a></li>
+<li><a href="#make-a-faceedge">Make a Face/Edge</a></li>
+<li><a href="#loop-cut-and-slide">Loop Cut and Slide</a></li>
+<li><a href="#merge">Merge</a></li>
+<li><a href="#cut">Cut</a></li>
+<li><a href="#straighten">Straighten</a></li>
+<li><a href="#see-geometry-through-objects">See Geometry through Objects</a></li>
+</ul>
+</li>
+<li><a href="#warnings">Warnings</a></li>
+<li><a href="#workflow">Workflow</a>
+<ul>
+<li><a href="#creating-parts-separately-and-merging-them">Creating Parts separately and merging them</a></li>
+<li><a href="#extrusion-and-the-magnet-tool">Extrusion and the Magnet Tool</a></li>
+<li><a href="#flip-normals">Flip Normals</a></li>
+<li><a href="#zip-snapshot-02">Zip-Snapshot 02</a></li>
+<li><a href="#dealing-with-non-planar-polygons">Dealing with non-planar Polygons</a></li>
+<li><a href="#placeholders">Placeholders</a></li>
+<li><a href="#filling-in-the-placeholders">Filling in the placeholders</a></li>
+<li><a href="#zip-snapshot-03">Zip-Snapshot 03</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>In this step we will take a look at Blender's Edit Mode. You will be able to edit the objects that you created in the last step. We will actually start modeling our track now.<br />
+Modeling requires a lot of practice and you will need to find your own workflow. The only thing I can do here is to show you one way of modeling basic things. The main point of the tutorial is to show you how to use Blender in conjuction with Re-Volt. There are many modeling tutorials out there. <strong>I recommend watching some basic tutorials on YouTube first</strong>. If you trust your intuition, you can also go ahead and read this page, it's not <em>too</em> hard if you've used some other rather complex programs.</p>
+<a class="header" href="#getting-your-map-inside-blender" id="getting-your-map-inside-blender"><h2>Getting your Map inside Blender</h2></a>
+<p>You surely want to model along your map that you created.</p>
+<p>Go to the Blender Preferences and enable the <em>Import Images as Planes</em> plugin (Go back <a href="/tracks-and-modeling/setup#blender">here</a> if you forgot how to enable plugins. You don't need to install it, only activate it, since it comes with Blender).</p>
+<p><img src="img_plugin.png" alt="activate the plugin" /></p>
+<p>Now go to <strong>File -&gt; Import -&gt; Images as Planes</strong> and select your map.</p>
+<p>This will give you a plane, you should not be able to see the texture. To fix this, enable <em>Textured Solid</em> in the right sidebar (you can toggle the right sidebar with <strong>N</strong> and the left one with <strong>T</strong>):</p>
+<p><img src="textured_solid.png" alt="enable textures on solid-shaded objects" /></p>
+<p>Now it is time to <strong>scale the map up</strong>. We can change the scale later but it is important to have it somewhat right.
+To do that, select the map with the <strong>Right</strong> mouse button so it's outlined in orange (as in the screenshot above). Then press <strong>S</strong> on the keyboard and move your mouse. Apply with <strong>ENTER</strong>, discard with <strong>ESC</strong>. (You can also use the mouse buttons to confirm or dismiss changes when scaling.)</p>
+<p>For my track, this seems alright (compare it with the grid):</p>
+<p><img src="scale.png" alt="scale" /></p>
+<blockquote>
+<p><strong>Advanced Tip</strong>: Import a stock track and compare it to your plan. Go to <strong>File -&gt; Import -&gt; Re-Volt</strong> and choose a track that is roughly the size of your track. The select your map object and scale/rotate it accordingly. If you are satisfied, select your map object and press <strong>CTRL I</strong> to invert your selection. This way you will have the imported stock track selected which you can now delete with <strong>DELETE</strong>.</p>
+</blockquote>
+<p>Now move the map so that your desired start/finish line is centered on the main grid (I have already done that on the last screenshot). The positive Y-axis (green arrow) is the forward direction. The screenshot above shows an example. This way we don't need to specify the starting position in the <strong>.inf</strong> file (don't worry, you'll be able to adjust this at any point of time).</p>
+<a class="header" href="#editing-an-object" id="editing-an-object"><h2>Editing an Object</h2></a>
+<p>Set your cursor to a part of your track you want to work on (click on your map to move the cursor there) and add a Plane. Feel free to focus on your newly created object with <strong>NUMPAD PERIOD</strong>.<br>
+Now press <strong>TAB</strong> to enter <em>Edit Mode</em>.<br>
+Here I'll show you some of the basic techniques that you can use to model your track geometry. There are many ways of doing this, so feel free to try out what works for you (as long as you stick to the <a href="#warnings">rules</a> further down this page).</p>
+<a class="header" href="#vertex-select" id="vertex-select"><h3>Vertex Select</h3></a>
+<p>You will see the objects vertices now. Blender defaults to vertex mode by default. Select a vertex and move it around. It works just like the Object mode covered in the previous step. Now select two vertices and try to scale them. You will see that the center of scaling is the median point of the two vertices (the middle). Now select a third one and rotate them. If you're feeling comfortable with that, move on to the next mode. If not, keep experimenting.</p>
+<a class="header" href="#edge-select" id="edge-select"><h3>Edge Select</h3></a>
+<p>Switching modes is easy. There is a bar of three buttons located at the bottom of the viewport:
+<img src="edge_select.png" alt="edge selection" />
+Click the center button to enable edge select. Just like with the vertex selection mode, you can now select edges of your object (two vertices at once, so to speak).</p>
+<a class="header" href="#face-select" id="face-select"><h3>Face Select</h3></a>
+<p>You can also select entire faces (the area contained by vertices and edges). It is the third button located on the same bar.</p>
+<p>With these selections, you can perform the same actions as with the objects. You can scale, rotate, translate, duplicate, ...
+Now there are some more tools to edit the geometry of objects. I will list the most important ones below and explain how they are used:</p>
+<a class="header" href="#select-linked" id="select-linked"><h3>Select Linked</h3></a>
+<p>To select everything that is linked, i.e. all that belongs to a mesh, press <strong>CTRL + L</strong>. This is handy if you have a lot of geometry in one object. You can then move, delete or do other things with the selection.</p>
+<a class="header" href="#add" id="add"><h3>Add</h3></a>
+<p>You can still add an <strong>mesh</strong> to the <strong>object</strong> you're currently editing: <strong>SHIFT + A</strong>. It's just like in the object mode.</p>
+<p><img src="add.png" alt="add an object to a mesh" /></p>
+<a class="header" href="#subdivide" id="subdivide"><h3>Subdivide</h3></a>
+<p>Press <strong>W</strong> and then <strong>S</strong> to subdivide your selection.</p>
+<p><img src="sibdiv.jpg" alt="subdivision" /></p>
+<a class="header" href="#extrude" id="extrude"><h3>Extrude</h3></a>
+<p>Select a vertex, edge or face and press <strong>E</strong>. New geometry will pop out along the normal axis of the selected thing. If you don't want to move it, press <strong>ESC</strong> or <strong>RMB</strong>. It will still be extruded. but you will be able to move it yourself. If you want to undo, press <strong>CTRL Z</strong> as usual.</p>
+<p><img src="extrude.gif" alt="extrude" /></p>
+<a class="header" href="#make-a-faceedge" id="make-a-faceedge"><h3>Make a Face/Edge</h3></a>
+<p>To fill in a face or edge from selected vertices or edges, press <strong>F</strong></p>
+<p><img src="fill.jpg" alt="fill" /></p>
+<a class="header" href="#loop-cut-and-slide" id="loop-cut-and-slide"><h3>Loop Cut and Slide</h3></a>
+<p>Press <strong>CTRL + R</strong> and then scroll to adjust the number of cuts. <strong>LMB</strong> to confirm. Then you will be able to move the cut. Move and confirm with <strong>ENTER</strong> or <strong>LMB</strong>, alternatively press <strong>ESC</strong> or <strong>RMB</strong> to not move the cut.
+<img src="cut.gif" alt="cut" /></p>
+<a class="header" href="#merge" id="merge"><h3>Merge</h3></a>
+<p>You can merge two vertices by selecting them and pressing <strong>ALT + M</strong>. Alternatively, you can also select them and scale them to 0. Then you'd need to remove double vertices by pressing <strong>SPACE</strong> and searching for <em>Remove Doubles</em>.</p>
+<a class="header" href="#cut" id="cut"><h3>Cut</h3></a>
+<p>Sometimes it's necessary to cut some polygons to get a more quadratic shape out of them so mapping a texture onto them will be easier later. An example can be seen here where I cut some triangles into the mesh to connect the two rooms with a door and a threshold. In Edit Mode, press <strong>K</strong> and then click on parts of the mesh you want to cut. Confirm with <strong>ENTER</strong>. In the example below, I'm creating the green lines by cutting there. (You can watch this technique on <a href="https://youtu.be/sxuiw1u5mmg?t=7m3s">YouTube</a>)
+<img src="cut.png" alt="cut" /></p>
+<a class="header" href="#straighten" id="straighten"><h3>Straighten</h3></a>
+<p>If you have a face or an edge that is not straight and you want to level it/bring it to one height, select the vertices in question and scale them to 0 along the Z (or any other) axis. This way, you can align anything you want along a line.</p>
+<a class="header" href="#see-geometry-through-objects" id="see-geometry-through-objects"><h3>See Geometry through Objects</h3></a>
+<p>There is a handy little function that lets you see through objects. You'll be able to select all the polygons, even the ones that would otherwise be hidden by other geometry/objects.
+<img src="seethrough.jpg" alt="limit selection to visible" /></p>
+<a class="header" href="#warnings" id="warnings"><h2>Warnings</h2></a>
+<p><strong>Before you actually start editing, you need to keep a few things in mind</strong> (Don't be scared. If you get something wrong or don't understand something, you can always get help on the forums.):</p>
+<ul>
+<li><strong>Save often and create backups!</strong></li>
+<li>The more polygons you have, the more it is going to lag in-game. Keep your track under 60,000 polygons.</li>
+<li>Keep the geometry simple! If your track has simple geometry, players will have more fun racing it.</li>
+<li>Keep your quads square! A quad should be 'as big' as the texture you're planning to use with it. You cannot tile textures, you can only tile polygons. Import (File -&gt; Import -&gt; Re-Volt) a stock tracks if you don't understand. You will see that there are many square polygons used for surfaces that largely have the same texture. This is a technical limitation, I will explain it further at a later point. If you have sections with too large polygons, subdivide or cut them so that they <em>fit</em> the textures.</li>
+<li><a href="#dealing-with-non-planar-polygons">Learn how to deal with non-planar polygons.</a> Planar quads are easier to work with.</li>
+</ul>
+<a class="header" href="#workflow" id="workflow"><h2>Workflow</h2></a>
+<p>If you felt brave and got stuck anyway, you can still <a href="https://youtu.be/sxuiw1u5mmg">watch the following steps on YouTube</a></p>
+<p>I started tracing the track by adding a plane, extruding, rotating, subdividing, ...
+<img src="workflow01.png" alt="Beginning to model" />
+I added one plane, scaled it up and subdivided it. Then I extruded parts and transformed them into the other rooms using the techniques mentioned above.</p>
+<a class="header" href="#creating-parts-separately-and-merging-them" id="creating-parts-separately-and-merging-them"><h3>Creating Parts separately and merging them</h3></a>
+<p>Some parts can be modeled as separate meshes and then merged. Here I cut some polygons to fit another part of the track using the knife tool. Then I will merge them with <strong>ALT + M</strong>:</p>
+<p><img src="combine.jpg" alt="combining meshes" /></p>
+<p>New parts start as a long plane that can be subdivided or cut:</p>
+<p><img src="newcut.jpg" alt="cutting meshes" /></p>
+<p>Combining all the techniques explained above, i copied parts and merged them with other parts. Now most of the track is outlined. It doesn't need to be <em>too</em> clean as we will polish everything in the end. Just make sure that you have no double vertices (remember: remove doubles) and that everything is connected nicely. Everything is flat at the moment (to flatten: select everything and scale Z to 0).</p>
+<p><img src="full.png" alt="full view" /></p>
+<a class="header" href="#extrusion-and-the-magnet-tool" id="extrusion-and-the-magnet-tool"><h3>Extrusion and the Magnet Tool</h3></a>
+<p>I then started extruding walls and other things from the rooms that I modeled. A very useful tool is the magnet. You can find it in the bottom toolbar of the viewport (in the marked dropdown list, select Vertex):</p>
+<p><img src="snap.jpg" alt="snap to vertex" /></p>
+<p><img src="extrude2.png" alt="" /></p>
+<p>You can activate the magnet tool by either clicking on the magnet or holding down <strong>CTRL</strong>. Now you can select a row of edges, extrude it and then move it, point to the vertex you want to snap to, click when it snaps to the right vertex. If not, press <strong>ESC</strong> and start moving the edges again, this time with your mouse cursor placed somewhere else. You'll get the hang of it. For example, you can get all walls to be the same height with this.</p>
+<p><img src="extrude_snap.gif" alt="extrude gif" /></p>
+<a class="header" href="#flip-normals" id="flip-normals"><h3>Flip Normals</h3></a>
+<p>(invisible polygons, wrong normal direction)</p>
+<p>Sometimes it can happen that your polygons are the wrong way around. They are shaded differently:</p>
+<p><img src="flipn1.jpg" alt="wrong normal direction" /></p>
+<p>To make those polygons easier to spot, enable <em>Backface Culling</em> in the right sidebar and polygons will only be visible from their <em>up</em>-side:</p>
+<p><img src="flipn2.jpg" alt="backface culling" /></p>
+<p>To flip a polygon around, select it and use the <em>Flip Direction</em> function in the left sidebar:</p>
+<p><img src="flipn3.jpg" alt="flip normals" /></p>
+<p>Your polygon should now be facing the right direction:</p>
+<p><img src="flipn4.jpg" alt="flipped normals" /></p>
+<p>Remember, you can select multiple polygons while holding down <strong>SHIFT</strong>.</p>
+<a class="header" href="#zip-snapshot-02" id="zip-snapshot-02"><h3>Zip-Snapshot 02</h3></a>
+<p>If you're stuck, here is my current level folder:</p>
+<p><a href="track_snapshot02.zip">Download Zip File</a></p>
+<p><img src="zip02.png" alt="screenshot of the zip" /></p>
+<a class="header" href="#dealing-with-non-planar-polygons" id="dealing-with-non-planar-polygons"><h3>Dealing with non-planar Polygons</h3></a>
+<p>How to spot non-planar faces:</p>
+<table><thead><tr><th> planar </th><th> non-planar </th></tr></thead><tbody>
+<tr><td> <img src="planar.gif" alt="planar gif" /> </td><td> <img src="nonplanar.gif" alt="non-planar gif" /> </td></tr>
+</tbody></table>
+<p>Always pay attention to non-planar polygons (remember, they can be split in two ways). Re-Volt does not like quads that are not straight. If they are non-planar, you will need to split them (if cars will drive on them). The best way to do it is selecting the two opposing vertices and pressing <strong>J</strong> (this will split quad faces to tris). Here is an example of the ambiguity (Blender might split it the way you don't want):
+<img src="nonplanar.jpg" alt="example of non-planar faces" /></p>
+<p>If you have a large selection of non-planar polygons, for example on a bumpy hill or a lawn, you can select all of them and then press <strong>CTRL + T</strong>. This will triangulate them automatically.</p>
+<a class="header" href="#placeholders" id="placeholders"><h3>Placeholders</h3></a>
+<p>I am planning to model some parts of the track later, mostly decorational objects. I changed to object mode by pressing <strong>TAB</strong> and created a few cubes, rotated and scaled them the way I want. Later, I will replace them with proper meshes.</p>
+<a class="header" href="#filling-in-the-placeholders" id="filling-in-the-placeholders"><h3>Filling in the placeholders</h3></a>
+<p><a href="https://youtu.be/Thte7eVJUy0">YouTube: Placing Placeholders</a></p>
+<p>When you're done modeling a solid base for the cars to drive on, you can start filling in more detailed objects. You can just place new objects (<strong>Shift + A</strong>, make sure that you are in Object mode by pressing TAB and checking the bottom bar of the view port). Then you can get rid of the placeholder objects. All those objects can be separate, they'll all be exported to the track file. It's recommended to keep the base in one object, though. It's best to have one solid mesh for the cars to drive on.</p>
+<p><img src="placeholders.png" alt="placeholders" /></p>
+<a class="header" href="#zip-snapshot-03" id="zip-snapshot-03"><h3>Zip-Snapshot 03</h3></a>
+<p>If you're stuck, here is my current level folder:</p>
+<p><a href="track_snapshot03.zip">Download Zip File</a></p>
+<a class="header" href="#conclusion" id="conclusion"><h2>Conclusion</h2></a>
+<p>At the end of this step you should have a mesh of your track (mostly done, you can polish it later, of course). If you're doing this for the first time: Take your time, start over if you don't like your results. It's a steep learning curve that is tackled easiest in small bits. It also helps to import some simple models from the game and then remodel them. See how you can improve your workflow. Feel free to use google or ask on the forums if you are stuck! There are lots of ways to do things.</p>
+<p>The next step is to texture the track. If you have come this far, congratulations! There is still a long way to go but I am sure you learned a lot.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../02.tracks/06.blender-first-steps/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../02.tracks/08.creating-textures/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../02.tracks/06.blender-first-steps/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../02.tracks/08.creating-textures/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

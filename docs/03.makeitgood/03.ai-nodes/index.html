@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AI Nodes - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../00.todo/index.html">TODO</a></li><li><a href="../../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../../02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../../02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../../02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../../02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../../03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../../03.makeitgood/03.ai-nodes/index.html" class="active"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../../03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#ai-nodes" id="ai-nodes"><h1>AI Nodes</h1></a>
+<blockquote>
+<p>To make the CPU cars drive around in a track you will need AI nodes. Without AI nodes you can’t have a proper race against the AI.</p>
+</blockquote>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#keymap">Keymap</a></li>
+<li><a href="#what-is-ai">What is AI?</a></li>
+<li><a href="#what-exactly-are-ai-nodes">What exactly are AI nodes?</a></li>
+<li><a href="#1-how-to-enter-edit-mode">1. How to enter edit mode?</a></li>
+<li><a href="#2-making-your-track-ready-for-ai-nodes">2. Making your track ready for AI nodes.</a></li>
+<li><a href="#3-inserting-the-first-nodes">3. Inserting the first nodes</a></li>
+<li><a href="#4-connecting-the-nodes">4. Connecting the nodes</a></li>
+<li><a href="#5-reconfiguring-the-ai-path">5. Reconfiguring the AI Path</a>
+<ul>
+<li><a href="#the-purple-line">The Purple Line</a>
+<ul>
+<li><a href="#tricks-for-using-the-purple-line">Tricks for using the purple line</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#6-ai-nodes-properties">6. AI Nodes Properties</a></li>
+<li><a href="#a-racing-line">A. Racing Line</a></li>
+<li><a href="#b-pickup-route">B. Pickup Route</a></li>
+<li><a href="#c-stairs">C. Stairs</a></li>
+<li><a href="#d-bumpy">D. Bumpy</a></li>
+<li><a href="#e-25-mph-slow-down">E. 25 mph Slow Down</a></li>
+<li><a href="#f-soft-suspension">F. Soft Suspension</a></li>
+<li><a href="#g-jump-wall">G. Jump Wall</a></li>
+<li><a href="#h-title-screen-slow-down">H. Title Screen Slow down</a></li>
+<li><a href="#i-turbo-line">I. Turbo Line</a></li>
+<li><a href="#j-long-pickup-route">J. Long Pickup Route</a></li>
+<li><a href="#k-short-cut">K. Short Cut</a></li>
+<li><a href="#l-long-cut">L. Long Cut</a></li>
+<li><a href="#m-barrel-block">M. Barrel Block</a></li>
+<li><a href="#n-off-throttlepetrol-throttle">N. Off Throttle/Petrol Throttle</a></li>
+<li><a href="#o-wilderness">O. Wilderness</a></li>
+<li><a href="#p-152030-mph-slowdowns">P. 15/20/30 MPH Slowdowns</a></li>
+<li><a href="#extra-things">Extra Things</a></li>
+<li><a href="#tips-and-tricks">Tips and Tricks</a>
+<ul>
+<li><a href="#string-multiple-node-properties-together-to-get-the-best-ai">String multiple node properties together to get the best AI.</a></li>
+<li><a href="#keep-the-line-level-and-smooth">Keep the line level and smooth.</a></li>
+<li><a href="#create-an-ai-line-out-of-a-ghost-path">Create an AI line out of a ghost path</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#keymap" id="keymap"><h2>Keymap</h2></a>
+<p><img src="MIG_AI_Nodes.png" alt="" /></p>
+<a class="header" href="#what-is-ai" id="what-is-ai"><h2>What is AI?</h2></a>
+<p>AI is short for Artificial Intelligence, which means that the computer cars have their own “fake” intelligence. But still, the cars don’t know where to go, and how fast they should go, and when to brake. This is when AI nodes comes in handy.
+The cars do know how to read the AI node path, which is a part of their intelligence.</p>
+<a class="header" href="#what-exactly-are-ai-nodes" id="what-exactly-are-ai-nodes"><h2>What exactly are AI nodes?</h2></a>
+<p>AI nodes are nodes in a track, which you can connect to make a complete path. The nodes tell the cars how to drive in that part of the track. With AI nodes you have the exact control over your AI cars, telling them what way to go, let the cars maintain a certain speed, give the cars actions, like: taking the pickup route, using the battery, drive careful under stairs and many more things.</p>
+<a class="header" href="#a1-how-to-enter-edit-mode" id="a1-how-to-enter-edit-mode"><h2>1. How to enter edit mode?</h2></a>
+<p>There are two options</p>
+<ul>
+<li>v1.2 of Re-volt or RVGL has a DEV-mode. You can unlock DEV-mode by pressing the following arrows in the start menu: up, right, down, left, up, left, down, right. Now you have unlocked the edit mode.</li>
+<li>You can unlock edit mode by typing MAKEITGOOD in the name wheel. The edit mode is less advanced than the DEV-mode, because DEV-mode unlocks all the cars while being in the mode, unlock all the tracks, give you a few options while editing like pressing F8 for making a screenshot, F9 for statistics and much more. Thus I recommend using the DEV-mode. For this you have to download version 1.2, which you can find on the following website: <a href="http://rv12.revoltzone.net">http://rv12.revoltzone.net.</a>.</li>
+</ul>
+<p>After unlocking edit mode or DEV mode you go to the race selection screen. Go down the menu and there is a new mode called Edit mode. If you choose this mode you can use the left and right arrow keys to navigate between modes, for example: POS nodes, Objects, Track zones, Triggers, Lights, AI nodes and much more. But the thing we need are AI nodes. For making the the first AI nodes you might want to select Edit mode instead of Single race, so let’s do that.</p>
+<p>Why select Edit mode instead of Single race?</p>
+<p>In single race you have AI cars. Those AI cars will follow your node path. If your node path is not finished, the game will crash! By choosing Edit mode you can safely create the AI path, before letting the AI cars drive on it, as edit mode is quite the same as the Practice mode, just with a timer. (basically single race with one car.)</p>
+<p><img src="aitut1.png" alt="" /></p>
+<blockquote>
+<p>The AI node edit mode in the race selection menu.</p>
+</blockquote>
+<p>If you have done this, we can advance to the next step, which is making your track ready for AI nodes!</p>
+<a class="header" href="#a2-making-your-track-ready-for-ai-nodes" id="a2-making-your-track-ready-for-ai-nodes"><h2>2. Making your track ready for AI nodes.</h2></a>
+<p>Before creating AI nodes I suggest to create POS nodes and Track zones first. Also you have to put a definite starting position in your track. This to make things easier for you.</p>
+<a class="header" href="#a3-inserting-the-first-nodes" id="a3-inserting-the-first-nodes"><h2>3. Inserting the first nodes</h2></a>
+<p>Go to the track you want to edit. To edit you have to press the F4 button, to enter Edit Mode. Your HUD will disappear and a mouse arrow will appear. This mouse arrow is your best friend, with the arrow you can select nodes, navigate through the track (with right mouse button), do a lot of other things.</p>
+<p>Important to remember: the Left side is the Green bubble, and in the Right side, put the Red bubble.</p>
+<p>Press Insert, to insert your first node at the left side of the track. This will be the place where the green node spawns. Hold your left mouse button and move the red node to the right side of the track.</p>
+<p><img src="placenode.gif" alt="" /></p>
+<blockquote>
+<p>Placing the first node in AI nodes Edit Mode.</p>
+</blockquote>
+<p>So, you have placed your first node and two bubbles! Now repeat this throughout the whole track. There are a few tricks in making AI nodes.</p>
+<ol>
+<li>At least place a pair of nodes every 3 car lengths.</li>
+<li>Turns will need more nodes, for the better AI intelligence.</li>
+<li>More nodes means better intelligence, the AI will get more information -&gt; can cope better with AI problems, like getting stuck, crashing into walls etc.</li>
+</ol>
+<p><img src="firstnodes-e1408965148693.jpg" alt="" /></p>
+<blockquote>
+<p>Nodes for a normal turn.</p>
+</blockquote>
+<p><img src="sharpnodeturn.jpg" alt="" /></p>
+<blockquote>
+<p>Nodes for a sharp 90 degree turn.</p>
+</blockquote>
+<p>As you see in the two pictures above, you will see both ways to place nodes. In a normal turn you don’t have to put as much as in a sharp turn. It is important to have more nodes, as the AI won’t steer well while being in both nodes, it needs new instructions. If there are a lot of nodes, you will see the AI steering much smoother!</p>
+<p>If you placed all the nodes, then it should look like this:</p>
+<p><img src="aipathnodes.png" alt="" /></p>
+<p><strong>Note:</strong> Please notice that they are NOT connected and that there is no middle line yet.</p>
+<p>As you can notice the ‘bubbles’ are blinking. This is because they are not connected yet. In the next step you will learn how to connect nodes.</p>
+<a class="header" href="#a4-connecting-the-nodes" id="a4-connecting-the-nodes"><h2>4. Connecting the nodes</h2></a>
+<p>If you did everything correct, and followed correct the last steps, you will be able to connect the AI Nodes that you inserted.</p>
+<p>Put your mouse over the first start node. Press enter to select the node. Hover your mouse over the second node, and press Space. Now hover the mouse over the next node, and press Space again! Now you have connected the first three nodes. By doing so this way, it will look like this:
+<img src="aiconnectnodes.gif" alt="" /></p>
+<blockquote>
+<p>Connecting the first two AI nodes!</p>
+</blockquote>
+<p>Connecting AI nodes has never been so easy!</p>
+<p>Continue until you connect all lines correctly.</p>
+<blockquote>
+<p><strong>Note:</strong> Check your nodes, so they have green bubbles left, and red bubbles right! This is very important, if this is not the cause your track will crash most likely. BUT! Why don’t the nodes stop blinking? Don’t worry.</p>
+</blockquote>
+<p>You have to save! To save you have to press ‘Left Ctrl + F4‘.After this you will see a pop-up window, telling you “trackname.fan” is saved! Now check the AI Nodes, and you’ll see that they’re not blinking anymore. If they are still blinking then you did something wrong. This happens if you didn’t connect them properly.</p>
+<p>After this, go back to the main menu. Now start a single Race in your track, and see those AI cars driving, following your nodes? Good job.</p>
+<a class="header" href="#a5-reconfiguring-the-ai-path" id="a5-reconfiguring-the-ai-path"><h2>5. Reconfiguring the AI Path</h2></a>
+<p>Now you’re going to learn how to reconfigure the AI path.</p>
+<p>I suppose your AI nodes kind of look like this after connecting:
+<img src="aiconnectednodes.png" alt="" /></p>
+<blockquote>
+<p>AI nodes after connecting them!</p>
+</blockquote>
+<p>What is wrong? Well, nothing is wrong! Just the AI path is exactly in the middle of all the nodes. Maybe it could work on some tracks, but not on ones with 90 degree sharp turns, chicanes, etc. To fix this, we need to reconfigure the AI path.</p>
+<p>How to do this? We have to use the numpad / and * keys first, to edit the white path. Try it for yourself; Select the first node, press *, and the white line will move to right. Same goes for going left with the / key.</p>
+<blockquote>
+<p><strong>Note:</strong> This is only possible with a numpad!</p>
+</blockquote>
+<p><img src="aireconfigurednodes.png" alt="" /></p>
+<blockquote>
+<p>AI Nodes after reconfiguring them.</p>
+</blockquote>
+<p>Okay, look at that white line now! Looks much smoother, isn’t it?</p>
+<p>There are a few tricks. While editing the white line you have to think about the smoothness of the AI, and let them brake as less as possible, as pretty many cars in Re-Volt doesn’t have the best acceleration.</p>
+<p>In the real RC world there is a trick for taking turns, in a real track.</p>
+<table><thead><tr><th> <img src="slowingcorner.jpg" alt="" /> </th><th> <img src="slowingcorner2.jpg" alt="" /> </th></tr></thead><tbody>
+<tr><td> This is the standard trick of taking a corner in a RC car race. </td><td> Multiple ways of taking a corner. </td></tr>
+</tbody></table>
+<p>Those pictures are from a real RC manufacturer (tamiya.com), take these pictures in consideration for creating the perfect AI.</p>
+<a class="header" href="#the-purple-line" id="the-purple-line"><h3>The Purple Line</h3></a>
+<p>While editing nodes you see a purple line. What the hell is that???</p>
+<p>The purple line is the overtaking line, for your AI nodes. If there is a faster car, they can take the overtaking line so they can overtake the slower car, when the slower car gets lapped, or making a collision with your or another car.</p>
+<p>After creating your white line, I suggest select the first node, press Shift+Space to delete the purple line. After that you can edit the overtaking line with the numpad keys 8 and 9.</p>
+<a class="header" href="#tricks-for-using-the-purple-line" id="tricks-for-using-the-purple-line"><h4>Tricks for using the purple line</h4></a>
+<p>With purple line you can do a few nice tricks, see here:</p>
+<p><img src="aistartlinetrick.png" alt="" /></p>
+<blockquote>
+<p>The purple line trick, for the start – the bottom four cars will follow the purple line in this case, thus there will be less start crashes!</p>
+</blockquote>
+<p>The second trick – you can use the purple line to let cars avoid the oil puddles that are commonly placed – a lot of crashes happen there which means you can “overtake” them, and the oil puddle!</p>
+<p><img src="aioilpuddle.png" alt="" /></p>
+<blockquote>
+<p>Okay, a car placed a oil puddle between two lines. Imagine if there was one line, then the chance for driving over an oil puddle is doubled. The purple line prevented it a few times.</p>
+</blockquote>
+<a class="header" href="#a6-ai-nodes-properties" id="a6-ai-nodes-properties"><h2>6. AI Nodes Properties</h2></a>
+<p>Now that you have the base idea down, it’s time to learn how to give properties to the AI Nodes. To change the properties for the racing line press ‘Numpad Enter‘ and you’ll see that the line changes its color, depends of the property. If you want to move the properties the other way, press ‘Left Shift + Numpad Enter‘ This is one of the most important steps when you create AI for your track.</p>
+<a class="header" href="#a-racing-line" id="a-racing-line"><h2>A. Racing Line</h2></a>
+<p>It is the first property you get. If you take a look, after you connected the nodes, you’ll see a white line in the middle. That is called Racing Line. It means, that it doesn’t really have a property. It leaves the AI Cars to drive at their max speed. That’s why in the beginning of the curves you should never use this. This is recommended for the zones where you have enough space to drive faster, you and the AI, like the long straights in Toys in the Hood 1.</p>
+<p><img src="aitut4.png" alt="" /></p>
+<blockquote>
+<p>The white Race Line property – cars will drive at their maximum speed</p>
+</blockquote>
+<a class="header" href="#b-pickup-route" id="b-pickup-route"><h2>B. Pickup Route</h2></a>
+<p>This one is always used when you have a track with splitways. The AI takes only one route out of two, then choose for the one they don’t take, the property as Pickup Route. The AI cars that don’t have any weapon ready for use, will take that route to get a weapon from the pickups.</p>
+<p>If the car has a weapon ready it will ignore that route. As you can notice the line is now light blue. That means that it’s not a simple white racing line anymore, you only need to assign it one or two times, not for the whole splitway.</p>
+<p><img src="aitut5.png" alt="" /></p>
+<p>Can you see that car that used the route with the Pickup? Can you also notice the blue line? This means that the car doesn’t have any weapon ready.</p>
+<a class="header" href="#c-stairs" id="c-stairs"><h2>C. Stairs</h2></a>
+<p>This is one of the least used AI properties. It is always used when the AI Cars drive on stairs, the AI will stay carefully on their wheels and maintian balance. The line of this property is grey.</p>
+<p><img src="aitut6.png" alt="" /></p>
+<a class="header" href="#d-bumpy" id="d-bumpy"><h2>D. Bumpy</h2></a>
+<p>The big roaring cars, like Phat Slug, Panga, Bertha Ballistics and Mouse takes that line. It is used for tracks with normal and offroad roads. When you make AI Nodes for the offroad part, choose, like on Pickup Route, Bumpy. I don’t really think it works, but it worked on some tracks. It is like Soft Suspension – another AI Nodes property that we’ll learn soon. The line of this property is a dark brown. Aeon, a good AI Nodes editor says that the Bumpy is:</p>
+<blockquote>
+<p>(Aeon)</p>
+<blockquote>
+<p>Bumpy – or whatever it was called – is a route that is more likely to be chosen by cars which have a high Suspension AI setting.</p>
+</blockquote>
+</blockquote>
+<p>And he was right!</p>
+<p><img src="aitut7.png" alt="" /></p>
+<p>So, if you have offroad tracks, try to use this property to let the car take a good shortcut.</p>
+<a class="header" href="#e-25-mph-slow-down" id="e-25-mph-slow-down"><h2>E. 25 mph Slow Down</h2></a>
+<p>It does what it says. It slows down the AI car to 25 mph. If the car drives faster than this, it will slow it down. It is a very good one. You’ll need also Petrol Throttle or Off Throttle… I’ll tell you soon why. The line of this property is yellow.</p>
+<p><img src="aitut8.png" alt="" /></p>
+<p>Do you see the yellow lines? That is the 25 mph slow down property. See also the car? It drives now at 25 mph because it is driving through that node.</p>
+<a class="header" href="#f-soft-suspension" id="f-soft-suspension"><h2>F. Soft Suspension</h2></a>
+<p>It does again what it says. It is used by the AI Cars that have soft suspension. Here are the stock ones that uses it: Phat Slug, Mouse, Bertha Ballistics, Rotor &amp; Panga.
+It is represented by a light pink line. It can be used mostly on track with splits or shortcuts.Let me show you a picture with it and how it works.</p>
+<p><img src="aitut10.png" alt="" /></p>
+<p>Can you see that small car? That one is a custom one that has soft suspension. That’s why it chose that line. Also the light brown line is the Soft Suspension. So, now we can advance to the next step!</p>
+<a class="header" href="#g-jump-wall" id="g-jump-wall"><h2>G. Jump Wall</h2></a>
+<p>It is used to “skip” sections in the track, for example in case you have a track with a long jump and a bottomless pit, weak cars most likely won’t make that jump.
+If you use nodes with that property there and your car crashes in that section, it will be teleported to the next “non-Jump Wall” node (thus helping the cars over the jump).</p>
+<p>However even though this property can be extremely helpful in tracks that have such jumps, it should also be used with care as it could be exploited by players in certain situations where the crash could end up being beneficial instead of causing you to loose time (that’s probably why its not used that much).
+But as long as the nodes are placed properly and the track has been tested well enough, this shouldn’t be an issue.</p>
+<a class="header" href="#h-title-screen-slow-down" id="h-title-screen-slow-down"><h2>H. Title Screen Slow down</h2></a>
+<p>The name explains it all, it was used in the intro, so the AI cars would drive very slow.</p>
+<p>It slows down the car. It slows most of all properties, it slows a car to 5 mph. It isn’t used in any of the stock tracks and not too much at customs. It’s useful for the tracks with small racing line, where the AI crashes in a lot of things.</p>
+<p><img src="aitut12.png" alt="" /></p>
+<p>Do you see the car? It’s going very slow at about 5 mph because the racing line is very small, that’s why there are also AI Nodes walls (we’ll learn soon about it).If you understood what it is, let’s go on!</p>
+<a class="header" href="#i-turbo-line" id="i-turbo-line"><h2>I. Turbo Line</h2></a>
+<p>This one if for telling the AI Cars that it’s a good place for using battery. If the AI car has the battery as the next ready weapon and it drives over a node with this property it’ll use the battery. A tip: don’t place this property along the road ahead. Only at the beginning. If not, it could use the battery only when it finished going through the AI and will be a problem, because a battery-driven AI car is hard to tame with the normal nodes. It is represented by a orangish-red line to suit its action.</p>
+<p><img src="aitut13.png" alt="" /></p>
+<p>Do you see Cougar that uses the battery? Well, this is because it drives over the AI Nodes with Turbo Line property. Also, do you see that it’s low ahead road? No curves? So it has to be. Find the best place for battery use, and use the property there. Every track needs one.If you have questions, I hope you know what you should do, just ask here! And now let’s advance!</p>
+<a class="header" href="#j-long-pickup-route" id="j-long-pickup-route"><h2>J. Long Pickup Route</h2></a>
+<p>Like ‘Pickup Route’ this is used to tell the AI Car where to drive to get a pickup if it hasn’t one. It doesn’t work every time on all tracks, but sometimes you can find workable one. The CTR Palm Marsh track used a lot of this. There are 2 routes. One shorter and one longer. On the shorter is no pickup, and on the longer is. So, when you make AI for the longer route, use this property to tell the AI car that there’s a pickup. If not, the AI will ignore that route. The cars that have a weapon already, will ignore that route. The color for this line is dark red.</p>
+<p><img src="aitut14.png" alt="" /></p>
+<p>Do you see the car that uses that line? And it’s also a pickup there that the car just picked up. Also, please notice that that route is longer that the other. That’s why it is called ‘Long Pickup Route’.</p>
+<a class="header" href="#k-short-cut" id="k-short-cut"><h2>K. Short Cut</h2></a>
+<p>It tells the car when there’s a shorter way. If you have a track with two routes, where ever you put that property, the car will follow it. Even if you put the Short Cut for the longer route, the AI will drive only on that route, even if it’s longer. The AI cars sometimes take this route for a short cut. Pretty self explanatory. If the car is close to the node it will take that line over the default racing line. Here’s a picture so you can better understand what I mean.</p>
+<p><img src="aitut15.png" alt="" /></p>
+<p>Do you see the cars and the Skid Marks? That means that all the AI cars take that route, even if, how it seems, it’s not the shortest. So, if you want the AI to follow only one route, use this property with the pink line named Short Cut. Let’s skip now to the next property, right? wink.gif</p>
+<a class="header" href="#l-long-cut" id="l-long-cut"><h2>L. Long Cut</h2></a>
+<p>The AI cars sometimes take this route if they accidentally drive into it. This may happen because of oil, getting shoved, or just a simple loss of control.</p>
+<p><img src="longcut.png" alt="" /></p>
+<p>As you can see in the pic above, the AI car on the right lost control and swerved into the Long Cut node. It will follow that until it rejoins with the Racing Line. Moving on.</p>
+<a class="header" href="#m-barrel-block" id="m-barrel-block"><h2>M. Barrel Block</h2></a>
+<p>This property is unknown, and I could not find anywhere in the stock tracks where it is used.</p>
+<a class="header" href="#n-off-throttlepetrol-throttle" id="n-off-throttlepetrol-throttle"><h2>N. Off Throttle/Petrol Throttle</h2></a>
+<p>It’s very important! Most of the experienced AI users place these properties before using the slow down properties. It doesn’t let the AI cars to get out of control making an 180 turn, losing time. Let me show you a picture to see where to place it…</p>
+<p><img src="petrol-throttle.png" alt="" /></p>
+<p>The image shows an Petrol Throttle. The Petrol Throttle makes the car repeatedly go off throttle and then back on quickly. The car goes go, off, go, off etc…
+Depends only of you which one you’d like to use.</p>
+<a class="header" href="#o-wilderness" id="o-wilderness"><h2>O. Wilderness</h2></a>
+<p>Not much is known on this property. Urnemanden however has developed a fitting theory that might be true. He says:</p>
+<blockquote>
+<p>(Urnemanden)</p>
+<blockquote>
+<p>I think that the wilderness property was made for the AI to have a backup-line just in case that it came off-road. These backup lines could help the AI avoid all the obstacles on its way back to the racing line, and help it save important time and get further in the race. Of course you just have to set up these backup-lines the most important places.
+Urnemanden’s theory is very possible and I think it’s correct.He crashed off the normal Racing Line nodes and ended up on the Wilderness nodes.</p>
+</blockquote>
+</blockquote>
+<a class="header" href="#p-152030-mph-slowdowns" id="p-152030-mph-slowdowns"><h2>P. 15/20/30 MPH Slowdowns</h2></a>
+<blockquote>
+<blockquote>
+<p>They do exactly what the 25 MPH Slowdown does, they slow the car to the desired speed. By using a good combination of them, you can let the car not slide in turns, like for example use a 30 mph property first, then slow down to 20, then to 15 if it’s a sharp turn.</p>
+</blockquote>
+</blockquote>
+<a class="header" href="#extra-things" id="extra-things"><h2>Extra Things</h2></a>
+<p>What about the reversed track AI nodes? There is a simple, yet good trick for this. Press Shift+R and Shift+T to reverse your nodes.
+Same goes for POS nodes, track zones have to be done manually.</p>
+<a class="header" href="#tips-and-tricks" id="tips-and-tricks"><h2>Tips and Tricks</h2></a>
+<a class="header" href="#string-multiple-node-properties-together-to-get-the-best-ai" id="string-multiple-node-properties-together-to-get-the-best-ai"><h3>String multiple node properties together to get the best AI.</h3></a>
+<p>Making decent AI involves simply moving the racing line and making slowdowns. Making great AI involves combining almost every type of node.Use the throttle properties!
+Sure slowdowns are important too, but if you really want to make good AI you have to use everything. Sometimes slowdowns aren’t the best node for the job. If you have an AI line that has a sharp narrow turn in it, maybe you don’t have enough space to slow the car down, and if you have them suddenly slam the brakes then you might have them crashing into each other. A better alternative would be if you set a Petrol Throttle section a while before the corner, thus slowing the car down more effectively than the wall.</p>
+<a class="header" href="#keep-the-line-level-and-smooth" id="keep-the-line-level-and-smooth"><h3>Keep the line level and smooth.</h3></a>
+<p>This may sound stupid, however please keep the line on the ground and not in the sky. How can you edit and perfect your AI when the nodes are floating?
+Also, you should try and keep you line as smooth as possible. You wouldn’t want a car to turn right, and then swerve left randomly. That would just make the AI horrendous.</p>
+<a class="header" href="#create-an-ai-line-out-of-a-ghost-path" id="create-an-ai-line-out-of-a-ghost-path"><h3>Create an AI line out of a ghost path</h3></a>
+<p>For this one you have to be in the Time trial mode. You need to place the nodes first, but no need to optimize the racing line.</p>
+<p>What does this exactly do? Race the best lap you could, preferably without shortcuts, with Toyeca or another car.</p>
+<p>Use the key combination ‘6’ + ‘Left Shift’ for applying the ghost path to the racing line, extremely useful if you didn’t work on a racing line yet (the resulting line might require some fine tuning for the AI).</p>
+<blockquote>
+<blockquote>
+<p>Thanks to Kenny for the explanation of Jump Wall nodes and for the constructive criticism about this tutorial.</p>
+</blockquote>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../03.makeitgood/02.track-zones/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../03.makeitgood/04.force-fields/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../03.makeitgood/02.track-zones/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../03.makeitgood/04.force-fields/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

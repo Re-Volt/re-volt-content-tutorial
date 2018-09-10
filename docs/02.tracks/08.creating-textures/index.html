@@ -1,0 +1,309 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>GIMP: Creating Textures - RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "../../";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="../../index.html">Introduction</a></li><li class="affix"><a href="../../00.todo/index.html">TODO</a></li><li><a href="../../01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="../../01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="../../02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="../../02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="../../02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="../../02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="../../02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="../../02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="../../02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="../../02.tracks/08.creating-textures/index.html" class="active"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="../../02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="../../02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="../../02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="../../02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="../../02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="../../02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="../../02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="../../02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="../../03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="../../03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="../../03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="../../03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="../../03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="../../03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="../../03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="../../04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#creating-textures" id="creating-textures"><h1>Creating Textures</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#file-formats">File Formats</a></li>
+<li><a href="#mip-maps">Mip Maps</a></li>
+<li><a href="#rules-and-tips">Rules and Tips</a></li>
+<li><a href="#gathering-textures">Gathering Textures</a></li>
+<li><a href="#gimp">Gimp</a></li>
+<li><a href="#creating-new-files">Creating new Files</a></li>
+<li><a href="#scaling-layers">Scaling Layers</a></li>
+<li><a href="#duplicating-layers">Duplicating Layers</a></li>
+<li><a href="#merging-layers">Merging Layers</a></li>
+<li><a href="#altering-colors">Altering Colors</a></li>
+<li><a href="#drop-shadows">Drop Shadows</a></li>
+<li><a href="#save">Save</a></li>
+<li><a href="#working-with-selections">Working with Selections</a></li>
+<li><a href="#zip-snapshot-04">Zip-Snapshot 04</a></li>
+<li><a href="#exporting-textures">Exporting Textures</a></li>
+<li><a href="#more-textures">More Textures</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>In this step, we will create textures for the track.<br />
+First, some theory.</p>
+<a class="header" href="#file-formats" id="file-formats"><h3>File Formats</h3></a>
+<p>Re-Volt uses 10 <em>texture pages</em> with a naming scheme of <code>track*.bmp</code> where <code>*</code> is a letter ranging from a to j (ten of them).<br />
+The .bmp textures should have a size of 256x256. Depending on the version of Re-Volt, the resolution can be higher. Beginning with Re-Volt 1.2, you can use larger texture sizes. <a href="http://wiki.re-volt.io/articles/texture-formats">Check the wiki</a> to find out which sizes and formats are available. If you're going for a high resolution, you should stick to 1024 or 2048 since larger texture might have a negative impact on the track's performance.</p>
+<a class="header" href="#mip-maps" id="mip-maps"><h3>Mip Maps</h3></a>
+<p>For my example track I will be using 512x512 texture pages. During development, I will name them <code>artsa.bmp, artsb.bmp, ..., artsj.bmp</code>. I will need to rename them to <code>*.bmo</code> later since <code>*.bmp</code> should be used for 256x256 textures:</p>
+<pre><code>-------- Size ------------ File --------
+      8192 x 8192   -   texture.bmk  (near)
+      4096 x 4096   -   texture.bml
+      2048 x 2048   -   texture.bmm
+      1024 x 1024   -   texture.bmn
+       512 x 512    -   texture.bmo
+     [ 256 x 256    -   texture.bmp ]
+       128 x 128    -   texture.bmq
+        64 x 64     -   texture.bmr
+        32 x 32     -   texture.bms
+        16 x 16     -   texture.bmt
+         8 x 8      -   texture.bmu
+         4 x 4      -   texture.bmv
+         2 x 2      -   texture.bmw
+         1 x 1      -   texture.bmx   (far)
+</code></pre>
+<p>You may have noticed the <code>*.bmq</code> files in the Re-Volt levels. They have a size of 128x128. What are they for? Those smaller textures are called mip maps. They will be used for objects that are further away from you. This way your track will look a lot smoother. You can also go into the other direction and use larger versions of your textures for objects that are <em>near</em>. That's what I'm doing. However, it is wise to start work with the largest resolution you're intending to use.</p>
+<blockquote>
+<p>I chose to work with a base resolution of 512x512 pixels. That means that I will have three files per texture page: <code>.bmo</code>, <code>.bmp</code>, <code>.bmq.</code>.<br />
+Creating those mipmaps is one of the last steps. While working on the track, I will use 512x512 files called <code>*.bmp</code>.<br />
+Also, you can save your textures as .png and rename them to .bmp, RVGL will read them. That's what I am going to do.</p>
+</blockquote>
+<a class="header" href="#rules-and-tips" id="rules-and-tips"><h3>Rules and Tips</h3></a>
+<p>Refer to them later, you might not understand them yet if you're new to 3D modeling. Re-Volt is a pretty old game. So here are some things to keep in mind:</p>
+<ul>
+<li>UV coordinates must be between 0 and 1 for both axes. This means that you cannot tile textures (as explained earlier in the tutorial). If you map them out of bounds, they will glitch out.</li>
+<li>Pure black RBG(0, 0, 0) will be transparent (if you use the default settings and 16bit bitmaps)</li>
+<li>There are no normal/specular or other special maps. All your details need to be on the texture page. You may also want to include detailed shadows in the textures.</li>
+<li>Brightness of the level can be manipulated with vertex paint. If your level is set at night, you don't necessarily need to use dark textures.</li>
+</ul>
+<a class="header" href="#gathering-textures" id="gathering-textures"><h3>Gathering Textures</h3></a>
+<p>A few pages earlier I linked you some texture resources. Download textures you like and extract them to a folder in your working directory. We will use them to compose our texture pages. These are some of the ones I chose. We'll also create some textures from scratch or get some new ones if we need more.</p>
+<p><img src="textures.png" alt="textures I chose" /></p>
+<a class="header" href="#gimp" id="gimp"><h2>Gimp</h2></a>
+<p>If you're completely unfamiliar with programs like GIMP, you can watch <a href="https://youtu.be/HhrxF4kzuYE">a part of this tutorial on YouTube</a>.</p>
+<p>The first step is to enable the Single-Window Mode (it's much more convenient). To do so, open the Window menu from the menu bar and select <em>Single-Window Mode</em>.</p>
+<a class="header" href="#creating-new-files" id="creating-new-files"><h3>Creating new Files</h3></a>
+<p>Create a new file by pressing <strong>CTRL N</strong>. You'll be greeted with this:</p>
+<p><img src="new_file.png" alt="new file" /></p>
+<p>Set the resolution to 512x512 (or any power of 2 above 256) and confirm.</p>
+<a class="header" href="#scaling-layers" id="scaling-layers"><h3>Scaling Layers</h3></a>
+<p>Now you can just trag a texture from your ressources folder into the program.</p>
+<p>You can <strong>zoom</strong> in and out using the <strong>scroll wheel</strong> while holding down <strong>CTRL</strong>.</p>
+<p>The first thing I want to do is scale it down to take up only a quarter (256x256) of the texture. Click on the scale tool and then on the layer. A window will pop up.</p>
+<p><img src="scale_layer.png" alt="scale layer" /></p>
+<p>After that you'll want to move it into a corner of our texture. Use the <em>Move</em> tool and grab the layer. It might be outside the canvas (still highlighted by the black-yellow outline). Just move it the top left edge so it aligns with the canvas' edges.</p>
+<p><img src="move.png" alt="move" /></p>
+<a class="header" href="#duplicating-layers" id="duplicating-layers"><h3>Duplicating Layers</h3></a>
+<p>So that is one part of the texture page. I also want a carpet on it, so I'll duplicate the current layer since I need to put the carpet on it. To duplicate a layer, right click it in the right side bar and click on <strong>Duplicate Layer</strong>.</p>
+<p><img src="duplicate.png" alt="duplicate layer" /></p>
+<a class="header" href="#merging-layers" id="merging-layers"><h3>Merging Layers</h3></a>
+<p>Now I dragged the carpet texture into GIMP and scaled it down to 128x128 to only take up a quarter of the wooden floor (as described above). I then duplicated it again and put it beneath it another time to have a larger strip. Then, select the topmost carpet layer from the list, right-click it and select <em>Merge Down</em>. We'll then have a larger carpet layer.</p>
+<p><img src="merge.png" alt="merge" /></p>
+<a class="header" href="#altering-colors" id="altering-colors"><h3>Altering Colors</h3></a>
+<p>Now, I have to admit, the carpet is a bit ugly. Select the layer and go to <strong>Colors -&gt; Hue/Saturation</strong>. Adjust the Hue slider until you found something you like.</p>
+<p><img src="hue.png" alt="changing the hue" /></p>
+<a class="header" href="#drop-shadows" id="drop-shadows"><h3>Drop Shadows</h3></a>
+<p>It still looks a bit bland, I know. How about a subtle shadow under the carpet? Go to <strong>Filters -&gt; Light -&gt; Drop Shadow</strong> and adjust it to your liking.</p>
+<table><thead><tr><th align="left">  Drop Shadow Window  </th><th align="left"> Result  </th></tr></thead><tbody>
+<tr><td align="left"> <img src="shadow.png" alt="" /> </td><td align="left"> <img src="shadow_done.png" alt="" /> </td></tr>
+</tbody></table>
+<a class="header" href="#save" id="save"><h3>Save</h3></a>
+<p>It's time to save. Hit <strong>CTRL S</strong> and save it as <code>tracknamea.xcf</code>, I'll save it as <code>artsa.xcf</code>. We'll export to PNG/BMP later.</p>
+<a class="header" href="#working-with-selections" id="working-with-selections"><h3>Working with Selections</h3></a>
+<p>The shadow goes a bit beyond the wood part of the texture. I want to get rid of the shadow that sticks into the white part. Select the layer and activate the selection tool. Then select the part that's not on the wood and press <strong>DELETE</strong>. To unselect, press <strong>CTRL SHIFT A</strong>.</p>
+<table><thead><tr><th align="left">  Shadow goes too far  </th><th>  Selection Tool  </th><th>  Result  </th></tr></thead><tbody>
+<tr><td align="left">  <img src="toofar.png" alt="" /> </td><td align="left">  <img src="select.png" alt="" /> </td><td align="left">  <img src="select_result.png" alt="" /> </td></tr>
+</tbody></table>
+<a class="header" href="#zip-snapshot-04" id="zip-snapshot-04"><h3>Zip-Snapshot 04</h3></a>
+<p>If you're stuck, here is my current level folder:</p>
+<p><a href="track_snapshot04.zip">Download Zip File</a></p>
+<a class="header" href="#exporting-textures" id="exporting-textures"><h3>Exporting Textures</h3></a>
+<p>I added a few more textures to the texture page and it's now full. To export it, press <strong>CTRL SHIFT E</strong> and export it as a PNG file.</p>
+<p><img src="export.png" alt="export" /></p>
+<p>! To make the game recognize the texture, you need to rename the .png file to .bmp. (It's still a .png file, it just has the name of a .bmp file). <code>artsa.png</code> --&gt; <code>artsa.bmp</code></p>
+<p><img src="compare.png" alt="actually a png" /></p>
+<a class="header" href="#more-textures" id="more-textures"><h3>More Textures</h3></a>
+<p>One texture page won't be enough. While modeling the track further, I made some textures for the walls (artsb.bmp and artsc.bmp). Check out how I made them on <a href="https://youtu.be/aTEIB234OUo">YouTube</a>. (This video will be referenced in the next step again, so don't be shocked if you see some Blender things that you don't understand yet.)</p>
+<p><img src="walls.png" alt="walls" /></p>
+<a class="header" href="#conclusion" id="conclusion"><h3>Conclusion</h3></a>
+<p>You don't need to create <em>all</em> texture pages right now. I actually created only the first one and moved on to mapping and modeling the track a bit more. I made some walls higher and did some more adjustments. You can always come back to earlier steps later. In fact, we will create more sophisticated textures in a later step again (<em>Creating Textures (Advanced)</em>). In the next step, we'll put the texture we just made onto the 3D objects we modeled.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../02.tracks/07.blender-edit-mode/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../02.tracks/09.texture-mapping/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a href="../../02.tracks/07.blender-edit-mode/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a href="../../02.tracks/09.texture-mapping/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

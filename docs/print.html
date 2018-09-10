@@ -1,0 +1,1535 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>RV Tutorials</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">var path_to_root = "";</script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { } 
+            if (theme === null || theme === undefined) { theme = 'light'; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <ol class="chapter"><li class="affix"><a href="index.html">Introduction</a></li><li class="affix"><a href="00.todo/index.html">TODO</a></li><li><a href="01.tools/index.html"><strong aria-hidden="true">1.</strong> Tools</a></li><li><ol class="section"><li><a href="01.tools/01.blender-setup/index.html"><strong aria-hidden="true">1.1.</strong> Blender: Setup</a></li></ol></li><li><a href="02.tracks/index.html"><strong aria-hidden="true">2.</strong> Tracks</a></li><li><ol class="section"><li><a href="02.tracks/01.planning-a-track/index.html"><strong aria-hidden="true">2.1.</strong> Planning a Track</a></li><li><a href="02.tracks/02.resources/index.html"><strong aria-hidden="true">2.2.</strong> Resources</a></li><li><a href="02.tracks/04.setup/index.html"><strong aria-hidden="true">2.3.</strong> Setup</a></li><li><a href="02.tracks/05.track-files/index.html"><strong aria-hidden="true">2.4.</strong> Track Files</a></li><li><a href="02.tracks/06.blender-first-steps/index.html"><strong aria-hidden="true">2.5.</strong> Blender: First Steps</a></li><li><a href="02.tracks/07.blender-edit-mode/index.html"><strong aria-hidden="true">2.6.</strong> Blender: Edit Mode</a></li><li><a href="02.tracks/08.creating-textures/index.html"><strong aria-hidden="true">2.7.</strong> GIMP: Creating Textures</a></li><li><a href="02.tracks/09.texture-mapping/index.html"><strong aria-hidden="true">2.8.</strong> Blender: Texture Mapping</a></li><li><a href="02.tracks/10.creating-textures-advanced/index.html"><strong aria-hidden="true">2.9.</strong> GIMP: Creating Textures (Advanced)</a></li><li><a href="02.tracks/11.vertex-paint/index.html"><strong aria-hidden="true">2.10.</strong> Blender: Vertex Paint</a></li><li><a href="02.tracks/12.polygon-properties/index.html"><strong aria-hidden="true">2.11.</strong> Blender: Polygon Properties</a></li><li><a href="02.tracks/13.collision/index.html"><strong aria-hidden="true">2.12.</strong> Collision</a></li><li><a href="02.tracks/14.special-effects/index.html"><strong aria-hidden="true">2.13.</strong> Special Effects</a></li><li><a href="02.tracks/15.exporting/index.html"><strong aria-hidden="true">2.14.</strong> Blender: Exporting</a></li><li><a href="02.tracks/16.makeitgood/index.html"><strong aria-hidden="true">2.15.</strong> Makeitgood</a></li></ol></li><li><a href="03.makeitgood/index.html"><strong aria-hidden="true">3.</strong> MakeItGood</a></li><li><ol class="section"><li><a href="03.makeitgood/01.pos-nodes/index.html"><strong aria-hidden="true">3.1.</strong> Pos Nodes</a></li><li><a href="03.makeitgood/02.track-zones/index.html"><strong aria-hidden="true">3.2.</strong> Track Zones</a></li><li><a href="03.makeitgood/03.ai-nodes/index.html"><strong aria-hidden="true">3.3.</strong> AI Nodes</a></li><li><a href="03.makeitgood/04.force-fields/index.html"><strong aria-hidden="true">3.4.</strong> Force Fields</a></li><li><a href="03.makeitgood/05.objects/index.html"><strong aria-hidden="true">3.5.</strong> Objects</a></li><li><a href="03.makeitgood/06.triggers/index.html"><strong aria-hidden="true">3.6.</strong> Triggers</a></li></ol></li><li><a href="04.cars/index.html"><strong aria-hidden="true">4.</strong> Cars</a></li></ol>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light <span class="default">(default)</span></button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">RV Tutorials</h1> 
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <a class="header" href="#rv-creation-tutorial" id="rv-creation-tutorial"><h1>RV Creation Tutorial</h1></a>
+<blockquote>
+<p><strong>Work in progress</strong>:<br />
+Feel free to <a href="https://forum.re-volt.io"><strong>ask us</strong></a> if something is unclear or write us to point out errors.<br />
+You can <strong>contribute</strong> by writing missing parts of the tutorial. These can either be posted on the <a href="https://forum.re-volt.io">forum</a> you can make a pull request on GitHub.<br />
+You can read <strong>what needs to be done</strong> on the following page.</p>
+</blockquote>
+<p>This tutorial is about creating content for Re-Volt in Blender.</p>
+<a class="header" href="#todo" id="todo"><h1>TODO</h1></a>
+<a class="header" href="#tracks" id="tracks"><h2>Tracks</h2></a>
+<ul>
+<li>texture baking</li>
+<li>NCP (needs to be expanded)</li>
+<li>Explain polygon properties</li>
+<li>Mirrors</li>
+</ul>
+<a class="header" href="#makeitgood" id="makeitgood"><h2>MakeItGood</h2></a>
+<ul>
+<li>Objects</li>
+<li>Camera Nodes</li>
+<li>Visiboxes</li>
+<li>Instances</li>
+<li>Lights</li>
+</ul>
+<a class="header" href="#cars" id="cars"><h2>Cars</h2></a>
+<p>There is no tutorial for cars yet.</p>
+<a class="header" href="#tools" id="tools"><h1>Tools</h1></a>
+<a class="header" href="#introduction" id="introduction"><h2>Introduction</h2></a>
+<p>The following tutorials will mainly focus on open-source software for numerous reasons. The software we are going to be using is free, faster, smaller and, in terms of creating content for Re-Volt, easier to use if you’re just starting.</p>
+<a class="header" href="#blender---3d-modeling" id="blender---3d-modeling"><h2>Blender - 3D Modeling</h2></a>
+<ol>
+<li>Install Blender from <a href="https://www.blender.org/download/"><strong>blender.org/download/</strong></a></li>
+<li>Download the plugin/add-on here: <a href="https://github.com/Re-Volt/re-volt-addon/archive/master.zip"><strong>Download</strong></a>, <a href="https://github.com/Re-Volt/re-volt-addon">GitHub page</a></li>
+</ol>
+<a class="header" href="#gimp---texture-creation" id="gimp---texture-creation"><h2>GIMP - Texture Creation</h2></a>
+<p>We will use GIMP for creating textures for the track. If you tried to use GIMP before and didn’t like it: Don’t worry. You will see that it suits our needs perfectly. Everything you could want to do with it will be explained in a later step.</p>
+<p><a href="http://gimp.org">Download GIMP</a></p>
+<a class="header" href="#audacity" id="audacity"><h2>Audacity</h2></a>
+<p>This is an option. If you are planning to have some sounds in your track or a custom engine sound for your car, you might want to download this audio editor to get your sound files right.</p>
+<p><a href="http://audacityteam.org/">Download Audacity</a></p>
+<a class="header" href="#re-volt" id="re-volt"><h2>Re-Volt</h2></a>
+<p>The tutorials focuses on creating tracks for <a href="https://rvgl.re-volt.io">RVGL</a>. Get the game <a href="http://re-volt.io/downloads/game">here</a>.</p>
+<p>That's it for now. You are pretty much covered. What you should have now:</p>
+<ul>
+<li>Blender and the add-on</li>
+<li>GIMP</li>
+<li>Audacity (if you want to edit sounds)</li>
+<li>A clean installation of Re-Volt</li>
+</ul>
+<a class="header" href="#blender-setup" id="blender-setup"><h1>Blender: Setup</h1></a>
+<p>To install the add-on, follow the guide <a href="https://re-volt.github.io/re-volt-addon/html/installation.html">here</a> and come back when you're done.</p>
+<p>When you have done that, close the preferences window. Then, with the cursor over the main viewport (with the cube inside of it), press A to select all objects.</p>
+<blockquote>
+<p>Selected objects will be outlined. Press Delete or X to delete these objects (since we don't need them right now).</p>
+</blockquote>
+<p>You can now resize the left sidebar of the 3D view. It contains the main RV tool panel at the very top.</p>
+<p>When all that is done, press <strong>CTRL U</strong> to save the startup file (so you don't have to activate the plugin every time you start Blender).</p>
+<p>Now Blender is set up for creating content for Re-Volt.</p>
+<a class="header" href="#tracks-1" id="tracks-1"><h1>Tracks</h1></a>
+<a class="header" href="#planning-a-track" id="planning-a-track"><h1>Planning a Track</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#collecting-ideas">Collecting Ideas</a></li>
+<li><a href="#planning-the-track">Planning the Track</a></li>
+<li><a href="#the-flow">The Flow</a></li>
+<li><a href="#planning-the-layout">Planning the Layout</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#introduction-1" id="introduction-1"><h2>Introduction</h2></a>
+<p>The most important thing is to not overestimate yourself and the capabilities of the game. Re-Volt has been around for more than a decade. You won’t get any amazing next-gen graphics out of it and some mechanics are just not possible. Back then, proper texturing and lighting (manually, of course!) did the job.</p>
+<a class="header" href="#collecting-ideas" id="collecting-ideas"><h2>Collecting Ideas</h2></a>
+<p>Planning the track is probably the most demanding task. Take your time and think for a few days about possible themes and details. Always carry a small notebook to write your thoughts down (nowadays you can do that with your smartphone, of course). Write everything down immediately as it comes to your mind; Anything that could be helpful for your track. Even the smallest detail might help you in the end. You might think that you will remember later but you won’t. No matter how small your idea is, just write it down!</p>
+<p>The next step is to find reference pictures and google for some hours. Try different search terms for your track theme. You should also check out sites like deviantArt or Flickr. Create a folder on your desktop and save everything in there. Here are my references for the track I will be making throughout this guide:</p>
+<p><a href="http://imgur.com/a/ZkEV6">Chinatown References</a></p>
+<p>If you think you got a solid idea, think about it once more. Do you have every inch of the track planned out? Do you think they could work in the game? It is really important to have a rock solid plan for your track. It will make modeling it much easier.<br />
+Some people might be able to just start modeling without much planning, making up parts of the track as they go.</p>
+<p>If you're planning to do an indoor track, you can check out Google Maps. There is a <a href="https://support.google.com/maps/answer/1685827">list of indoor maps</a> that you can check out to gather some inspiration.</p>
+<a class="header" href="#planning-the-track" id="planning-the-track"><h2>Planning the Track</h2></a>
+<p>Categorize your ideas. Some examples are: Track flow, special elements (such as escalators, long jumps, underwater parts, …) and details. Write them down in a table with columns reaching from fundamental elements to little graphical details. This table will help you building up the actual plan.
+When you’re done collecting your ideas, try to organize them in an order. A fun idea is to cut all of them out and put them on a table, then arrange them in an interesting order.</p>
+<a class="header" href="#the-flow" id="the-flow"><h2>The Flow</h2></a>
+<p>A very fundamental part of it is the flow itself. The flow describes the path the cars take on a track and how well it's driveable. It can be smooth with a lot of curves and aids that help you to keep in line or rather rough with some edges and obstacles. A good flow is not necessarily smooth. Some people might enjoy a little challenge.</p>
+<p>Venice is a pretty hard track for beginners but offers a fun challenge for online races. You're easily pushed into the canals if you don't pay attention. The narrow bridge part integrates well into the track theme which makes up for its difficutly.<br />
+Just don’t put any unnecessary obstacles in your track (any narrow parts that are just there to make the track harder), but implement obstacles in your overall theme of the track. A hull breach in a space ship that sucks you out into space? That sounds cool. A random spot in the track where you’re just lifted up into the air? Way more likely to be annoying.</p>
+<p>The perfect flow is actually up to personal preference. A good example however are stock tracks since most people enjoy them. Ask yourself: What do I like about tracks? What do I hate about them? What do I hate although it’s a funny challenge and worth implementing?</p>
+<p>If you mess up the flow, there is little reason for people to play your track. Re-Volt is not a game for showing off your graphics (although some quite nice things can be done). I advise you to not rush or skip this part and do the flow on the fly. Take your time and optimize it where you can. Make your track original and interestingly challenging.</p>
+<a class="header" href="#planning-the-layout" id="planning-the-layout"><h2>Planning the Layout</h2></a>
+<p><em>Can you suggest any tool for planning a track</em>? Pen and Paper. It’s still the most efficient way to put your ideas down. Take a look at your list of track elements and put them together. Make sure to distribute them all over the track. You should avoid any entirely boring parts. Think about Holiday Camp here. It has that long part where you’re just heading back to the start line. It’s not too bad but it gets boring over time.</p>
+<p>If you have trouble finding a proper layout for your track, just have a look at stock tracks from above (You can search for maps on Re-Volt Frontend for some track renderings). It’s no shame to copy some elements from them.</p>
+<p>When you have an acceptable flow, start finding places for your special track elements and details. Don’t be vague about this. It will help you immensely if you have a proper map on paper that you could already race on. Don’t leave anything out!</p>
+<p>Before proceeding you should have a nice plan of your track. Take your time and rework it a few times. It saves a lot of work to have an accurate map. If you have one, it’s going to be easy to model your track!</p>
+<p>Here are some old maps of my first track:</p>
+<p><img src="skizze_ht.jpg" alt="sketch1" />
+<img src="skizze_ht2.jpg" alt="sketch2" /></p>
+<p>For this tutorial, I'm going to use this one:</p>
+<p><img src="sketch.png" alt="sketch art" /></p>
+<blockquote>
+<p>The more detailed your plan is, the easier it will be to model the track.</p>
+</blockquote>
+<a class="header" href="#resources" id="resources"><h1>Resources</h1></a>
+<p>To create a track, you will need some resources.<br />
+Textures, sounds and even models if you don't want to model everything yourself.</p>
+<a class="header" href="#everything" id="everything"><h2>Everything</h2></a>
+<p><a href="http://opengameart.org/">http://opengameart.org/</a> – Speaks for itself.</p>
+<a class="header" href="#textures" id="textures"><h2>Textures</h2></a>
+<p><a href="http://files.re-volt.io/resources/animations.7z"><strong>RVIO Texture Animations</strong></a><br />
+More than 20 texture animations ready to be used with the Blender add-on.</p>
+<p><a href="http://files.re-volt.io/resources/skyboxes.7z"><strong>RVIO Skyboxes</strong></a><br />
+More than 20 skyboxes ready to be used in RVGL.</p>
+<p><a href="http://cgtextures.com/">http://cgtextures.com/</a> – Huge resource.</p>
+<a class="header" href="#sounds" id="sounds"><h2>Sounds</h2></a>
+<p><a href="http://freesound.org/">http://freesound.org/</a> – Free sounds. Find login data at <a href="http://bugmenot.com">http://bugmenot.com</a></p>
+<a class="header" href="#music" id="music"><h2>Music</h2></a>
+<blockquote>
+<p>TODO: Find a resource</p>
+</blockquote>
+<a class="header" href="#useful-topics" id="useful-topics"><h2>Useful Topics</h2></a>
+<ul>
+<li><a href="https://forum.re-volt.io/viewtopic.php?f=9&amp;t=223"><strong>Alpha sorting</strong>: How translucent polygons are rendered</a></li>
+</ul>
+<a class="header" href="#setup" id="setup"><h1>Setup</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#folder">Folder</a></li>
+<li><a href="#blender">Blender</a></li>
+<li><a href="#inf-file">.inf File</a></li>
+<li><a href="#zip-snapshot-01">Zip-Snapshot 01</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<blockquote>
+<p>On Windows, some problems with file permissions might occur if your Re-Volt folder is in the <em>Program Files</em> folder (<code>C:\Program Files\Acclaim Entertainment\Re-Volt\</code>). Sometimes it is <strong>better to move your Re-Volt folder to your Desktop</strong> or your user folder.</p>
+</blockquote>
+<a class="header" href="#folder" id="folder"><h2>Folder</h2></a>
+<p>Create a new folder within <code>...\Re-Volt\levels</code> with the name of your track (keep it lowercase and rather short). In our example, we'll call it <code>testtrack</code>.</p>
+<p>An example for the full path:</p>
+<p><code>C:\Program Files\Acclaim Entertainment\Re-Volt\levels\testtrack</code> or <code>C:\Users\YourName\Desktop\Re-Volt\levels\testtrack</code></p>
+<p>Examples for track names are <code>track_name</code>, <code>track_name01</code>, <code>track1name</code>, ...<br />
+It's best to use lowercase letters, underscores and letters.</p>
+<a class="header" href="#blender" id="blender"><h2>Blender</h2></a>
+<p>Open Blender and save the empty Blender file with <strong>CTRL S</strong> to the directory that you created for the track. Call it according to your project, for example <code>testtrack.blend</code>.</p>
+<a class="header" href="#inf-file" id="inf-file"><h2>.inf File</h2></a>
+<p>The .inf file defines parameters for the game so it can see and read the track. Feel free to copy the file below and use it as a template. If you want to disable certain features (like MUSIC), put a semicolon in front of it (this will deactivate the line). Create an empty text file in your track folder and rename it to your track folder name, e.g. testtrack.inf. You will be prompted if you really want to rename it. Click yes.</p>
+<p>Copy the following file and customize it to fit your track (you can leave most of the things as they are right now).</p>
+<blockquote>
+<p>TODO: Sample track.inf</p>
+</blockquote>
+<pre><code>;--------------------------
+;Revolt .INF file structure
+;--------------------------
+
+NAME                   'Test Track'                   	  ;The name of the level as seen in-game
+STARTPOS               0 0 0                              ;Start position of the car (x, y, z)
+STARTPOSREV            0 0 0                              ;Start position of the car in reverse mode
+STARTROT               0                                  ;Start rotation of the car (0 - 1)
+STARTROTREV            0                                  ;Start rotation of the car in reverse mode (0 - 1)
+FARCLIP                34000                              ;Far clipping distance (draw distance)
+FOGSTART               33000                              ;Fog start (slightly less than FARCLIP)
+FOGCOLOR               0 0 0                              ;Fog and background color (RGB)
+VERTFOGSTART           0                                  ;Vertical fog start (as in rooftops)
+VERTFOGEND             0                                  ;Vertical fog end (as in rooftops)
+WORLDRGBPER            100                                ;RGB percent of original world gouraud (0 is dark)
+MODELRGBPER            100                                ;RGB percent of original model (cars, etc.) gouraud
+INSTANCERGBPER         80                                 ;RGB percent of original instance (decorations, etc.) gouraud
+MIRRORS                0 0.75 0 256                       ;Type - mix - intensity start - distance
+MUSIC                  'levels\testtrack\testtrack.mp3'   ;supported formats are mp3, ogg and wav
+REDBOOK                4 9                                ;Redbook soundtrack if redbook folder is present. Two values, first and last track.
+ENVROLL                'levels\testtrack\envroll.bmp'     ;Reflection on cars
+ENVSTILL               'levels\testtrack\envstill.bmp'    ;Reflection on stationary objects and the ball bearing weapon
+SHADOWBOX              -96                                ;Changes the contrast/brightness or the shadows on the track, default -96.
+ROCK                   0 0 0 0                            ;Rocking effect like on Toytanic.
+</code></pre>
+<p>Check the <a href="https://yethiel.gitlab.io/RVDocs/#for-track-makers">RVGL Documentation</a> for more options.</p>
+<p>So far, we:</p>
+<ol>
+<li>installed Blender</li>
+<li>installed the addon and activated it</li>
+<li>created a level folder for our track</li>
+<li>saved an empty .blend file</li>
+<li>created an .inf file so the track gets recognized by the game</li>
+</ol>
+<a class="header" href="#zip-snapshot-01" id="zip-snapshot-01"><h2>Zip-Snapshot 01</h2></a>
+<p>If you're unsure, you can download my level folder:</p>
+<p><a href="track_snapshot01.zip">Download Zip File</a></p>
+<a class="header" href="#track-files" id="track-files"><h1>Track Files</h1></a>
+<p>Let’s take a look at garden1’s folder structure. You won’t have to do anything in this step. This is just so you know what a track looks like.</p>
+<p><img src="track-files.png" alt="trackfiles" /></p>
+<p>You will find these file types in many tracks:</p>
+<p><code>reversed</code> folder<br />
+This folder includes files that will be used in case the player chooses to race it backwards.</p>
+<p><code>&lt;trackname&gt;&lt;letter&gt;.bmp</code><br />
+There can be 10 bitmaps, named gardena.bmp to gardenj.bmp in this case.</p>
+<p><code>&lt;trackname&gt;&lt;letter&gt;.bmq</code><br />
+You will have noticed that there are similar files to the bitmaps we were just looking at. These are called mipmaps. They are used by the game and will be used on object that is further away in order to make the textures look smoother. Modern game engines do this automatically, and, in fact, if you are planning to make the track just for RVGL, you don’t need to worry about those.</p>
+<p><code>&lt;trackname&gt;.cam</code><br />
+This file contains camera nodes that Re-Volt uses for the replay.</p>
+<p><code>&lt;trackname&gt;.pan</code><br />
+This file contains the POS nodes.</p>
+<p><code>&lt;trackname&gt;.fan</code><br />
+This file contains the AI nodes.</p>
+<p><code>&lt;trackname&gt;.fin</code><br />
+This contains information about instances (decorative objects).</p>
+<p><code>&lt;trackname&gt;.fld</code><br />
+A file for force fields. These can alter the gravity or provide wind effects.</p>
+<p><code>&lt;trackname&gt;.fob</code><br />
+Object file for pickups and other interactive objects.</p>
+<p><code>&lt;trackname&gt;.lit</code><br />
+This contains the lights. Some extra lighting effects can be achieved like shadows on cars and objects.</p>
+<p><code>&lt;trackname&gt;.rim</code><br />
+This one contains simple geometry to tell the game where mirrors are. These are used for reflective floors.</p>
+<p><code>&lt;trackname&gt;.inf</code><br />
+Information file for tracks. It contains, for example, the start position, music path, fog color, etc.</p>
+<p><code>&lt;trackname&gt;.taz</code><br />
+Track zones, used to determine if a car went through all parts of the track.</p>
+<p><code>&lt;trackname&gt;.tri</code><br />
+Triggers: These are used for the direction arrows and repositioning of the car.</p>
+<p><code>&lt;trackname&gt;.vis</code><br />
+Visiboxes are used for performance optimization: Hiding parts of the tracks that cannot be seen anyway based on where the car is. These are optional but can improve performance.</p>
+<p><code>&lt;trackname&gt;.w</code><br />
+The 3D model of the track. We will create this one with Blender.</p>
+<p><code>&lt;trackname&gt;.ncp</code><br />
+Collision and surface data. Also done with Blender.</p>
+<p><code>properties.txt</code><br />
+A text file that contains track properties like materials and effects (optional). You can read about its options in the <a href="https://yethiel.gitlab.io/RVDocs/#track-properties-properties.txt">RVGL Documentation</a></p>
+<p>In the game’s folder, there is a folder called <code>gfx</code>. We will need to put a bitmap in there later which will be used to show a preview picture in the track selection. It will be named like the track folder you have chosen. We will create this file and all the others listed above in the following steps.</p>
+<a class="header" href="#first-steps-with-blender" id="first-steps-with-blender"><h1>First Steps with Blender</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#watch-tutorials-first">Watch Tutorials first</a></li>
+<li><a href="#creating-objects-and-moving-the-camera">Creating objects and moving the camera</a></li>
+<li><a href="#move-rotate-and-manipulate-objects">Move, Rotate and Manipulate Objects</a>
+<ul>
+<li><a href="#advanced-manipulation">Advanced manipulation</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#watch-tutorials-first" id="watch-tutorials-first"><h2>Watch Tutorials first</h2></a>
+<blockquote>
+<p>Blender can get extremely complex if you're not used to similar programs. <strong>I highly recommend watching this tutorial if you've never seen Blender or worked with it before</strong>:<br />
+<a href="https://cgcookie.com/lesson/first-steps-with-blender/">https://cgcookie.com/lesson/first-steps-with-blender/</a></p>
+</blockquote>
+<blockquote>
+<p><em>It's like a sports car, many people will bin it on their first tries, but if you take the time to learn to drive it's a blast.</em></p>
+</blockquote>
+<p><cite>- Gotolei</cite></p>
+<a class="header" href="#creating-objects-and-moving-the-camera" id="creating-objects-and-moving-the-camera"><h2>Creating objects and moving the camera</h2></a>
+<p>Start Blender and load your level file. First you should get used to Blender's viewport controls. For this, it is wise to create an object to focus on, first. I can't tell you everything here so you will need to use your intuition a bit. Blender has a very steep learning curve. I recommend looking up some basic Blender tutorials if you're having trouble with this step.</p>
+<p><strong>Getting some things clear</strong>: (You don't need to understand this right away, use it as a reference at a later point)</p>
+<ul>
+<li>Blender can be used to create 3D objects. This space has 3 axes: X, Y and Z. For us, the positive Z axis is up, the positive X axis is right and the positive Y axis is forward.</li>
+<li>We are going to create objects. These objects have a point of origin (center) which can be represented by a position vector (x, y, z), e.g. with (3, 5, 0).</li>
+<li>All objects are made of multiple triangles (polygons). In our case, each polygon will have 3 or 4 vertices (corner points). Most of our polygons will be quads (quadratic polygons with four vertices/points). Note that quads are also made of two triangles. If you have a quad that is non-planar (not flat), you will need to split it into two triangles (more about this later).</li>
+</ul>
+<p>You can see a red-white circle in the view port: It's the <em>3D cursor</em>. This is where new objects will be created. To center it, press <strong>SHIFT + C</strong>.
+To add an object, press <strong>SHIFT A</strong> and select <em>Plane</em>. A new plane object should show up:</p>
+<p><img src="blender01.jpg" alt="Creating a plane" /></p>
+<p>Try out the following keys:</p>
+<blockquote>
+<p>I will be using some abbreviations:<br />
+<strong>LMB</strong>: Left mouse button<br />
+<strong>RMB</strong>: Right mouse button<br />
+<strong>MMB</strong>: Middle mouse button</p>
+</blockquote>
+<table><thead><tr><th> Keyboard </th><th> Action </th></tr></thead><tbody>
+<tr><td> LMB </td><td> Set cursor </td></tr>
+<tr><td> CTRL + LMB and then drag </td><td> Lasso selection </td></tr>
+<tr><td> SHIFT + B </td><td> Square selection </td></tr>
+<tr><td> RMB </td><td> Select object. Selected objects will be outlined in orange </td></tr>
+<tr><td> Numpad Period </td><td> Focus on selected object </td></tr>
+<tr><td> MMB </td><td> Pan around focused object </td></tr>
+<tr><td> Scroll </td><td> Scoll in and out, direction depends on your selected object </td></tr>
+<tr><td> SHIFT + MMB and drag around </td><td> Drag around the view </td></tr>
+</tbody></table>
+<p>There are many more hotkeys and key combinations. However, for the basics, it's well enough.</p>
+<a class="header" href="#move-rotate-and-manipulate-objects" id="move-rotate-and-manipulate-objects"><h2>Move, Rotate and Manipulate Objects</h2></a>
+<p>One object is not enough. Often it's wise to split your track into multiple parts, or you just want to create an object that is not fixed to the main road. For this, you can either create new objects or duplicate your existing ones. Try out the following actions:</p>
+<table><thead><tr><th> Keyboard </th><th> Action </th></tr></thead><tbody>
+<tr><td> SHIFT + A </td><td> Open <em>add</em> menu </td></tr>
+<tr><td> SHIFT + D </td><td> Create duplicate of an object </td></tr>
+<tr><td> ALT + D </td><td> Create duplicate of an object (Geometry will be shared. If you edit one object, the duplicates will change, too.) </td></tr>
+<tr><td> SHIFT + RMB </td><td> Select multiple objects (main selection bright orange, all other objects dark orange) </td></tr>
+<tr><td> DELETE or X </td><td> Delete an object </td></tr>
+<tr><td> S </td><td> Scale an object </td></tr>
+<tr><td> G </td><td> Grab and move an object </td></tr>
+<tr><td> R </td><td> Rotate an object </td></tr>
+</tbody></table>
+<a class="header" href="#advanced-manipulation" id="advanced-manipulation"><h3>Advanced manipulation</h3></a>
+<p>Now you can move, rotate and scale objects. You can also do all of these actions along a specific axis.
+For example, if you wish to scale an object only in height, press <strong>S</strong> and after that, press <strong>Z</strong>. This way you can select the axis.
+If you only want want to scale it on the X and Y axis, press <strong>S</strong> and then <strong>SHIFT + <em>the axis you don't want</em></strong>. Then move your mouse and click the <strong>LMB</strong> or <strong>ENTER</strong> to confirm, or <strong>ESC</strong> to dismiss the tool.</p>
+<p>You can also specify by how much you want to scale/rotate/translate. After initiating scale and selecting your axis, type a number (blender units or degrees, depending on what you're doing.) A 90 deg. rotation around the Z axis would be <strong>S -&gt; Z -&gt; 90</strong>. Moving your object up by 3 blender units (BU) would be <strong>G -&gt; Z -&gt; 3</strong>.</p>
+<a class="header" href="#conclusion" id="conclusion"><h2>Conclusion</h2></a>
+<p>Now you should know how to create objects and move them around. These objects will contain the geometry of your track. You could create one object for the base geometry and then many small objects for decoration and things that will be represented more than once.</p>
+<p>These basics will also help you in the next step in which we will take a look at the <em>Edit Mode</em>. This mode allows you to change the geometry of objects.</p>
+<a class="header" href="#edit-mode" id="edit-mode"><h1>Edit Mode</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#getting-your-map-inside-blender">Getting your Map inside Blender</a></li>
+<li><a href="#editing-an-object">Editing an Object</a>
+<ul>
+<li><a href="#vertex-select">Vertex Select</a></li>
+<li><a href="#edge-select">Edge Select</a></li>
+<li><a href="#face-select">Face Select</a></li>
+<li><a href="#select-linked">Select Linked</a></li>
+<li><a href="#add">Add</a></li>
+<li><a href="#subdivide">Subdivide</a></li>
+<li><a href="#extrude">Extrude</a></li>
+<li><a href="#make-a-faceedge">Make a Face/Edge</a></li>
+<li><a href="#loop-cut-and-slide">Loop Cut and Slide</a></li>
+<li><a href="#merge">Merge</a></li>
+<li><a href="#cut">Cut</a></li>
+<li><a href="#straighten">Straighten</a></li>
+<li><a href="#see-geometry-through-objects">See Geometry through Objects</a></li>
+</ul>
+</li>
+<li><a href="#warnings">Warnings</a></li>
+<li><a href="#workflow">Workflow</a>
+<ul>
+<li><a href="#creating-parts-separately-and-merging-them">Creating Parts separately and merging them</a></li>
+<li><a href="#extrusion-and-the-magnet-tool">Extrusion and the Magnet Tool</a></li>
+<li><a href="#flip-normals">Flip Normals</a></li>
+<li><a href="#zip-snapshot-02">Zip-Snapshot 02</a></li>
+<li><a href="#dealing-with-non-planar-polygons">Dealing with non-planar Polygons</a></li>
+<li><a href="#placeholders">Placeholders</a></li>
+<li><a href="#filling-in-the-placeholders">Filling in the placeholders</a></li>
+<li><a href="#zip-snapshot-03">Zip-Snapshot 03</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>In this step we will take a look at Blender's Edit Mode. You will be able to edit the objects that you created in the last step. We will actually start modeling our track now.<br />
+Modeling requires a lot of practice and you will need to find your own workflow. The only thing I can do here is to show you one way of modeling basic things. The main point of the tutorial is to show you how to use Blender in conjuction with Re-Volt. There are many modeling tutorials out there. <strong>I recommend watching some basic tutorials on YouTube first</strong>. If you trust your intuition, you can also go ahead and read this page, it's not <em>too</em> hard if you've used some other rather complex programs.</p>
+<a class="header" href="#getting-your-map-inside-blender" id="getting-your-map-inside-blender"><h2>Getting your Map inside Blender</h2></a>
+<p>You surely want to model along your map that you created.</p>
+<p>Go to the Blender Preferences and enable the <em>Import Images as Planes</em> plugin (Go back <a href="/tracks-and-modeling/setup#blender">here</a> if you forgot how to enable plugins. You don't need to install it, only activate it, since it comes with Blender).</p>
+<p><img src="img_plugin.png" alt="activate the plugin" /></p>
+<p>Now go to <strong>File -&gt; Import -&gt; Images as Planes</strong> and select your map.</p>
+<p>This will give you a plane, you should not be able to see the texture. To fix this, enable <em>Textured Solid</em> in the right sidebar (you can toggle the right sidebar with <strong>N</strong> and the left one with <strong>T</strong>):</p>
+<p><img src="textured_solid.png" alt="enable textures on solid-shaded objects" /></p>
+<p>Now it is time to <strong>scale the map up</strong>. We can change the scale later but it is important to have it somewhat right.
+To do that, select the map with the <strong>Right</strong> mouse button so it's outlined in orange (as in the screenshot above). Then press <strong>S</strong> on the keyboard and move your mouse. Apply with <strong>ENTER</strong>, discard with <strong>ESC</strong>. (You can also use the mouse buttons to confirm or dismiss changes when scaling.)</p>
+<p>For my track, this seems alright (compare it with the grid):</p>
+<p><img src="scale.png" alt="scale" /></p>
+<blockquote>
+<p><strong>Advanced Tip</strong>: Import a stock track and compare it to your plan. Go to <strong>File -&gt; Import -&gt; Re-Volt</strong> and choose a track that is roughly the size of your track. The select your map object and scale/rotate it accordingly. If you are satisfied, select your map object and press <strong>CTRL I</strong> to invert your selection. This way you will have the imported stock track selected which you can now delete with <strong>DELETE</strong>.</p>
+</blockquote>
+<p>Now move the map so that your desired start/finish line is centered on the main grid (I have already done that on the last screenshot). The positive Y-axis (green arrow) is the forward direction. The screenshot above shows an example. This way we don't need to specify the starting position in the <strong>.inf</strong> file (don't worry, you'll be able to adjust this at any point of time).</p>
+<a class="header" href="#editing-an-object" id="editing-an-object"><h2>Editing an Object</h2></a>
+<p>Set your cursor to a part of your track you want to work on (click on your map to move the cursor there) and add a Plane. Feel free to focus on your newly created object with <strong>NUMPAD PERIOD</strong>.<br>
+Now press <strong>TAB</strong> to enter <em>Edit Mode</em>.<br>
+Here I'll show you some of the basic techniques that you can use to model your track geometry. There are many ways of doing this, so feel free to try out what works for you (as long as you stick to the <a href="#warnings">rules</a> further down this page).</p>
+<a class="header" href="#vertex-select" id="vertex-select"><h3>Vertex Select</h3></a>
+<p>You will see the objects vertices now. Blender defaults to vertex mode by default. Select a vertex and move it around. It works just like the Object mode covered in the previous step. Now select two vertices and try to scale them. You will see that the center of scaling is the median point of the two vertices (the middle). Now select a third one and rotate them. If you're feeling comfortable with that, move on to the next mode. If not, keep experimenting.</p>
+<a class="header" href="#edge-select" id="edge-select"><h3>Edge Select</h3></a>
+<p>Switching modes is easy. There is a bar of three buttons located at the bottom of the viewport:
+<img src="edge_select.png" alt="edge selection" />
+Click the center button to enable edge select. Just like with the vertex selection mode, you can now select edges of your object (two vertices at once, so to speak).</p>
+<a class="header" href="#face-select" id="face-select"><h3>Face Select</h3></a>
+<p>You can also select entire faces (the area contained by vertices and edges). It is the third button located on the same bar.</p>
+<p>With these selections, you can perform the same actions as with the objects. You can scale, rotate, translate, duplicate, ...
+Now there are some more tools to edit the geometry of objects. I will list the most important ones below and explain how they are used:</p>
+<a class="header" href="#select-linked" id="select-linked"><h3>Select Linked</h3></a>
+<p>To select everything that is linked, i.e. all that belongs to a mesh, press <strong>CTRL + L</strong>. This is handy if you have a lot of geometry in one object. You can then move, delete or do other things with the selection.</p>
+<a class="header" href="#add" id="add"><h3>Add</h3></a>
+<p>You can still add an <strong>mesh</strong> to the <strong>object</strong> you're currently editing: <strong>SHIFT + A</strong>. It's just like in the object mode.</p>
+<p><img src="add.png" alt="add an object to a mesh" /></p>
+<a class="header" href="#subdivide" id="subdivide"><h3>Subdivide</h3></a>
+<p>Press <strong>W</strong> and then <strong>S</strong> to subdivide your selection.</p>
+<p><img src="sibdiv.jpg" alt="subdivision" /></p>
+<a class="header" href="#extrude" id="extrude"><h3>Extrude</h3></a>
+<p>Select a vertex, edge or face and press <strong>E</strong>. New geometry will pop out along the normal axis of the selected thing. If you don't want to move it, press <strong>ESC</strong> or <strong>RMB</strong>. It will still be extruded. but you will be able to move it yourself. If you want to undo, press <strong>CTRL Z</strong> as usual.</p>
+<p><img src="extrude.gif" alt="extrude" /></p>
+<a class="header" href="#make-a-faceedge" id="make-a-faceedge"><h3>Make a Face/Edge</h3></a>
+<p>To fill in a face or edge from selected vertices or edges, press <strong>F</strong></p>
+<p><img src="fill.jpg" alt="fill" /></p>
+<a class="header" href="#loop-cut-and-slide" id="loop-cut-and-slide"><h3>Loop Cut and Slide</h3></a>
+<p>Press <strong>CTRL + R</strong> and then scroll to adjust the number of cuts. <strong>LMB</strong> to confirm. Then you will be able to move the cut. Move and confirm with <strong>ENTER</strong> or <strong>LMB</strong>, alternatively press <strong>ESC</strong> or <strong>RMB</strong> to not move the cut.
+<img src="cut.gif" alt="cut" /></p>
+<a class="header" href="#merge" id="merge"><h3>Merge</h3></a>
+<p>You can merge two vertices by selecting them and pressing <strong>ALT + M</strong>. Alternatively, you can also select them and scale them to 0. Then you'd need to remove double vertices by pressing <strong>SPACE</strong> and searching for <em>Remove Doubles</em>.</p>
+<a class="header" href="#cut" id="cut"><h3>Cut</h3></a>
+<p>Sometimes it's necessary to cut some polygons to get a more quadratic shape out of them so mapping a texture onto them will be easier later. An example can be seen here where I cut some triangles into the mesh to connect the two rooms with a door and a threshold. In Edit Mode, press <strong>K</strong> and then click on parts of the mesh you want to cut. Confirm with <strong>ENTER</strong>. In the example below, I'm creating the green lines by cutting there. (You can watch this technique on <a href="https://youtu.be/sxuiw1u5mmg?t=7m3s">YouTube</a>)
+<img src="cut.png" alt="cut" /></p>
+<a class="header" href="#straighten" id="straighten"><h3>Straighten</h3></a>
+<p>If you have a face or an edge that is not straight and you want to level it/bring it to one height, select the vertices in question and scale them to 0 along the Z (or any other) axis. This way, you can align anything you want along a line.</p>
+<a class="header" href="#see-geometry-through-objects" id="see-geometry-through-objects"><h3>See Geometry through Objects</h3></a>
+<p>There is a handy little function that lets you see through objects. You'll be able to select all the polygons, even the ones that would otherwise be hidden by other geometry/objects.
+<img src="seethrough.jpg" alt="limit selection to visible" /></p>
+<a class="header" href="#warnings" id="warnings"><h2>Warnings</h2></a>
+<p><strong>Before you actually start editing, you need to keep a few things in mind</strong> (Don't be scared. If you get something wrong or don't understand something, you can always get help on the forums.):</p>
+<ul>
+<li><strong>Save often and create backups!</strong></li>
+<li>The more polygons you have, the more it is going to lag in-game. Keep your track under 60,000 polygons.</li>
+<li>Keep the geometry simple! If your track has simple geometry, players will have more fun racing it.</li>
+<li>Keep your quads square! A quad should be 'as big' as the texture you're planning to use with it. You cannot tile textures, you can only tile polygons. Import (File -&gt; Import -&gt; Re-Volt) a stock tracks if you don't understand. You will see that there are many square polygons used for surfaces that largely have the same texture. This is a technical limitation, I will explain it further at a later point. If you have sections with too large polygons, subdivide or cut them so that they <em>fit</em> the textures.</li>
+<li><a href="#dealing-with-non-planar-polygons">Learn how to deal with non-planar polygons.</a> Planar quads are easier to work with.</li>
+</ul>
+<a class="header" href="#workflow" id="workflow"><h2>Workflow</h2></a>
+<p>If you felt brave and got stuck anyway, you can still <a href="https://youtu.be/sxuiw1u5mmg">watch the following steps on YouTube</a></p>
+<p>I started tracing the track by adding a plane, extruding, rotating, subdividing, ...
+<img src="workflow01.png" alt="Beginning to model" />
+I added one plane, scaled it up and subdivided it. Then I extruded parts and transformed them into the other rooms using the techniques mentioned above.</p>
+<a class="header" href="#creating-parts-separately-and-merging-them" id="creating-parts-separately-and-merging-them"><h3>Creating Parts separately and merging them</h3></a>
+<p>Some parts can be modeled as separate meshes and then merged. Here I cut some polygons to fit another part of the track using the knife tool. Then I will merge them with <strong>ALT + M</strong>:</p>
+<p><img src="combine.jpg" alt="combining meshes" /></p>
+<p>New parts start as a long plane that can be subdivided or cut:</p>
+<p><img src="newcut.jpg" alt="cutting meshes" /></p>
+<p>Combining all the techniques explained above, i copied parts and merged them with other parts. Now most of the track is outlined. It doesn't need to be <em>too</em> clean as we will polish everything in the end. Just make sure that you have no double vertices (remember: remove doubles) and that everything is connected nicely. Everything is flat at the moment (to flatten: select everything and scale Z to 0).</p>
+<p><img src="full.png" alt="full view" /></p>
+<a class="header" href="#extrusion-and-the-magnet-tool" id="extrusion-and-the-magnet-tool"><h3>Extrusion and the Magnet Tool</h3></a>
+<p>I then started extruding walls and other things from the rooms that I modeled. A very useful tool is the magnet. You can find it in the bottom toolbar of the viewport (in the marked dropdown list, select Vertex):</p>
+<p><img src="snap.jpg" alt="snap to vertex" /></p>
+<p><img src="extrude2.png" alt="" /></p>
+<p>You can activate the magnet tool by either clicking on the magnet or holding down <strong>CTRL</strong>. Now you can select a row of edges, extrude it and then move it, point to the vertex you want to snap to, click when it snaps to the right vertex. If not, press <strong>ESC</strong> and start moving the edges again, this time with your mouse cursor placed somewhere else. You'll get the hang of it. For example, you can get all walls to be the same height with this.</p>
+<p><img src="extrude_snap.gif" alt="extrude gif" /></p>
+<a class="header" href="#flip-normals" id="flip-normals"><h3>Flip Normals</h3></a>
+<p>(invisible polygons, wrong normal direction)</p>
+<p>Sometimes it can happen that your polygons are the wrong way around. They are shaded differently:</p>
+<p><img src="flipn1.jpg" alt="wrong normal direction" /></p>
+<p>To make those polygons easier to spot, enable <em>Backface Culling</em> in the right sidebar and polygons will only be visible from their <em>up</em>-side:</p>
+<p><img src="flipn2.jpg" alt="backface culling" /></p>
+<p>To flip a polygon around, select it and use the <em>Flip Direction</em> function in the left sidebar:</p>
+<p><img src="flipn3.jpg" alt="flip normals" /></p>
+<p>Your polygon should now be facing the right direction:</p>
+<p><img src="flipn4.jpg" alt="flipped normals" /></p>
+<p>Remember, you can select multiple polygons while holding down <strong>SHIFT</strong>.</p>
+<a class="header" href="#zip-snapshot-02" id="zip-snapshot-02"><h3>Zip-Snapshot 02</h3></a>
+<p>If you're stuck, here is my current level folder:</p>
+<p><a href="track_snapshot02.zip">Download Zip File</a></p>
+<p><img src="zip02.png" alt="screenshot of the zip" /></p>
+<a class="header" href="#dealing-with-non-planar-polygons" id="dealing-with-non-planar-polygons"><h3>Dealing with non-planar Polygons</h3></a>
+<p>How to spot non-planar faces:</p>
+<table><thead><tr><th> planar </th><th> non-planar </th></tr></thead><tbody>
+<tr><td> <img src="planar.gif" alt="planar gif" /> </td><td> <img src="nonplanar.gif" alt="non-planar gif" /> </td></tr>
+</tbody></table>
+<p>Always pay attention to non-planar polygons (remember, they can be split in two ways). Re-Volt does not like quads that are not straight. If they are non-planar, you will need to split them (if cars will drive on them). The best way to do it is selecting the two opposing vertices and pressing <strong>J</strong> (this will split quad faces to tris). Here is an example of the ambiguity (Blender might split it the way you don't want):
+<img src="nonplanar.jpg" alt="example of non-planar faces" /></p>
+<p>If you have a large selection of non-planar polygons, for example on a bumpy hill or a lawn, you can select all of them and then press <strong>CTRL + T</strong>. This will triangulate them automatically.</p>
+<a class="header" href="#placeholders" id="placeholders"><h3>Placeholders</h3></a>
+<p>I am planning to model some parts of the track later, mostly decorational objects. I changed to object mode by pressing <strong>TAB</strong> and created a few cubes, rotated and scaled them the way I want. Later, I will replace them with proper meshes.</p>
+<a class="header" href="#filling-in-the-placeholders" id="filling-in-the-placeholders"><h3>Filling in the placeholders</h3></a>
+<p><a href="https://youtu.be/Thte7eVJUy0">YouTube: Placing Placeholders</a></p>
+<p>When you're done modeling a solid base for the cars to drive on, you can start filling in more detailed objects. You can just place new objects (<strong>Shift + A</strong>, make sure that you are in Object mode by pressing TAB and checking the bottom bar of the view port). Then you can get rid of the placeholder objects. All those objects can be separate, they'll all be exported to the track file. It's recommended to keep the base in one object, though. It's best to have one solid mesh for the cars to drive on.</p>
+<p><img src="placeholders.png" alt="placeholders" /></p>
+<a class="header" href="#zip-snapshot-03" id="zip-snapshot-03"><h3>Zip-Snapshot 03</h3></a>
+<p>If you're stuck, here is my current level folder:</p>
+<p><a href="track_snapshot03.zip">Download Zip File</a></p>
+<a class="header" href="#conclusion-1" id="conclusion-1"><h2>Conclusion</h2></a>
+<p>At the end of this step you should have a mesh of your track (mostly done, you can polish it later, of course). If you're doing this for the first time: Take your time, start over if you don't like your results. It's a steep learning curve that is tackled easiest in small bits. It also helps to import some simple models from the game and then remodel them. See how you can improve your workflow. Feel free to use google or ask on the forums if you are stuck! There are lots of ways to do things.</p>
+<p>The next step is to texture the track. If you have come this far, congratulations! There is still a long way to go but I am sure you learned a lot.</p>
+<a class="header" href="#creating-textures" id="creating-textures"><h1>Creating Textures</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#file-formats">File Formats</a></li>
+<li><a href="#mip-maps">Mip Maps</a></li>
+<li><a href="#rules-and-tips">Rules and Tips</a></li>
+<li><a href="#gathering-textures">Gathering Textures</a></li>
+<li><a href="#gimp">Gimp</a></li>
+<li><a href="#creating-new-files">Creating new Files</a></li>
+<li><a href="#scaling-layers">Scaling Layers</a></li>
+<li><a href="#duplicating-layers">Duplicating Layers</a></li>
+<li><a href="#merging-layers">Merging Layers</a></li>
+<li><a href="#altering-colors">Altering Colors</a></li>
+<li><a href="#drop-shadows">Drop Shadows</a></li>
+<li><a href="#save">Save</a></li>
+<li><a href="#working-with-selections">Working with Selections</a></li>
+<li><a href="#zip-snapshot-04">Zip-Snapshot 04</a></li>
+<li><a href="#exporting-textures">Exporting Textures</a></li>
+<li><a href="#more-textures">More Textures</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>In this step, we will create textures for the track.<br />
+First, some theory.</p>
+<a class="header" href="#file-formats" id="file-formats"><h3>File Formats</h3></a>
+<p>Re-Volt uses 10 <em>texture pages</em> with a naming scheme of <code>track*.bmp</code> where <code>*</code> is a letter ranging from a to j (ten of them).<br />
+The .bmp textures should have a size of 256x256. Depending on the version of Re-Volt, the resolution can be higher. Beginning with Re-Volt 1.2, you can use larger texture sizes. <a href="http://wiki.re-volt.io/articles/texture-formats">Check the wiki</a> to find out which sizes and formats are available. If you're going for a high resolution, you should stick to 1024 or 2048 since larger texture might have a negative impact on the track's performance.</p>
+<a class="header" href="#mip-maps" id="mip-maps"><h3>Mip Maps</h3></a>
+<p>For my example track I will be using 512x512 texture pages. During development, I will name them <code>artsa.bmp, artsb.bmp, ..., artsj.bmp</code>. I will need to rename them to <code>*.bmo</code> later since <code>*.bmp</code> should be used for 256x256 textures:</p>
+<pre><code>-------- Size ------------ File --------
+      8192 x 8192   -   texture.bmk  (near)
+      4096 x 4096   -   texture.bml
+      2048 x 2048   -   texture.bmm
+      1024 x 1024   -   texture.bmn
+       512 x 512    -   texture.bmo
+     [ 256 x 256    -   texture.bmp ]
+       128 x 128    -   texture.bmq
+        64 x 64     -   texture.bmr
+        32 x 32     -   texture.bms
+        16 x 16     -   texture.bmt
+         8 x 8      -   texture.bmu
+         4 x 4      -   texture.bmv
+         2 x 2      -   texture.bmw
+         1 x 1      -   texture.bmx   (far)
+</code></pre>
+<p>You may have noticed the <code>*.bmq</code> files in the Re-Volt levels. They have a size of 128x128. What are they for? Those smaller textures are called mip maps. They will be used for objects that are further away from you. This way your track will look a lot smoother. You can also go into the other direction and use larger versions of your textures for objects that are <em>near</em>. That's what I'm doing. However, it is wise to start work with the largest resolution you're intending to use.</p>
+<blockquote>
+<p>I chose to work with a base resolution of 512x512 pixels. That means that I will have three files per texture page: <code>.bmo</code>, <code>.bmp</code>, <code>.bmq.</code>.<br />
+Creating those mipmaps is one of the last steps. While working on the track, I will use 512x512 files called <code>*.bmp</code>.<br />
+Also, you can save your textures as .png and rename them to .bmp, RVGL will read them. That's what I am going to do.</p>
+</blockquote>
+<a class="header" href="#rules-and-tips" id="rules-and-tips"><h3>Rules and Tips</h3></a>
+<p>Refer to them later, you might not understand them yet if you're new to 3D modeling. Re-Volt is a pretty old game. So here are some things to keep in mind:</p>
+<ul>
+<li>UV coordinates must be between 0 and 1 for both axes. This means that you cannot tile textures (as explained earlier in the tutorial). If you map them out of bounds, they will glitch out.</li>
+<li>Pure black RBG(0, 0, 0) will be transparent (if you use the default settings and 16bit bitmaps)</li>
+<li>There are no normal/specular or other special maps. All your details need to be on the texture page. You may also want to include detailed shadows in the textures.</li>
+<li>Brightness of the level can be manipulated with vertex paint. If your level is set at night, you don't necessarily need to use dark textures.</li>
+</ul>
+<a class="header" href="#gathering-textures" id="gathering-textures"><h3>Gathering Textures</h3></a>
+<p>A few pages earlier I linked you some texture resources. Download textures you like and extract them to a folder in your working directory. We will use them to compose our texture pages. These are some of the ones I chose. We'll also create some textures from scratch or get some new ones if we need more.</p>
+<p><img src="textures.png" alt="textures I chose" /></p>
+<a class="header" href="#gimp" id="gimp"><h2>Gimp</h2></a>
+<p>If you're completely unfamiliar with programs like GIMP, you can watch <a href="https://youtu.be/HhrxF4kzuYE">a part of this tutorial on YouTube</a>.</p>
+<p>The first step is to enable the Single-Window Mode (it's much more convenient). To do so, open the Window menu from the menu bar and select <em>Single-Window Mode</em>.</p>
+<a class="header" href="#creating-new-files" id="creating-new-files"><h3>Creating new Files</h3></a>
+<p>Create a new file by pressing <strong>CTRL N</strong>. You'll be greeted with this:</p>
+<p><img src="new_file.png" alt="new file" /></p>
+<p>Set the resolution to 512x512 (or any power of 2 above 256) and confirm.</p>
+<a class="header" href="#scaling-layers" id="scaling-layers"><h3>Scaling Layers</h3></a>
+<p>Now you can just trag a texture from your ressources folder into the program.</p>
+<p>You can <strong>zoom</strong> in and out using the <strong>scroll wheel</strong> while holding down <strong>CTRL</strong>.</p>
+<p>The first thing I want to do is scale it down to take up only a quarter (256x256) of the texture. Click on the scale tool and then on the layer. A window will pop up.</p>
+<p><img src="scale_layer.png" alt="scale layer" /></p>
+<p>After that you'll want to move it into a corner of our texture. Use the <em>Move</em> tool and grab the layer. It might be outside the canvas (still highlighted by the black-yellow outline). Just move it the top left edge so it aligns with the canvas' edges.</p>
+<p><img src="move.png" alt="move" /></p>
+<a class="header" href="#duplicating-layers" id="duplicating-layers"><h3>Duplicating Layers</h3></a>
+<p>So that is one part of the texture page. I also want a carpet on it, so I'll duplicate the current layer since I need to put the carpet on it. To duplicate a layer, right click it in the right side bar and click on <strong>Duplicate Layer</strong>.</p>
+<p><img src="duplicate.png" alt="duplicate layer" /></p>
+<a class="header" href="#merging-layers" id="merging-layers"><h3>Merging Layers</h3></a>
+<p>Now I dragged the carpet texture into GIMP and scaled it down to 128x128 to only take up a quarter of the wooden floor (as described above). I then duplicated it again and put it beneath it another time to have a larger strip. Then, select the topmost carpet layer from the list, right-click it and select <em>Merge Down</em>. We'll then have a larger carpet layer.</p>
+<p><img src="merge.png" alt="merge" /></p>
+<a class="header" href="#altering-colors" id="altering-colors"><h3>Altering Colors</h3></a>
+<p>Now, I have to admit, the carpet is a bit ugly. Select the layer and go to <strong>Colors -&gt; Hue/Saturation</strong>. Adjust the Hue slider until you found something you like.</p>
+<p><img src="hue.png" alt="changing the hue" /></p>
+<a class="header" href="#drop-shadows" id="drop-shadows"><h3>Drop Shadows</h3></a>
+<p>It still looks a bit bland, I know. How about a subtle shadow under the carpet? Go to <strong>Filters -&gt; Light -&gt; Drop Shadow</strong> and adjust it to your liking.</p>
+<table><thead><tr><th align="left">  Drop Shadow Window  </th><th align="left"> Result  </th></tr></thead><tbody>
+<tr><td align="left"> <img src="shadow.png" alt="" /> </td><td align="left"> <img src="shadow_done.png" alt="" /> </td></tr>
+</tbody></table>
+<a class="header" href="#save" id="save"><h3>Save</h3></a>
+<p>It's time to save. Hit <strong>CTRL S</strong> and save it as <code>tracknamea.xcf</code>, I'll save it as <code>artsa.xcf</code>. We'll export to PNG/BMP later.</p>
+<a class="header" href="#working-with-selections" id="working-with-selections"><h3>Working with Selections</h3></a>
+<p>The shadow goes a bit beyond the wood part of the texture. I want to get rid of the shadow that sticks into the white part. Select the layer and activate the selection tool. Then select the part that's not on the wood and press <strong>DELETE</strong>. To unselect, press <strong>CTRL SHIFT A</strong>.</p>
+<table><thead><tr><th align="left">  Shadow goes too far  </th><th>  Selection Tool  </th><th>  Result  </th></tr></thead><tbody>
+<tr><td align="left">  <img src="toofar.png" alt="" /> </td><td align="left">  <img src="select.png" alt="" /> </td><td align="left">  <img src="select_result.png" alt="" /> </td></tr>
+</tbody></table>
+<a class="header" href="#zip-snapshot-04" id="zip-snapshot-04"><h3>Zip-Snapshot 04</h3></a>
+<p>If you're stuck, here is my current level folder:</p>
+<p><a href="track_snapshot04.zip">Download Zip File</a></p>
+<a class="header" href="#exporting-textures" id="exporting-textures"><h3>Exporting Textures</h3></a>
+<p>I added a few more textures to the texture page and it's now full. To export it, press <strong>CTRL SHIFT E</strong> and export it as a PNG file.</p>
+<p><img src="export.png" alt="export" /></p>
+<p>! To make the game recognize the texture, you need to rename the .png file to .bmp. (It's still a .png file, it just has the name of a .bmp file). <code>artsa.png</code> --&gt; <code>artsa.bmp</code></p>
+<p><img src="compare.png" alt="actually a png" /></p>
+<a class="header" href="#more-textures" id="more-textures"><h3>More Textures</h3></a>
+<p>One texture page won't be enough. While modeling the track further, I made some textures for the walls (artsb.bmp and artsc.bmp). Check out how I made them on <a href="https://youtu.be/aTEIB234OUo">YouTube</a>. (This video will be referenced in the next step again, so don't be shocked if you see some Blender things that you don't understand yet.)</p>
+<p><img src="walls.png" alt="walls" /></p>
+<a class="header" href="#conclusion-2" id="conclusion-2"><h3>Conclusion</h3></a>
+<p>You don't need to create <em>all</em> texture pages right now. I actually created only the first one and moved on to mapping and modeling the track a bit more. I made some walls higher and did some more adjustments. You can always come back to earlier steps later. In fact, we will create more sophisticated textures in a later step again (<em>Creating Textures (Advanced)</em>). In the next step, we'll put the texture we just made onto the 3D objects we modeled.</p>
+<a class="header" href="#mapping-textures-in-blender" id="mapping-textures-in-blender"><h1>Mapping Textures in Blender</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#loading-and-assigning-textures">Loading and assigning Textures</a></li>
+<li><a href="#navigating-the-uv-image-editor">Navigating the UV Image Editor</a></li>
+<li><a href="#manipulating-the-uv-map">Manipulating the UV Map</a>
+<ul>
+<li><a href="#using-reset">Using Reset</a></li>
+<li><a href="#zip-snapshot-05">Zip-Snapshot 05</a></li>
+<li><a href="#using-unwrap">Using Unwrap</a></li>
+<li><a href="#using-project-from-view">Using Project from View</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>You can <a href="https://youtu.be/Jpoz3U5b1Fw">watch this part on YouTube</a>.</p>
+<p>The textures you import into Blender have to be the correct format already:
+Height and width of each texture has to be a power of two, as mentioned earlier. Make sure that your filenames are right (e.g. tracknamea.bmp, tracknameb.bmp, ...).
+Let's import the first bitmap into Blender. In my case it is <code>artsa.bmp</code>.</p>
+<blockquote>
+<p>You need to have <em>Textured Solid</em> shading enabled, if you didn't already activate it in the Edit Mode part.</p>
+</blockquote>
+<a class="header" href="#loading-and-assigning-textures" id="loading-and-assigning-textures"><h2>Loading and assigning Textures</h2></a>
+<p>To apply textures to 3D models for use with Re-Volt you need to <em>paint them on</em>. You do not need to create materials for a texture.</p>
+<p>First you need to open the UV/Image Editor:</p>
+<p><img src="image_editor.jpg" alt="editor" /></p>
+<p>In the <strong>UV/Image Editor</strong>, load a new texture by clicking on <strong>Open</strong>. Select your bitmap file. If you loaded a bitmap before, you can select it from the dropdown list next to it. Don't open files twice (you'll get filenames with .001 endings and those will not export to Re-Volt.</p>
+<p>Select the object you want to map and go into edit mode. Now select one or multiple faces you want to apply the texture to.</p>
+<blockquote>
+<p>To select all faces that are on one level, select one face of the ground and press <strong>SHIFT G</strong>, then select <strong>co-planar</strong>. It will select the whole floor if it's on one level.</p>
+</blockquote>
+<p><img src="co_planar.png" alt="" /></p>
+<p>Now you need to map/unwrap the polygons. Move your mouse back to the 3D viewport and press <strong>U</strong> (with the faces selected that you want to unwrap). For now, choose <strong>Reset</strong>. You will see that there are multiple quads (all layed over another) in the UV/Image Editor. You can select them just like things from the 3D viewport. They represent your 3D object in a 2D texture space, so to say. For example, you can select all of them and scale them down, then move them to the part of the texture you'd like them be at.</p>
+<p><img src="loaded_texture.png" alt="" /></p>
+<a class="header" href="#navigating-the-uv-image-editor" id="navigating-the-uv-image-editor"><h2>Navigating the UV Image Editor</h2></a>
+<p>Some basic and advanced tips.</p>
+<ul>
+<li>Drag the view aroung with the <strong>Middle Mouse Button</strong></li>
+<li>Zoom with the <strong>Scroll Wheel</strong></li>
+<li>Press <strong>HOME</strong> to reset the zoom level</li>
+<li>Make sure <strong>your mouse is inside the Image Editor when working with it</strong></li>
+<li>When in Edit Mode, you can export the UV map. Select everything with A and then click <strong>UVs -&gt; Export UV Layout</strong>. You can then use it as a base for your textures.</li>
+</ul>
+<a class="header" href="#manipulating-the-uv-map" id="manipulating-the-uv-map"><h2>Manipulating the UV Map</h2></a>
+<a class="header" href="#using-reset" id="using-reset"><h3>Using Reset</h3></a>
+<p>Before you start mapping, please enable <strong>Constrain to Image Bounds</strong> as it's technically required by Re-Volt. This will make sure that all mapping coordinates stay inside the texture.</p>
+<p><img src="constrain.png" alt="" /></p>
+<p>Now that we have loaded the texture, it's time to map the faces we assigned the texture to. Just press <strong>A</strong> while your mouse is in the Image Editor. You will see that you can select those 2D faces just like the 3D ones in the view port. In this case, I need to scale them down by half by typing <strong>S 0.5</strong>. Then I just move them to the top left corner of the texture by pressing <strong>G</strong> and using the mouse to move them.</p>
+<p><img src="mapping01.png" alt="" /></p>
+<blockquote>
+<p>I also scaled it down a bit again so that there are small margins to the other parts of the texture and the borders of the texture. This is to ensure that no other parts of the texture will bleed through when the game filters/smoothens the textures.</p>
+</blockquote>
+<p>It's not perfect yet. You might have noticed that this only worked for (almost) perfectly square faces/polygons. I also don't want the entire floor to be wood. First, I'll take care of the other floor types. To do this, I again selected the faces I want to map another floor texture to. (Optional/Possible: Press U and R again and scale it down to the desired size.)</p>
+<p><img src="mapping02.png" alt="" /></p>
+<p>Then, in the Image Editor, press <strong>G</strong> to move the UV of the polygons you selected to another part of the texture.</p>
+<blockquote>
+<p>Remember, you can move, rotate and scale the UV as you were able to in the Edit and Object mode. You can also <strong>mirror</strong> by scaling by -1 (e.g. type <strong>S X -1</strong> to mirror horizontally).</p>
+</blockquote>
+<p>The result should look similar to this:</p>
+<p><img src="mapping04.png" alt="" /></p>
+<blockquote>
+<p>To view the entire UV map, select the entire object in the 3D view port</p>
+</blockquote>
+<p><strong>Summarizing my workflow for large areas:</strong></p>
+<ol>
+<li>select all similar faces (roughly same shape, supposed to have the same texture)</li>
+<li>load and apply the texture sheet to them</li>
+<li>unwrap them using <em>Reset</em></li>
+<li>select all faces in the UV/Image Editor and move them to the appropriate place on the texture sheet</li>
+</ol>
+<p>For more complex objects it would be better to actually <em>unwrap</em> (choose something other than Reset) them.</p>
+<a class="header" href="#zip-snapshot-05" id="zip-snapshot-05"><h3>Zip-Snapshot 05</h3></a>
+<p>If you're stuck, here is my current level folder: <a href="track_snapshot05.zip"><strong>Download Zip File</strong></a></p>
+<a class="header" href="#using-unwrap" id="using-unwrap"><h3>Using Unwrap</h3></a>
+<p>Sometimes you'll need to map larger chunks of faces onto one texture region. To do so, select all the faces you'd like to map, press <strong>U</strong> and select <em>Unwrap</em>. This will map all selected faces in one go, mostly proportionate. In some cases, you'll have to rotate the mapping and scale it the way you want it. I used a combination of this and <em>Project from View</em> (explained in the next step) to unwrap the walls.</p>
+<p><img src="unwrap.png" alt="unwrap.png" /></p>
+<p><a href="https://www.youtube.com/watch?v=6LqJ0KGJNWI">YouTube: Modeling and Texturing a Tree</a></p>
+<hr />
+<p>With these techniques, I was able to map the floor and the walls.</p>
+<p><img src="mapped.png" alt="mapped floor" /></p>
+<a class="header" href="#using-project-from-view" id="using-project-from-view"><h3>Using Project from View</h3></a>
+<p>Sometimes it's really useful to map the geometry's shape as it is in the view port directly to the texture. This works best with polygons that are aligned to the global axes (X, Y, Z). You can align the camera using the numbers on the numblock or by holding down <strong>ALT</strong> while panning the viewport with the <strong>middle mouse button</strong>. Then press <strong>U</strong> and choose <strong>Project from View</strong> (...Bounds will span the mapped part over your whole texture).
+Whenever you can't align the view to the faces, you can always use <em>Unwrap</em> instead.</p>
+<p><img src="project_from_view.png" alt="project from view" /></p>
+<p><a href="https://youtu.be/aTEIB234OUo">YouTube: Creating textures for the walls and mapping them with various techniques</a></p>
+<a class="header" href="#creating-textures-advanced" id="creating-textures-advanced"><h1>Creating Textures (Advanced)</h1></a>
+<blockquote>
+<p>Under Construction
+Here I'm planning to explain how to</p>
+</blockquote>
+<ul>
+<li>make textures seamless,</li>
+<li>bake textures using Blender</li>
+<li>compose textures with light</li>
+</ul>
+<a class="header" href="#making-textures-seamless" id="making-textures-seamless"><h2>Making Textures Seamless</h2></a>
+<p>You might have noticed that some textures do not tile very well. There are seams all over the edges.</p>
+<p><img src="seams.png" alt="texture seams" /></p>
+<p>Here I selected the layer I want to make seamless:</p>
+<p><img src="seamless_layer.png" alt="selected layer" /></p>
+<p>To make it seamless, go to <strong>Filters -&gt; Map -&gt; Make Seamless</strong>. The result should look like this:</p>
+<p><img src="result.png" alt="result" /></p>
+<a class="header" href="#vertex-paint" id="vertex-paint"><h1>Vertex Paint</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#automatic-shading">Automatic Shading</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>In this step, I'm planning to explain how to add lighting to your track as well as sharp shadows using the knife tool.</p>
+<a class="header" href="#automatic-shading" id="automatic-shading"><h2>Automatic Shading</h2></a>
+<blockquote>
+<p>An easier one-click function is now included in the Blender add-on. See <a href="https://re-volt.github.io/re-volt-addon/html/tools-panel/light-and-shadow.html#shade-object"><strong>here</strong></a> for instructions.</p>
+</blockquote>
+<p>Here I will show you how to automatically bake the lighting from Blender onto the vertex color channels of the objects so your level doesn't look so flat in-game.<br />
+This is how you're seeing your objects in Blender. There is some shading applied to it and you can distinguish some edges. The sides also have different shades.</p>
+<p><img src="barecube.png" alt="Cube without lighting" /></p>
+<p>Now, if you export it and view it in the game, it will normally end up looking like this (white since there's no texture assigned at the moment):</p>
+<p><img src="noshade.png" alt="No Shading in game" /></p>
+<p>Let's add some lights to your track. Press <strong>SHIFT A</strong> and select a light source. Then rotate it as you would do with other objects. In the Properties panel on the right, you'll be able to set brightness and light color. I set it up like this:</p>
+<p><img src="hemi.png" alt="Adding a light" /></p>
+<p>You will need to add a <em>Color Channel</em> to the objects you want to shade. To do so, select your object by right clicking and then head over to the <em>Object Data</em> panel and search for the list of <strong>Vertex Colors</strong>. Click on the little plus and a channel will be added.</p>
+<p><img src="vertex_channel.png" alt="Adding a vertex channel" /></p>
+<p>Before applying the shading to your object, you'll have to adjust some settings in the <em>Render</em> tab of the Properties panel. Turn <strong>Textures off</strong>.</p>
+<p><img src="shading_properties.png" alt="Setting the shading properties" /></p>
+<p>All that's left to do is bake the light onto that channel (you have to do that once per object). Enable <strong>Bake to Vertex Color</strong>, make sure Full Render is set as the Bake Mode and then hit the <strong>Bake</strong> button. To preview, set the 3D viewport to <em>Texture</em> mode.</p>
+<p><img src="bake.png" alt="Baking" /></p>
+<p>In texture mode and in-game, your object will now be shaded:</p>
+<p><img src="ingame.png" alt="Shaded cube" /></p>
+<p>You can change the way things are lighted by adding multiple light sources, setting them up in different directions, with different brightnesses and colors.</p>
+<a class="header" href="#polygon-properties" id="polygon-properties"><h1>Polygon Properties</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#user-interface">User Interface</a></li>
+<li><a href="#property-explanations">Property Explanations</a>
+<ul>
+<li><a href="#double-sided">Double Sided</a></li>
+<li><a href="#translucent">Translucent</a></li>
+<li><a href="#mirror">Mirror</a></li>
+<li><a href="#additive-blending">Additive blending</a></li>
+<li><a href="#texture-animation">Texture Animation</a></li>
+<li><a href="#no-envmap">No EnvMap</a></li>
+<li><a href="#envmap">EnvMap</a></li>
+<li><a href="#cloth-effect">Cloth Effect</a></li>
+<li><a href="#do-not-export">Do not export</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>Each polygon (face) can have multiple properties. In Edit Mode, the panel for face properties can be found in the Re-Volt tab of the tools panel on the left side of the 3D view.</p>
+<a class="header" href="#user-interface" id="user-interface"><h2>User Interface</h2></a>
+<p><img src="properties-panel.png" alt="Face properties panel" /></p>
+<p>While a face is selected, the checkboxes and the numbers next to them represent its current state.<br />
+If the checkbox is checked, all selected faces have this property enabled.<br />
+If the checkbox is not checked but the number next to it is <em>not</em> 0, some of the selected faces have the property enabled.</p>
+<p>Here's an example: All of the 16 selected faces are double-sided but only 4 have texture animation enabled:</p>
+<p><img src="props-example.png" alt="Example for set properties" /></p>
+<p>To select/deselect all faces with a property, click on the <strong>sel</strong> botton next to the propery in question.</p>
+<a class="header" href="#property-explanations" id="property-explanations"><h2>Property Explanations</h2></a>
+<a class="header" href="#double-sided" id="double-sided"><h3>Double Sided</h3></a>
+<p>The polygon is visible from both sides in-game.</p>
+<a class="header" href="#translucent" id="translucent"><h3>Translucent</h3></a>
+<p>When enabled, the polygon will be rendered transparent according to the Alpha vertex color channel <em>or</em> the transparency of the texture (e.g. PNG or 32bit Bitmap).</p>
+<a class="header" href="#mirror" id="mirror"><h3>Mirror</h3></a>
+<p>todo</p>
+<a class="header" href="#additive-blending" id="additive-blending"><h3>Additive blending</h3></a>
+<p>Renders the polygon with additive blending: Colors of the polygon will be added to the underlying color values.</p>
+<a class="header" href="#texture-animation" id="texture-animation"><h3>Texture Animation</h3></a>
+<p>Enables texture animation for the polygon.<br />
+World files have 10 slots for texture animations, the same amount as the number of texture pages per track.<br />
+The texture animation slot is determined by the texture set on the polygon:<br />
+If texturea.bmp is mapped to the polygon, slot 0 will be used,<br />
+if texturec.bmp is mapped to the polygon, slot 2 will be used.</p>
+<a class="header" href="#no-envmap" id="no-envmap"><h3>No EnvMap</h3></a>
+<p>Only used in PRM files. PRMs have env enabled by default. Setting this will disable it.</p>
+<a class="header" href="#envmap" id="envmap"><h3>EnvMap</h3></a>
+<p>Mostly used in World files. World files don't have env enabled by default. Setting this will enable it.<br />
+As for PRMs, the pickup model (models/pickup.m) uses this to determine the polygons that generate sparks.</p>
+<a class="header" href="#cloth-effect" id="cloth-effect"><h3>Cloth Effect</h3></a>
+<p>Enables the cloth effect, used on the Mystery car.</p>
+<a class="header" href="#do-not-export" id="do-not-export"><h3>Do not export</h3></a>
+<p>A custom flag not used by Re-Volt. Faces with this property enabled won't be exported.</p>
+<a class="header" href="#collision" id="collision"><h1>Collision</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#collision-mesh">Collision Mesh</a></li>
+<li><a href="#properties-and-materials">Properties and Materials</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>The NCP file contains all collision information of your track. Without it you would not be able to drive on it.<br />
+It also contains information about the surface itself: Material (dirt, ice, etc.), whether it collides with the camera or not and some other properties.</p>
+<a class="header" href="#collision-mesh" id="collision-mesh"><h2>Collision Mesh</h2></a>
+<p>It's generally advised to make a separate mesh for your track's collision. This allows you to be more efficient with the polygon count (since you don't have to care about texture tiling).<br />
+Most stock tracks have an NCP file that is a lot simpler than the .w file (the one that contains all geometry and texture information).</p>
+<blockquote>
+<p>Take nhood1 as an example. Import the .w file and then the .ncp file. You can see that the road of the .w file is divided into smaller tiles while the NCP file has longer polygons for the straight parts of the road.</p>
+</blockquote>
+<a class="header" href="#properties-and-materials" id="properties-and-materials"><h2>Properties and Materials</h2></a>
+<p>Switch to edit mode and click on the NCP tab in the Re-Volt toolbar.</p>
+<p><img src="ncp.png" alt="NCP Panel" /></p>
+<p>To apply properties and materials, select the polygons in question and set the properties by clicking on the checkboxes and selecting a material from the list. You will see that the polygons change color depending on the material you chose.</p>
+<blockquote>
+<p>In order to see the color preview, make sure Blender is set to solid mode. If textures are assigned to your mesh, you might have a harder time seeing the colors (that's why it's recommended to have a separate clean mesh for your track collision).</p>
+</blockquote>
+<blockquote>
+<p>You can hover any of these properties in Blender to see an explanation of what they do.</p>
+</blockquote>
+<a class="header" href="#special-effects" id="special-effects"><h1>Special Effects</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#cartoon-style">Cartoon Style</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>If you want to give your track (or even car) a special look, you can try out one of these things:</p>
+<a class="header" href="#cartoon-style" id="cartoon-style"><h2>Cartoon Style</h2></a>
+<p>Cartoons often have outlines around characters and objects. In modern games, this could be achieved with a shader. However, Re-Volt doesn't support such fancy technology. There <em>is</em> a way to get your cartoon fixings despite the games ancient technology.</p>
+<blockquote>
+<p>Please excuse the different Blender theme I'm using, it's much easier to see things with a brighter background!
+<cite>Marv</cite></p>
+</blockquote>
+<p>Alright, first off, here's what we're aiming for:</p>
+<p><img src="final.png" alt="Spoiling the final result before the tutorial started. This is how you lose readers!" /></p>
+<p>Before we get started, you might want to set your view port to <strong>Texture Mode</strong> in order to see vertex colors:</p>
+<p><img src="texture_mode.png" alt="You really have to enable texture mode, there is no way around it." /></p>
+<p>So, you're a bit bored by the appearance of your object, right? Perhaps you're a bit lazy to work out the textures and all you have right now is a shaded monkey.</p>
+<p><img src="suzanne_shaded.png" alt="Picture of a shaded monkey head" /></p>
+<p>One thing to note is that results with more complex models may vary, perhaps even require manual cleanup. In this case, it works out alright if you're not a perfectionist (which I know you are!).</p>
+<p>To even see what's going on, we need to adjust a setting in the 3D view. Do you remember the panel on the right? You can toggle it by pressing <strong>N</strong>. Press it a few times to see which panel I'm talking about.<br />
+Now scroll down a bit and make sure <strong>Backface Culling</strong> is <strong>enabled</strong>.<br />
+<img src="backface_culling.png" alt="Backface culling, may sound harsher than it actually is." /></p>
+<p>The first step is to duplicate your object. I'm going to demonstrate this in <strong>Object Mode</strong> since it's easier to work with.<br />
+To duplicate the object, I press <strong>SHIFT D</strong>. You will then have another instance of the object stuck to your cursor. We don't want to move it anywhere else, so hit <strong>ESC</strong> or <strong>RMB</strong>.<br />
+If you look at your outliner in the top right, you'll see two of your objects:</p>
+<p><img src="two_suzannes.png" alt="Picture of the list with two objects" /></p>
+<p>Now let's change into <strong>Edit Mode</strong>. Make sure everything is selected by pressing <strong>A</strong>. The first thing we'll do is to <strong>flip the normals</strong>. To do that, either hit <strong>SPACE</strong> and type <strong>Flip Normals</strong> or click this button:</p>
+<p><img src="flip_direction.png" alt="Flipping the normals like a chess table after losing the game" /></p>
+<p>You won't see any difference just yet.<br />
+Now let's get to the juicy part. Make sure everything is still selected! Press <strong>ALT S</strong> (this tool is called Shrink Flatten) and move your mouse around. If you're unsure, enter something like <strong>-0.1</strong> on the keyboard and press <strong>ENTER</strong> or <strong>LMB</strong>. You will already see that something like an outline will form:</p>
+<p><img src="outlined_monkey.png" alt="Almost done, monkey with outline" /></p>
+<p>Now it is time to assign a color to the outline. Head on over to the Re-Volt tool tab and locate the Vertex Color Panel. You might be prompted to create a vertex color layer. Do so.<br />
+When your object has a vertex color layer, you will see the buttons for setting colors. Either pick a color or a shade and press a button (I chose black because I'm boring). You will then see that the outline changes its color:<br />
+<img src="black_outlined_monkey.png" alt="The screenshot before the final result." /></p>
+<p>Enter Object mode again and bewonder your final result. Perhaps go back and change the color or use ALT S again to change the thickness. Yes, I know, there are some rough edges but you have to understand that the game is from 1999, alright?</p>
+<p><img src="final.png" alt="The final result." /></p>
+<p>Now, feel free to merge the two objects by selecting them and pressing <strong>CTRL J</strong>. You have to do this for exporting cars (.prm), but not when you're working on a track (.w).</p>
+<a class="header" href="#exporting" id="exporting"><h1>Exporting</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#export">Export</a></li>
+<li><a href="#world-w">World (.w)</a></li>
+<li><a href="#collision-ncp">Collision (.ncp)</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p>Your track can now be exported from Blender to the Re-Volt file formats. For now, you will have to focus on the following two:</p>
+<p><strong>World (.w)</strong>: Contains all 3D data<br />
+<strong>Collision (.ncp)</strong>: Contains data for collisions</p>
+<a class="header" href="#export" id="export"><h2>Export</h2></a>
+<p>The Re-Volt add-on supports various formats. To export a file to any format, proceed as follows:<br />
+Make sure you're in object mode. Click on the <em>Export</em> button in the left toolbar. Alternatively, use File -&gt; Export -&gt; Re-Volt.<br />
+The file type will be determined by the file name ending (.e.g. <code>.w</code>).</p>
+<p><img src="export.png" alt="Export button" /></p>
+<a class="header" href="#world-w" id="world-w"><h2>World (.w)</h2></a>
+<p>Export your file as <code>trackname.w</code> into your level folder, where <code>trackname</code> is the name of your track. It needs to match the folder name.</p>
+<a class="header" href="#collision-ncp" id="collision-ncp"><h2>Collision (.ncp)</h2></a>
+<p>Export your file as <code>trackname.ncp</code> into your level folder, where <code>trackname</code> is the name of your track. It needs to match the folder name.</p>
+<blockquote>
+<p>Exporting to NCP is a heavy task, it might take up to 5 minutes.</p>
+</blockquote>
+<p>Now it's time to integrate your track into the game. To do so, you will have to use the game's in-game editor.<br />
+This is explained in detail in the next section:</p>
+<p><a href="/03.makeitgood/">MakeItGood</a></p>
+<a class="header" href="#makeitgood-1" id="makeitgood-1"><h1>MakeItGood</h1></a>
+<p>At this point you should be done modeling and texturing your track.</p>
+<p>MakeItGood is a cheat code that enables you to access several different editing modes.</p>
+<blockquote>
+<p>To enable the edit modes: Launch Re-Volt in “-dev” mode (revolt.exe -dev). If you are using Re-Volt 1.2 or RVGL (which you should be), this is the way to go.</p>
+</blockquote>
+<p><strong>Alternatively:</strong> To get into each of the editing modes select Start Race from the main menu. Then select Single Race, and any game mode. Now put in “MAKEITGOOD” as a name and hit enter. After doing this you should hear a honking sound as it moves on to the car selection screen. Press Esc three times and it should take you back to the Race Type menu. At the bottom you will see a new option, Edit Mode. Select what edit mode you want. Once you get into the level, just follow the tutorial below for whatever mode your editing. You can start with POS Nodes, then continue with Track Zones and so on. Just follow the list of tutorials down below.</p>
+<table><thead><tr><th align="left">   </th><th align="left">  Edit Mode  </th><th align="left">  Description  </th></tr></thead><tbody>
+<tr><td align="left"> <img src="posnodes.jpg" alt="" /> </td><td align="left">  <a href="./01.pos-nodes">POS Nodes</a> </td><td align="left">  <strong>POS Nodes</strong> tell the Re-Volt engine about the race path, this includes distance your car is from the other cars in the race as well as the length of the track and what it takes to complete a lap on your track. Pos nodes will only define nodes, the orientation is given by Track zones. </td></tr>
+<tr><td align="left"> <img src="taz1.png" alt="" /> </td><td align="left">  <a href="./02.track-zones">Track Zones</a> </td><td align="left">  <strong>Track Zones</strong> tell the Re-Volt engine what order the cars need to take around your track to make a complete lap. They work in conjunction with Pos Nodes &amp; AI Nodes.Together with POS Nodes, they’ll determinate your position inside race path. </td></tr>
+<tr><td align="left"> <img src="ainodes.jpg" alt="" /> </td><td align="left">  <a href="./03.ai-nodes">AI Nodes</a> </td><td align="left">  <strong>AI Nodes</strong> are what the ai (computer) cars use to properly navigate the track. AI Nodes are mandatory in all tracks with the exception of battle levels and stunt tracks. </td></tr>
+<tr><td align="left"> <img src="force.png" alt="" /> </td><td align="left">  <a href="./04.force-fields">Force Fields</a> </td><td align="left">  <strong>Force Fields</strong> push and pull by applying different forces to cars around the track depending on how you set your fields up. You can use these in a variety of ways to enhance the theme of your track. For whatever reason, the word force is spelled <em>Farce</em> in the game. </td></tr>
+<tr><td align="left"> <img src="objects.jpg" alt="" /> </td><td align="left">  <a href="./05.objects">Objects</a> </td><td align="left">  <strong>Objects</strong> are 3D models with special features. This also includes the Pick-Ups which players get their weapons from. </td></tr>
+<tr><td align="left"> <img src="triggers.png" alt="" /> </td><td align="left">  <a href="./06.triggers">Triggers</a> </td><td align="left">  <strong>Triggers</strong> allow you to put direction arrows and other things into your track. This will help people navigate your track. It’s also used for the piano in Toy World and for cameras. </td></tr>
+<tr><td align="left"> <img src="camnodes.png" alt="" /> </td><td align="left">  Camera Nodes </td><td align="left">  <strong>Camera Nodes</strong> tell the Re-Volt engine where to place the cameras for replays, and what direction (order) they should travel. See TVTIME. </td></tr>
+<tr><td align="left"> <img src="default.jpg" alt="" /> </td><td align="left">  Visiboxes </td><td align="left">  <strong>Visiboxes</strong> will block out certain sections of your track while they are not in view, increasing the FPS (Frames Per Second) on your track, making the track a smoother racing experience </td></tr>
+<tr><td align="left"> <img src="instance.jpg" alt="" /> </td><td align="left">  Instances </td><td align="left">  <strong>Instances</strong> are models that you (or other people) have created that you can insert into your track to enhance your overall theme. </td></tr>
+<tr><td align="left"> <img src="lights.png" alt="" /> </td><td align="left">  Lights </td><td align="left">  Adding <strong>lights</strong> can help create a different mood for your track as well as the objects (such as cars) inside. </td></tr>
+<tr><td align="left">  <img src="default.jpg" alt="" /> </td><td align="left">  Portals (Erm, nothing to see here) </td><td align="left">  Not used in game. This mode was probably used for performance optimization, not teleportation. </td></tr>
+</tbody></table>
+<a class="header" href="#pos-nodes" id="pos-nodes"><h1>Pos Nodes</h1></a>
+<a class="header" href="#what-are-pos-nodes" id="what-are-pos-nodes"><h2>What are POS Nodes?</h2></a>
+<p>POS Nodes are used to determine your track’s length. The Re-Volt engine will render the Pos node line to use to calculate the distance between cars, thanks to POS nodes the information about other players will get supplied.</p>
+<a class="header" href="#placing-pos-nodes" id="placing-pos-nodes"><h2>Placing POS Nodes</h2></a>
+<ol>
+<li>
+<p>Type in your game MAKEITGOOD as name, or use the DEV mode in v1.2 and rvgl, more information about this in the AI Nodes tutorial.</p>
+</li>
+<li>
+<p>Go in your track that you want to make POS Nodes. Press F4 then press <strong>Insert</strong> to insert the first POS Node. This POS node has to be placed in front of your car, the first node always counts! You cannot change the start node, so do not mess up your first node!</p>
+</li>
+</ol>
+<blockquote>
+<p>Always when you start making POS Nodes insert the first node at the start line</p>
+</blockquote>
+<ol start="3">
+<li>Now after you inserted the first POS Node , using the same ‘trick’ insert the second one.</li>
+</ol>
+<blockquote>
+<p>Better use a lot of POS Nodes because sometimes it’s more useful and revolt will give more and better infos. Each POS Node should be very near to the next</p>
+</blockquote>
+<ol start="4">
+<li>
+<p>OK , you did the first two POS Nodes. Now to do the next step just put the mouse over the <strong>first</strong> POS Nodes and press Spacebar. Then go with the mouse over the next POS Node and press Spacebar again. And so you got the line.</p>
+</li>
+<li>
+<p>The last step is about connecting the nodes. Hover your mouse over the starting node (the biggest one!) and press <strong>Enter</strong>. Now hover your mouse over the next node and press <strong>Space</strong>. Hover your mouse over the third node and press Space again. Keep going till you connected all nodes.</p>
+</li>
+</ol>
+<blockquote>
+<p>After you have done the POS Nodes press left Ctrl + F4 to save. You will see a small window, you saved the POS Nodes in the *.pan file that you should find in the track’s folder.</p>
+</blockquote>
+<p>Tutorial by miromiro from Re-Volt Live, posted with permission</p>
+<a class="header" href="#track-zones" id="track-zones"><h1>Track Zones</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#keymap">Keymap</a></li>
+<li><a href="#what-are-track-zones">What are Track Zones?</a></li>
+<li><a href="#track-zones-in-races">Track Zones in Races</a></li>
+<li><a href="#track-zones-in-makeitgood">Track Zones in MakeItGood</a></li>
+<li><a href="#controls">Controls</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#keymap" id="keymap"><h2>Keymap</h2></a>
+<p><img src="MIG_Track_Zones.png" alt="" /></p>
+<a class="header" href="#what-are-track-zones" id="what-are-track-zones"><h2>What are Track Zones?</h2></a>
+<p>Just like the name hints, track zones are actually zones (boxes) that define which parts of tracks are race-able as well as the racing order.</p>
+<p>For this, each track zone has a unique ID which defines the order. Therefore Track zone 0 is the start zone (where all the cars should start from and inside) up to the final track zone whose ID should be <em>number_of_trackzones – 1</em>.</p>
+<p><img src="cgr.png" alt="" /></p>
+<a class="header" href="#track-zones-in-races" id="track-zones-in-races"><h2>Track Zones in Races</h2></a>
+<p>The track zones are actually ‘invisible’ inside a normal race, however, they’re actually present and they define the right orientation and position of the player as well as other cars with the help of POS nodes.</p>
+<p><img src="taz.png" alt="" /></p>
+<a class="header" href="#track-zones-in-makeitgood" id="track-zones-in-makeitgood"><h2>Track Zones in MakeItGood</h2></a>
+<p><img src="mig_tz.png" alt="" /></p>
+<p>Just like any other MakeItGood mode, Track zones can be accessed through ‘Edit Mode’ accessible using -dev mode or using MAKEITGOOD as the player name.</p>
+<p>Track zone edit mode is one of the easiest mode, in fact, there are not many keys you have to use.</p>
+<a class="header" href="#controls" id="controls"><h2>Controls</h2></a>
+<ul>
+<li><strong>Insert</strong>: Inserts a new track zone.</li>
+<li><strong>Numpad +</strong> and <strong>–</strong> : Modify the ID of current track zone.</li>
+<li>Moving mouse cursor to a track zone and clicking on <strong>Enter</strong>: Select a track zone</li>
+<li><strong>Space</strong>: toggle the selected track zone’s one of the 6 surfaces (top, right, bottom, left, front, back) for later modification</li>
+<li><strong>Numpad</strong> <code>*</code>  and <strong>/</strong> : Extend or shrink the currently selected surface</li>
+<li><strong>Numpad</strong> <code>*</code>  and <strong>/</strong> with CTRL pressed (down) : Extend or Shrink faster</li>
+<li><strong>Numpad</strong> <code>*</code> and <strong>/</strong> with SHIFT pressed (down) : Extend or Shrink all surfaces</li>
+<li><strong>Numpad</strong> <code>*</code> and <strong>/</strong> with <strong>SHIFT</strong> and <strong>CTRL</strong> pressed (down) : Extend or Shrink all surfaces faster.</li>
+<li>the key labeled <strong>2</strong> (above q,w,e,r) : Toggle seeing other track zones</li>
+</ul>
+<p>As well as the classic edit mode controls:</p>
+<ul>
+<li><strong>Numpad 1, 2, 3</strong>: 90° rotation along the chosen coordination system</li>
+<li><strong>Numpad 0</strong>: restore orientation</li>
+<li><strong>Tab</strong>: toggle the chosen coordination   system (camera/world)</li>
+<li><strong>Alt</strong>: Toggle the axis system (X-Y alone, X-Z alone, X alone etc…)</li>
+<li><strong>F4</strong>: Entering edit mode</li>
+<li><strong>CTRL+F4</strong>: Saving current work</li>
+</ul>
+<blockquote>
+<p>Tutorial written by Kallel</p>
+</blockquote>
+<a class="header" href="#ai-nodes" id="ai-nodes"><h1>AI Nodes</h1></a>
+<blockquote>
+<p>To make the CPU cars drive around in a track you will need AI nodes. Without AI nodes you can’t have a proper race against the AI.</p>
+</blockquote>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#keymap">Keymap</a></li>
+<li><a href="#what-is-ai">What is AI?</a></li>
+<li><a href="#what-exactly-are-ai-nodes">What exactly are AI nodes?</a></li>
+<li><a href="#1-how-to-enter-edit-mode">1. How to enter edit mode?</a></li>
+<li><a href="#2-making-your-track-ready-for-ai-nodes">2. Making your track ready for AI nodes.</a></li>
+<li><a href="#3-inserting-the-first-nodes">3. Inserting the first nodes</a></li>
+<li><a href="#4-connecting-the-nodes">4. Connecting the nodes</a></li>
+<li><a href="#5-reconfiguring-the-ai-path">5. Reconfiguring the AI Path</a>
+<ul>
+<li><a href="#the-purple-line">The Purple Line</a>
+<ul>
+<li><a href="#tricks-for-using-the-purple-line">Tricks for using the purple line</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#6-ai-nodes-properties">6. AI Nodes Properties</a></li>
+<li><a href="#a-racing-line">A. Racing Line</a></li>
+<li><a href="#b-pickup-route">B. Pickup Route</a></li>
+<li><a href="#c-stairs">C. Stairs</a></li>
+<li><a href="#d-bumpy">D. Bumpy</a></li>
+<li><a href="#e-25-mph-slow-down">E. 25 mph Slow Down</a></li>
+<li><a href="#f-soft-suspension">F. Soft Suspension</a></li>
+<li><a href="#g-jump-wall">G. Jump Wall</a></li>
+<li><a href="#h-title-screen-slow-down">H. Title Screen Slow down</a></li>
+<li><a href="#i-turbo-line">I. Turbo Line</a></li>
+<li><a href="#j-long-pickup-route">J. Long Pickup Route</a></li>
+<li><a href="#k-short-cut">K. Short Cut</a></li>
+<li><a href="#l-long-cut">L. Long Cut</a></li>
+<li><a href="#m-barrel-block">M. Barrel Block</a></li>
+<li><a href="#n-off-throttlepetrol-throttle">N. Off Throttle/Petrol Throttle</a></li>
+<li><a href="#o-wilderness">O. Wilderness</a></li>
+<li><a href="#p-152030-mph-slowdowns">P. 15/20/30 MPH Slowdowns</a></li>
+<li><a href="#extra-things">Extra Things</a></li>
+<li><a href="#tips-and-tricks">Tips and Tricks</a>
+<ul>
+<li><a href="#string-multiple-node-properties-together-to-get-the-best-ai">String multiple node properties together to get the best AI.</a></li>
+<li><a href="#keep-the-line-level-and-smooth">Keep the line level and smooth.</a></li>
+<li><a href="#create-an-ai-line-out-of-a-ghost-path">Create an AI line out of a ghost path</a></li>
+</ul>
+</li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#keymap-1" id="keymap-1"><h2>Keymap</h2></a>
+<p><img src="MIG_AI_Nodes.png" alt="" /></p>
+<a class="header" href="#what-is-ai" id="what-is-ai"><h2>What is AI?</h2></a>
+<p>AI is short for Artificial Intelligence, which means that the computer cars have their own “fake” intelligence. But still, the cars don’t know where to go, and how fast they should go, and when to brake. This is when AI nodes comes in handy.
+The cars do know how to read the AI node path, which is a part of their intelligence.</p>
+<a class="header" href="#what-exactly-are-ai-nodes" id="what-exactly-are-ai-nodes"><h2>What exactly are AI nodes?</h2></a>
+<p>AI nodes are nodes in a track, which you can connect to make a complete path. The nodes tell the cars how to drive in that part of the track. With AI nodes you have the exact control over your AI cars, telling them what way to go, let the cars maintain a certain speed, give the cars actions, like: taking the pickup route, using the battery, drive careful under stairs and many more things.</p>
+<a class="header" href="#a1-how-to-enter-edit-mode" id="a1-how-to-enter-edit-mode"><h2>1. How to enter edit mode?</h2></a>
+<p>There are two options</p>
+<ul>
+<li>v1.2 of Re-volt or RVGL has a DEV-mode. You can unlock DEV-mode by pressing the following arrows in the start menu: up, right, down, left, up, left, down, right. Now you have unlocked the edit mode.</li>
+<li>You can unlock edit mode by typing MAKEITGOOD in the name wheel. The edit mode is less advanced than the DEV-mode, because DEV-mode unlocks all the cars while being in the mode, unlock all the tracks, give you a few options while editing like pressing F8 for making a screenshot, F9 for statistics and much more. Thus I recommend using the DEV-mode. For this you have to download version 1.2, which you can find on the following website: <a href="http://rv12.revoltzone.net">http://rv12.revoltzone.net.</a>.</li>
+</ul>
+<p>After unlocking edit mode or DEV mode you go to the race selection screen. Go down the menu and there is a new mode called Edit mode. If you choose this mode you can use the left and right arrow keys to navigate between modes, for example: POS nodes, Objects, Track zones, Triggers, Lights, AI nodes and much more. But the thing we need are AI nodes. For making the the first AI nodes you might want to select Edit mode instead of Single race, so let’s do that.</p>
+<p>Why select Edit mode instead of Single race?</p>
+<p>In single race you have AI cars. Those AI cars will follow your node path. If your node path is not finished, the game will crash! By choosing Edit mode you can safely create the AI path, before letting the AI cars drive on it, as edit mode is quite the same as the Practice mode, just with a timer. (basically single race with one car.)</p>
+<p><img src="aitut1.png" alt="" /></p>
+<blockquote>
+<p>The AI node edit mode in the race selection menu.</p>
+</blockquote>
+<p>If you have done this, we can advance to the next step, which is making your track ready for AI nodes!</p>
+<a class="header" href="#a2-making-your-track-ready-for-ai-nodes" id="a2-making-your-track-ready-for-ai-nodes"><h2>2. Making your track ready for AI nodes.</h2></a>
+<p>Before creating AI nodes I suggest to create POS nodes and Track zones first. Also you have to put a definite starting position in your track. This to make things easier for you.</p>
+<a class="header" href="#a3-inserting-the-first-nodes" id="a3-inserting-the-first-nodes"><h2>3. Inserting the first nodes</h2></a>
+<p>Go to the track you want to edit. To edit you have to press the F4 button, to enter Edit Mode. Your HUD will disappear and a mouse arrow will appear. This mouse arrow is your best friend, with the arrow you can select nodes, navigate through the track (with right mouse button), do a lot of other things.</p>
+<p>Important to remember: the Left side is the Green bubble, and in the Right side, put the Red bubble.</p>
+<p>Press Insert, to insert your first node at the left side of the track. This will be the place where the green node spawns. Hold your left mouse button and move the red node to the right side of the track.</p>
+<p><img src="placenode.gif" alt="" /></p>
+<blockquote>
+<p>Placing the first node in AI nodes Edit Mode.</p>
+</blockquote>
+<p>So, you have placed your first node and two bubbles! Now repeat this throughout the whole track. There are a few tricks in making AI nodes.</p>
+<ol>
+<li>At least place a pair of nodes every 3 car lengths.</li>
+<li>Turns will need more nodes, for the better AI intelligence.</li>
+<li>More nodes means better intelligence, the AI will get more information -&gt; can cope better with AI problems, like getting stuck, crashing into walls etc.</li>
+</ol>
+<p><img src="firstnodes-e1408965148693.jpg" alt="" /></p>
+<blockquote>
+<p>Nodes for a normal turn.</p>
+</blockquote>
+<p><img src="sharpnodeturn.jpg" alt="" /></p>
+<blockquote>
+<p>Nodes for a sharp 90 degree turn.</p>
+</blockquote>
+<p>As you see in the two pictures above, you will see both ways to place nodes. In a normal turn you don’t have to put as much as in a sharp turn. It is important to have more nodes, as the AI won’t steer well while being in both nodes, it needs new instructions. If there are a lot of nodes, you will see the AI steering much smoother!</p>
+<p>If you placed all the nodes, then it should look like this:</p>
+<p><img src="aipathnodes.png" alt="" /></p>
+<p><strong>Note:</strong> Please notice that they are NOT connected and that there is no middle line yet.</p>
+<p>As you can notice the ‘bubbles’ are blinking. This is because they are not connected yet. In the next step you will learn how to connect nodes.</p>
+<a class="header" href="#a4-connecting-the-nodes" id="a4-connecting-the-nodes"><h2>4. Connecting the nodes</h2></a>
+<p>If you did everything correct, and followed correct the last steps, you will be able to connect the AI Nodes that you inserted.</p>
+<p>Put your mouse over the first start node. Press enter to select the node. Hover your mouse over the second node, and press Space. Now hover the mouse over the next node, and press Space again! Now you have connected the first three nodes. By doing so this way, it will look like this:
+<img src="aiconnectnodes.gif" alt="" /></p>
+<blockquote>
+<p>Connecting the first two AI nodes!</p>
+</blockquote>
+<p>Connecting AI nodes has never been so easy!</p>
+<p>Continue until you connect all lines correctly.</p>
+<blockquote>
+<p><strong>Note:</strong> Check your nodes, so they have green bubbles left, and red bubbles right! This is very important, if this is not the cause your track will crash most likely. BUT! Why don’t the nodes stop blinking? Don’t worry.</p>
+</blockquote>
+<p>You have to save! To save you have to press ‘Left Ctrl + F4‘.After this you will see a pop-up window, telling you “trackname.fan” is saved! Now check the AI Nodes, and you’ll see that they’re not blinking anymore. If they are still blinking then you did something wrong. This happens if you didn’t connect them properly.</p>
+<p>After this, go back to the main menu. Now start a single Race in your track, and see those AI cars driving, following your nodes? Good job.</p>
+<a class="header" href="#a5-reconfiguring-the-ai-path" id="a5-reconfiguring-the-ai-path"><h2>5. Reconfiguring the AI Path</h2></a>
+<p>Now you’re going to learn how to reconfigure the AI path.</p>
+<p>I suppose your AI nodes kind of look like this after connecting:
+<img src="aiconnectednodes.png" alt="" /></p>
+<blockquote>
+<p>AI nodes after connecting them!</p>
+</blockquote>
+<p>What is wrong? Well, nothing is wrong! Just the AI path is exactly in the middle of all the nodes. Maybe it could work on some tracks, but not on ones with 90 degree sharp turns, chicanes, etc. To fix this, we need to reconfigure the AI path.</p>
+<p>How to do this? We have to use the numpad / and * keys first, to edit the white path. Try it for yourself; Select the first node, press *, and the white line will move to right. Same goes for going left with the / key.</p>
+<blockquote>
+<p><strong>Note:</strong> This is only possible with a numpad!</p>
+</blockquote>
+<p><img src="aireconfigurednodes.png" alt="" /></p>
+<blockquote>
+<p>AI Nodes after reconfiguring them.</p>
+</blockquote>
+<p>Okay, look at that white line now! Looks much smoother, isn’t it?</p>
+<p>There are a few tricks. While editing the white line you have to think about the smoothness of the AI, and let them brake as less as possible, as pretty many cars in Re-Volt doesn’t have the best acceleration.</p>
+<p>In the real RC world there is a trick for taking turns, in a real track.</p>
+<table><thead><tr><th> <img src="slowingcorner.jpg" alt="" /> </th><th> <img src="slowingcorner2.jpg" alt="" /> </th></tr></thead><tbody>
+<tr><td> This is the standard trick of taking a corner in a RC car race. </td><td> Multiple ways of taking a corner. </td></tr>
+</tbody></table>
+<p>Those pictures are from a real RC manufacturer (tamiya.com), take these pictures in consideration for creating the perfect AI.</p>
+<a class="header" href="#the-purple-line" id="the-purple-line"><h3>The Purple Line</h3></a>
+<p>While editing nodes you see a purple line. What the hell is that???</p>
+<p>The purple line is the overtaking line, for your AI nodes. If there is a faster car, they can take the overtaking line so they can overtake the slower car, when the slower car gets lapped, or making a collision with your or another car.</p>
+<p>After creating your white line, I suggest select the first node, press Shift+Space to delete the purple line. After that you can edit the overtaking line with the numpad keys 8 and 9.</p>
+<a class="header" href="#tricks-for-using-the-purple-line" id="tricks-for-using-the-purple-line"><h4>Tricks for using the purple line</h4></a>
+<p>With purple line you can do a few nice tricks, see here:</p>
+<p><img src="aistartlinetrick.png" alt="" /></p>
+<blockquote>
+<p>The purple line trick, for the start – the bottom four cars will follow the purple line in this case, thus there will be less start crashes!</p>
+</blockquote>
+<p>The second trick – you can use the purple line to let cars avoid the oil puddles that are commonly placed – a lot of crashes happen there which means you can “overtake” them, and the oil puddle!</p>
+<p><img src="aioilpuddle.png" alt="" /></p>
+<blockquote>
+<p>Okay, a car placed a oil puddle between two lines. Imagine if there was one line, then the chance for driving over an oil puddle is doubled. The purple line prevented it a few times.</p>
+</blockquote>
+<a class="header" href="#a6-ai-nodes-properties" id="a6-ai-nodes-properties"><h2>6. AI Nodes Properties</h2></a>
+<p>Now that you have the base idea down, it’s time to learn how to give properties to the AI Nodes. To change the properties for the racing line press ‘Numpad Enter‘ and you’ll see that the line changes its color, depends of the property. If you want to move the properties the other way, press ‘Left Shift + Numpad Enter‘ This is one of the most important steps when you create AI for your track.</p>
+<a class="header" href="#a-racing-line" id="a-racing-line"><h2>A. Racing Line</h2></a>
+<p>It is the first property you get. If you take a look, after you connected the nodes, you’ll see a white line in the middle. That is called Racing Line. It means, that it doesn’t really have a property. It leaves the AI Cars to drive at their max speed. That’s why in the beginning of the curves you should never use this. This is recommended for the zones where you have enough space to drive faster, you and the AI, like the long straights in Toys in the Hood 1.</p>
+<p><img src="aitut4.png" alt="" /></p>
+<blockquote>
+<p>The white Race Line property – cars will drive at their maximum speed</p>
+</blockquote>
+<a class="header" href="#b-pickup-route" id="b-pickup-route"><h2>B. Pickup Route</h2></a>
+<p>This one is always used when you have a track with splitways. The AI takes only one route out of two, then choose for the one they don’t take, the property as Pickup Route. The AI cars that don’t have any weapon ready for use, will take that route to get a weapon from the pickups.</p>
+<p>If the car has a weapon ready it will ignore that route. As you can notice the line is now light blue. That means that it’s not a simple white racing line anymore, you only need to assign it one or two times, not for the whole splitway.</p>
+<p><img src="aitut5.png" alt="" /></p>
+<p>Can you see that car that used the route with the Pickup? Can you also notice the blue line? This means that the car doesn’t have any weapon ready.</p>
+<a class="header" href="#c-stairs" id="c-stairs"><h2>C. Stairs</h2></a>
+<p>This is one of the least used AI properties. It is always used when the AI Cars drive on stairs, the AI will stay carefully on their wheels and maintian balance. The line of this property is grey.</p>
+<p><img src="aitut6.png" alt="" /></p>
+<a class="header" href="#d-bumpy" id="d-bumpy"><h2>D. Bumpy</h2></a>
+<p>The big roaring cars, like Phat Slug, Panga, Bertha Ballistics and Mouse takes that line. It is used for tracks with normal and offroad roads. When you make AI Nodes for the offroad part, choose, like on Pickup Route, Bumpy. I don’t really think it works, but it worked on some tracks. It is like Soft Suspension – another AI Nodes property that we’ll learn soon. The line of this property is a dark brown. Aeon, a good AI Nodes editor says that the Bumpy is:</p>
+<blockquote>
+<p>(Aeon)</p>
+<blockquote>
+<p>Bumpy – or whatever it was called – is a route that is more likely to be chosen by cars which have a high Suspension AI setting.</p>
+</blockquote>
+</blockquote>
+<p>And he was right!</p>
+<p><img src="aitut7.png" alt="" /></p>
+<p>So, if you have offroad tracks, try to use this property to let the car take a good shortcut.</p>
+<a class="header" href="#e-25-mph-slow-down" id="e-25-mph-slow-down"><h2>E. 25 mph Slow Down</h2></a>
+<p>It does what it says. It slows down the AI car to 25 mph. If the car drives faster than this, it will slow it down. It is a very good one. You’ll need also Petrol Throttle or Off Throttle… I’ll tell you soon why. The line of this property is yellow.</p>
+<p><img src="aitut8.png" alt="" /></p>
+<p>Do you see the yellow lines? That is the 25 mph slow down property. See also the car? It drives now at 25 mph because it is driving through that node.</p>
+<a class="header" href="#f-soft-suspension" id="f-soft-suspension"><h2>F. Soft Suspension</h2></a>
+<p>It does again what it says. It is used by the AI Cars that have soft suspension. Here are the stock ones that uses it: Phat Slug, Mouse, Bertha Ballistics, Rotor &amp; Panga.
+It is represented by a light pink line. It can be used mostly on track with splits or shortcuts.Let me show you a picture with it and how it works.</p>
+<p><img src="aitut10.png" alt="" /></p>
+<p>Can you see that small car? That one is a custom one that has soft suspension. That’s why it chose that line. Also the light brown line is the Soft Suspension. So, now we can advance to the next step!</p>
+<a class="header" href="#g-jump-wall" id="g-jump-wall"><h2>G. Jump Wall</h2></a>
+<p>It is used to “skip” sections in the track, for example in case you have a track with a long jump and a bottomless pit, weak cars most likely won’t make that jump.
+If you use nodes with that property there and your car crashes in that section, it will be teleported to the next “non-Jump Wall” node (thus helping the cars over the jump).</p>
+<p>However even though this property can be extremely helpful in tracks that have such jumps, it should also be used with care as it could be exploited by players in certain situations where the crash could end up being beneficial instead of causing you to loose time (that’s probably why its not used that much).
+But as long as the nodes are placed properly and the track has been tested well enough, this shouldn’t be an issue.</p>
+<a class="header" href="#h-title-screen-slow-down" id="h-title-screen-slow-down"><h2>H. Title Screen Slow down</h2></a>
+<p>The name explains it all, it was used in the intro, so the AI cars would drive very slow.</p>
+<p>It slows down the car. It slows most of all properties, it slows a car to 5 mph. It isn’t used in any of the stock tracks and not too much at customs. It’s useful for the tracks with small racing line, where the AI crashes in a lot of things.</p>
+<p><img src="aitut12.png" alt="" /></p>
+<p>Do you see the car? It’s going very slow at about 5 mph because the racing line is very small, that’s why there are also AI Nodes walls (we’ll learn soon about it).If you understood what it is, let’s go on!</p>
+<a class="header" href="#i-turbo-line" id="i-turbo-line"><h2>I. Turbo Line</h2></a>
+<p>This one if for telling the AI Cars that it’s a good place for using battery. If the AI car has the battery as the next ready weapon and it drives over a node with this property it’ll use the battery. A tip: don’t place this property along the road ahead. Only at the beginning. If not, it could use the battery only when it finished going through the AI and will be a problem, because a battery-driven AI car is hard to tame with the normal nodes. It is represented by a orangish-red line to suit its action.</p>
+<p><img src="aitut13.png" alt="" /></p>
+<p>Do you see Cougar that uses the battery? Well, this is because it drives over the AI Nodes with Turbo Line property. Also, do you see that it’s low ahead road? No curves? So it has to be. Find the best place for battery use, and use the property there. Every track needs one.If you have questions, I hope you know what you should do, just ask here! And now let’s advance!</p>
+<a class="header" href="#j-long-pickup-route" id="j-long-pickup-route"><h2>J. Long Pickup Route</h2></a>
+<p>Like ‘Pickup Route’ this is used to tell the AI Car where to drive to get a pickup if it hasn’t one. It doesn’t work every time on all tracks, but sometimes you can find workable one. The CTR Palm Marsh track used a lot of this. There are 2 routes. One shorter and one longer. On the shorter is no pickup, and on the longer is. So, when you make AI for the longer route, use this property to tell the AI car that there’s a pickup. If not, the AI will ignore that route. The cars that have a weapon already, will ignore that route. The color for this line is dark red.</p>
+<p><img src="aitut14.png" alt="" /></p>
+<p>Do you see the car that uses that line? And it’s also a pickup there that the car just picked up. Also, please notice that that route is longer that the other. That’s why it is called ‘Long Pickup Route’.</p>
+<a class="header" href="#k-short-cut" id="k-short-cut"><h2>K. Short Cut</h2></a>
+<p>It tells the car when there’s a shorter way. If you have a track with two routes, where ever you put that property, the car will follow it. Even if you put the Short Cut for the longer route, the AI will drive only on that route, even if it’s longer. The AI cars sometimes take this route for a short cut. Pretty self explanatory. If the car is close to the node it will take that line over the default racing line. Here’s a picture so you can better understand what I mean.</p>
+<p><img src="aitut15.png" alt="" /></p>
+<p>Do you see the cars and the Skid Marks? That means that all the AI cars take that route, even if, how it seems, it’s not the shortest. So, if you want the AI to follow only one route, use this property with the pink line named Short Cut. Let’s skip now to the next property, right? wink.gif</p>
+<a class="header" href="#l-long-cut" id="l-long-cut"><h2>L. Long Cut</h2></a>
+<p>The AI cars sometimes take this route if they accidentally drive into it. This may happen because of oil, getting shoved, or just a simple loss of control.</p>
+<p><img src="longcut.png" alt="" /></p>
+<p>As you can see in the pic above, the AI car on the right lost control and swerved into the Long Cut node. It will follow that until it rejoins with the Racing Line. Moving on.</p>
+<a class="header" href="#m-barrel-block" id="m-barrel-block"><h2>M. Barrel Block</h2></a>
+<p>This property is unknown, and I could not find anywhere in the stock tracks where it is used.</p>
+<a class="header" href="#n-off-throttlepetrol-throttle" id="n-off-throttlepetrol-throttle"><h2>N. Off Throttle/Petrol Throttle</h2></a>
+<p>It’s very important! Most of the experienced AI users place these properties before using the slow down properties. It doesn’t let the AI cars to get out of control making an 180 turn, losing time. Let me show you a picture to see where to place it…</p>
+<p><img src="petrol-throttle.png" alt="" /></p>
+<p>The image shows an Petrol Throttle. The Petrol Throttle makes the car repeatedly go off throttle and then back on quickly. The car goes go, off, go, off etc…
+Depends only of you which one you’d like to use.</p>
+<a class="header" href="#o-wilderness" id="o-wilderness"><h2>O. Wilderness</h2></a>
+<p>Not much is known on this property. Urnemanden however has developed a fitting theory that might be true. He says:</p>
+<blockquote>
+<p>(Urnemanden)</p>
+<blockquote>
+<p>I think that the wilderness property was made for the AI to have a backup-line just in case that it came off-road. These backup lines could help the AI avoid all the obstacles on its way back to the racing line, and help it save important time and get further in the race. Of course you just have to set up these backup-lines the most important places.
+Urnemanden’s theory is very possible and I think it’s correct.He crashed off the normal Racing Line nodes and ended up on the Wilderness nodes.</p>
+</blockquote>
+</blockquote>
+<a class="header" href="#p-152030-mph-slowdowns" id="p-152030-mph-slowdowns"><h2>P. 15/20/30 MPH Slowdowns</h2></a>
+<blockquote>
+<blockquote>
+<p>They do exactly what the 25 MPH Slowdown does, they slow the car to the desired speed. By using a good combination of them, you can let the car not slide in turns, like for example use a 30 mph property first, then slow down to 20, then to 15 if it’s a sharp turn.</p>
+</blockquote>
+</blockquote>
+<a class="header" href="#extra-things" id="extra-things"><h2>Extra Things</h2></a>
+<p>What about the reversed track AI nodes? There is a simple, yet good trick for this. Press Shift+R and Shift+T to reverse your nodes.
+Same goes for POS nodes, track zones have to be done manually.</p>
+<a class="header" href="#tips-and-tricks" id="tips-and-tricks"><h2>Tips and Tricks</h2></a>
+<a class="header" href="#string-multiple-node-properties-together-to-get-the-best-ai" id="string-multiple-node-properties-together-to-get-the-best-ai"><h3>String multiple node properties together to get the best AI.</h3></a>
+<p>Making decent AI involves simply moving the racing line and making slowdowns. Making great AI involves combining almost every type of node.Use the throttle properties!
+Sure slowdowns are important too, but if you really want to make good AI you have to use everything. Sometimes slowdowns aren’t the best node for the job. If you have an AI line that has a sharp narrow turn in it, maybe you don’t have enough space to slow the car down, and if you have them suddenly slam the brakes then you might have them crashing into each other. A better alternative would be if you set a Petrol Throttle section a while before the corner, thus slowing the car down more effectively than the wall.</p>
+<a class="header" href="#keep-the-line-level-and-smooth" id="keep-the-line-level-and-smooth"><h3>Keep the line level and smooth.</h3></a>
+<p>This may sound stupid, however please keep the line on the ground and not in the sky. How can you edit and perfect your AI when the nodes are floating?
+Also, you should try and keep you line as smooth as possible. You wouldn’t want a car to turn right, and then swerve left randomly. That would just make the AI horrendous.</p>
+<a class="header" href="#create-an-ai-line-out-of-a-ghost-path" id="create-an-ai-line-out-of-a-ghost-path"><h3>Create an AI line out of a ghost path</h3></a>
+<p>For this one you have to be in the Time trial mode. You need to place the nodes first, but no need to optimize the racing line.</p>
+<p>What does this exactly do? Race the best lap you could, preferably without shortcuts, with Toyeca or another car.</p>
+<p>Use the key combination ‘6’ + ‘Left Shift’ for applying the ghost path to the racing line, extremely useful if you didn’t work on a racing line yet (the resulting line might require some fine tuning for the AI).</p>
+<blockquote>
+<blockquote>
+<p>Thanks to Kenny for the explanation of Jump Wall nodes and for the constructive criticism about this tutorial.</p>
+</blockquote>
+</blockquote>
+<a class="header" href="#force-fields" id="force-fields"><h1>Force Fields</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#linear-red">LINEAR (red):</a></li>
+<li><a href="#orientation-green">ORIENTATION (green):</a></li>
+<li><a href="#velocity-blue">VELOCITY (blue):</a></li>
+<li><a href="#spherical-yellow">SPHERICAL (yellow):</a></li>
+<li><a href="#wind-no-color">WIND (no color):</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<p><img src="mig-farce-fields-keys.jpg" alt="keytable" /></p>
+<p>In track making the farce field can be used to add to the theme of a track. Acclaim tracks using farce fields include: Ghost Town 1 and 2, Toytanic 1 and 2 and Toys in the Hood 2.</p>
+<p>When in the racing environment hit F4 to enter edit mode and then press insert to begin inserting farce fields. RV will automatically select the Linear farce type. Place the mouse over a field name and press enter to select an already present field. When finished adding your fields remember to hit CRTL+F4 to save your changes.</p>
+<p>NOTE: All fields (except spherical) have a white line in the center of the field. This line tells RV which direction to push in. I suggest editing the field’s size and placement in camera axis mode and editing the rotation and direction line in the world axis mode (hit left alt to change ). I also recommend changing the direction of the push in Rot Box mode (num pad del to change). The reason for this is because it is easier to get a perpendicular line direction by rotating the box instead of the line.
+Refer to the keys table for information on how to change all field settings.</p>
+<a class="header" href="#linear-red" id="linear-red"><h2>LINEAR (red):</h2></a>
+<p>The first type (and most common) is the linear field. This field is a pushing field for objects. This field is used on the Toytanic levels in the pool. The two values for the field are Mag and Dampening.</p>
+<p><strong>Mag:</strong>
+(press num pad enter to change value when selected)</p>
+<p>Tells RV how much force to apply to object entering the field. In the toytanic pool this is used to make lightweight cars float. The accepted value for floating, as if in water, is 2300. All values entered in this spot should be positive numbers.</p>
+<p><strong>Dampening:</strong>
+(press num pad enter to change value when selected)</p>
+<p>Tells RV how hard the field is. When objects hit the field it determines how far they should be allowed to go in before they are pushed back. Accepted values for this spot are positive numbers between 0 and 100. A value of 100 creates an invisible wall. Any object trying to enter the field while going against the direction of the push will not be allowed to enter. WARNING: Do not place a value of 100 on a field where the object entering the field will be pushed in the same direction of travel, this will create a force powerful enough to throw the car off of the track.</p>
+<a class="header" href="#orientation-green" id="orientation-green"><h2>ORIENTATION (green):</h2></a>
+<p>The second type of field is the orientation field. This field is used to rotate a car so that it faces a certain direction. This field is used in the Toytanic pool and in the Aqua series of tracks. The mag and dampening values are used in this field, but the Dampening value is not needed for proper use of the field.
+Note: The white line should point to the bottom of the car or object.</p>
+<p><img src="mig_farcefields_orientation.gif" alt="Farce field set to Orientation with magnitude 1000000" /></p>
+<p>Farce field set to Orientation with magnitude 1000000</p>
+<a class="header" href="#velocity-blue" id="velocity-blue"><h2>VELOCITY (blue):</h2></a>
+<p>This field is similar to the Linear field with one small difference. If a linear field is used to push a car when the mag value yields a push smaller than that of the cars top speed the field will act as a speed limiter. The Velocity field does not do this (I think). The velocity field should add to the top speed of the car. The velocity field uses the Mag value to determine its effects.</p>
+<a class="header" href="#spherical-yellow" id="spherical-yellow"><h2>SPHERICAL (yellow):</h2></a>
+<p>It is a round field that has no direction line and has GRAD START and GRAD END as its settings. There are no known uses of this field in any RV track, Acclaim or user made.</p>
+<a class="header" href="#wind-no-color" id="wind-no-color"><h2>WIND (no color):</h2></a>
+<p>(only found in Ghost Town)</p>
+<p>It is assumed that this field pushes very light weight objects. The use of it in Ghost Town appears to be in the movement of the tumbleweed. How it does this is unknown. The settings for this field are MAG and DAMPENING.</p>
+<a class="header" href="#objects" id="objects"><h1>Objects</h1></a>
+<p><img src="MIG_Objects.png" alt="" /></p>
+<a class="header" href="#triggers" id="triggers"><h1>Triggers</h1></a>
+<!-- MarkdownTOC autolink='true' -->
+<ul>
+<li><a href="#keymap">Keymap</a></li>
+<li><a href="#what-are-triggers">What are Triggers?</a></li>
+<li><a href="#1-controls">1. Controls</a></li>
+<li><a href="#2-placing-triggers">2. Placing Triggers</a></li>
+<li><a href="#3-types-of-triggers">3. Types of Triggers</a></li>
+<li><a href="#a-piano">A. Piano</a></li>
+<li><a href="#b-split">B. Split</a></li>
+<li><a href="#c-track-dir">C. Track dir</a></li>
+<li><a href="#d-camerarail">D. CameraRail</a></li>
+<li><a href="#e-ai-home">E. AI Home</a></li>
+<li><a href="#f-camerashorten">F. CameraShorten</a></li>
+<li><a href="#g-object-thrower">G. Object Thrower</a></li>
+<li><a href="#h-gap-camera">H. Gap Camera</a></li>
+<li><a href="#i-reposition-car">I. Reposition Car</a></li>
+</ul>
+<!-- /MarkdownTOC -->
+<a class="header" href="#keymap-2" id="keymap-2"><h2>Keymap</h2></a>
+<p><img src="MIG_Triggers.png" alt="" /></p>
+<a class="header" href="#what-are-triggers" id="what-are-triggers"><h2>What are Triggers?</h2></a>
+<p>Triggers are used to activate certain events or manage the player camera. Triggers are not necessary for a track to work, however, it is recommended that you at least add 'Track dir' triggers, so players know what path to take.</p>
+<a class="header" href="#a1-controls" id="a1-controls"><h2>1. Controls</h2></a>
+<ul>
+<li><strong>Insert</strong>: Insert a new trigger.</li>
+<li><strong>Enter</strong> while mouse is on a trigger: Select the trigger.</li>
+<li><strong>Space</strong>: Select a face (top, right, bottom, left, front, back) for editing.</li>
+<li><strong>Numpad *</strong>: Extend selected face.</li>
+<li><strong>Numpad /</strong> : Shrink selected face.</li>
+<li>Hold <strong>CTRL</strong>: Extend or shrink selected face faster.</li>
+<li>Hold <strong>SHIFT</strong>: Extend or shrink all surfaces.</li>
+<li>Hold <strong>CTRL</strong> and <strong>SHIFT</strong>: Extend or shrink all surfaces faster.</li>
+<li><strong>Numpad +</strong> and <strong>Numpad -</strong>: Change the trigger type.</li>
+<li><strong>-</strong>: Decrease 'Flag low' value.</li>
+<li><strong>+</strong>: Increase 'Flag low' value.</li>
+<li><strong>{</strong>: Increase 'Flag high' value.</li>
+<li><strong>}</strong>: Decrease 'Flag high' value.</li>
+</ul>
+<a class="header" href="#a2-placing-triggers" id="a2-placing-triggers"><h2>2. Placing Triggers</h2></a>
+<ol>
+<li>Use 'MAKEITGOOD' as your name or use the 'DEV' mode in v1.2 and rvgl. More information about this in the AI Nodes tutorial.</li>
+<li>Load the track you want to make Triggers for. Press <strong>F4</strong>, and then press <strong>Insert</strong> to insert a trigger.</li>
+<li>Look in the top right corner. You can see information about the trigger:
+<img src="insert.png" alt="default trigger" />
+Here is an explanation for each value:
+<strong>Piano</strong>: The type of trigger that is currently selected. Use <strong>Numpad +</strong> and <strong>Numpad -</strong> to change.
+<strong>Flag low</strong>: Used for several purposes. Use <strong>-</strong> and <strong>+</strong> to change. Some triggers make this value appear as text instead of a simple number.
+<strong>Flag high</strong>: Only used by some triggers. Use <strong>{</strong> and <strong>}</strong> to change.</li>
+</ol>
+<a class="header" href="#a3-types-of-triggers" id="a3-types-of-triggers"><h2>3. Types of Triggers</h2></a>
+<p>The types of triggers and their uses are listed here.</p>
+<a class="header" href="#a-piano" id="a-piano"><h2>A. Piano</h2></a>
+<p><img src="toy1piano.png" alt="toy world 1 piano" /></p>
+<p>This trigger is used for the piano in Toy World 1.
+<strong>Usage</strong>: For this trigger to work, it must cover the full piano area and the cars that drive on it. To use this trigger in a custom track, the piano must also be in the exact same position as it is in Toy World 1.
+<strong>Flag low</strong>: Not used? (60 in Toy World 1)
+<strong>Flag high</strong>: Not used? (20 in Toy World 1)</p>
+<a class="header" href="#b-split" id="b-split"><h2>B. Split</h2></a>
+<p><img src="toy1split.png" alt="toy world 1 split" /><br />
+<img src="toy1splitb.png" alt="toy world 1 split text" /></p>
+<p>This trigger is used for Time Trial mode. It displays the split time (how many seconds you are ahead or behind your record).
+<strong>Usage</strong>: Place halfway through your track, or divide it into 'segments', placing one at the end of each. Note that crossing the start line will act the same way as touching a <em>Split</em> trigger.
+<strong>Flag low</strong>: Used for order. Set to '0' for the first trigger you pass through, '1' for the second, ...
+<strong>Flag high</strong>: Not used.</p>
+<a class="header" href="#c-track-dir" id="c-track-dir"><h2>C. Track dir</h2></a>
+<p><img src="garden1dir.png" alt="botanical garden track dir" /><br />
+<img src="garden1dirb.png" alt="botanical garden track dir arrow" /></p>
+<p>This trigger is the most important, because it tells players what the racing line is.
+<strong>Usage</strong>: Place before each turn in your track and in sections you think might be confusing (such as two-way paths and intersections).
+<strong>Flag low</strong>: Used for type. Here is a text/image list:
+<img src="trackdirref.png" alt="track dir reference" />
+<strong>Flag high</strong>: Used for order. Set to '0' for the first trigger you pass through, '1' for the second... You can repeat numbers and use 'Dummy' triggers for multiple-way paths. Examples:</p>
+<p><img src="muse2dir1.png" alt="track dir multi path museum 2 example 1" /><br />
+<img src="muse2dir2.png" alt="track dir multi path museum 2 example 2" /><br />
+<img src="shoppedir.png" alt="track dir multi path shoppe example" /></p>
+<a class="header" href="#d-camerarail" id="d-camerarail"><h2>D. CameraRail</h2></a>
+<p><img src="ship1camerarail.png" alt="toytanic 1 camerarail" /></p>
+<p>This trigger activates Rail cameras. More information is in the Camera Nodes tutorial.
+<strong>Usage</strong>: Place this trigger covering the entirety of your Rail camera path. When a car enters it, the camera is activated. When it leaves, it is deactivated.
+<strong>Flag low</strong>: The starting camera ID.
+<strong>Flag high</strong>: Not used.</p>
+<a class="header" href="#e-ai-home" id="e-ai-home"><h2>E. AI Home</h2></a>
+<p><img src="aihome1.png" alt="ai home trigger 1" /><br />
+<img src="aihome2.png" alt="ai home trigger 2" /><br />
+<img src="aihome3.png" alt="ai home trigger 3" /></p>
+<p>This trigger is not used in stock tracks and rarely used in custom ones. It does not appear to have any effect. It could be related to forcing AI cars back to the racing line. More testing is needed.
+<strong>Usage</strong>: Unknown?
+<strong>Flag low</strong>: Unknown. Makes a line go around the trigger when the value is '0' through '31'. Attempting to set it to '32' causes it to reset to '0'. In the custom track 'Human Center by human', there are two of these triggers (seen above, first two images). The first one has this value set to '0', the next one has it set to '1'. The motivation for this is unknown, as the value doesn't seem to affect anything.
+<strong>Flag high</strong>: Unknown.</p>
+<a class="header" href="#f-camerashorten" id="f-camerashorten"><h2>F. CameraShorten</h2></a>
+<p><img src="camerashorten1.png" alt="nhood 1 camera shorten 1" /><br />
+<img src="camerashorten2.png" alt="nhood 1 camera shorten 2" /><br />
+<img src="camerashorten3.png" alt="nhood 1 camera shorten 3" /></p>
+<p>This trigger is used to make the camera go closer to the car.
+<strong>Usage</strong>: Put in places with low ceilings. Can also be used on ramps, so that the view isn't so terrible.
+<strong>Flag low</strong>: Sets how much the camera will be zoomed in (compared to original).
+<strong>Flag high</strong>: Not used.</p>
+<a class="header" href="#g-object-thrower" id="g-object-thrower"><h2>G. Object Thrower</h2></a>
+<p><img src="objthrower.png" alt="nhood 1 object thrower" /></p>
+<p>This trigger is used to activate 'Object Thrower' objects. For more information, visit the Objects tutorial.
+<strong>Usage</strong>: When a car touches this trigger, the corresponding Object Thrower is activated.
+<strong>Flag low</strong>: Set this to the ID of the Object Thrower to be activated.
+<strong>Flag high</strong>: Not used.</p>
+<a class="header" href="#h-gap-camera" id="h-gap-camera"><h2>H. Gap Camera</h2></a>
+<p><img src="" alt="" /></p>
+<p><strong>Usage</strong>:
+<strong>Flag low</strong>:
+<strong>Flag high</strong>:</p>
+<a class="header" href="#i-reposition-car" id="i-reposition-car"><h2>I. Reposition Car</h2></a>
+<p><img src="toy2repo.png" alt="toy world 2 tunnel reposition car" /></p>
+<p>All cars that touch this trigger will be repositioned, as if the played had pressed their 'Reposition' button.
+<strong>Usage</strong>: Place this trigger in an area you do not want the player to access, or where they would probably want to reposition as soon as possible. If you use this to block off access to locations, make sure that the area is clearly marked as 'out of bounds', otherwise, players will be confused.
+<strong>Flag low</strong>: Not used.
+<strong>Flag high</strong>: Not used.</p>
+<p>We do not have a proper, full tutorial written yet. In the meantime, check these out:</p>
+<ul>
+<li><a href="https://archive.re-volt.io/find?name=tag&amp;val=car_making">Articles on Re-Volt I/O Archive</a></li>
+<li><a href="http://s3.zetaboards.com/Revolt_Live/forum/71958/">Tutorials on Re-Volt Live</a> (includes outdated content)</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
